@@ -4,7 +4,7 @@
     <div class="max-w-4xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
         <h1 class="text-2xl font-bold">Create Product</h1>
 
-        <form action="{{ route('admin.products.store') }}" method="POST" class="mt-6 space-y-5">
+        <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="mt-6 space-y-5">
             @csrf
 
             <div class="grid gap-5 md:grid-cols-2">
@@ -113,6 +113,15 @@
             <div>
                 <label class="mb-1 block text-sm font-medium text-slate-700">Meta Description</label>
                 <textarea name="meta_description" rows="3" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">{{ old('meta_description') }}</textarea>
+            </div>
+
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Product Images</label>
+                <input type="file" name="images[]" accept="image/*" multiple class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Recommended size: 1000&times;1000px (square). The first image becomes the primary image.</p>
+                @error('images.*')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="flex gap-3">

@@ -4,7 +4,61 @@
     <div class="max-w-4xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
         <h1 class="text-2xl font-bold">Edit Product</h1>
 
-        <form action="{{ route('admin.products.update', $product) }}" method="POST" class="mt-6 space-y-5">
+        @if ($product->images->isNotEmpty())
+
+            <div class="mt-6">
+                <label class="mb-2 block text-sm font-medium text-slate-700">Current Images</label>
+
+                <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+
+                    @foreach ($product->images as $image)
+
+                        <div class="group relative overflow-hidden rounded-lg border border-slate-200">
+
+                            <img src="{{ asset('storage/' . $image->image) }}" alt="{{ $product->name }}" class="aspect-square w-full object-cover">
+
+                            @if ($image->is_primary)
+
+                                <span class="absolute left-1 top-1 rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold text-white">
+                                    Primary
+                                </span>
+
+                            @endif
+
+                            <div class="absolute inset-x-0 bottom-0 flex items-center justify-center gap-1 bg-black/60 p-1 opacity-0 transition group-hover:opacity-100">
+
+                                @unless ($image->is_primary)
+
+                                    <form method="POST" action="{{ route('admin.products.images.primary', [$product, $image]) }}">
+                                        @csrf
+                                        @method('PATCH')
+                                        <button type="submit" class="rounded p-1 text-white hover:bg-white/20" title="Set as primary">
+                                            <i data-lucide="star" class="h-4 w-4"></i>
+                                        </button>
+                                    </form>
+
+                                @endunless
+
+                                <form method="POST" action="{{ route('admin.products.images.destroy', [$product, $image]) }}" onsubmit="return confirm('Delete this image?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="rounded p-1 text-white hover:bg-white/20" title="Delete image">
+                                        <i data-lucide="trash-2" class="h-4 w-4"></i>
+                                    </button>
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    @endforeach
+
+                </div>
+            </div>
+
+        @endif
+
+        <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data" class="mt-6 space-y-5">
             @csrf
             @method('PUT')
 
@@ -113,6 +167,15 @@
             <div>
                 <label class="mb-1 block text-sm font-medium text-slate-700">Meta Description</label>
                 <textarea name="meta_description" rows="3" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">{{ old('meta_description', $product->meta_description) }}</textarea>
+            </div>
+
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Add More Images</label>
+                <input type="file" name="images[]" accept="image/*" multiple class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Recommended size: 1000&times;1000px (square).</p>
+                @error('images.*')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="flex gap-3">

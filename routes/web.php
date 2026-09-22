@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ThemeSectionController;
+use App\Http\Controllers\Store\CategoryController as StoreCategoryController;
+use App\Http\Controllers\Store\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
-    return view('store.home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('store.home');
+
+Route::get('/category/{category:slug}', [StoreCategoryController::class, 'show'])
+    ->name('store.category');
 
 
 /*
@@ -83,6 +87,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::resource('products', ProductController::class);
 
+        Route::delete(
+            'products/{product}/images/{image}',
+            [ProductController::class, 'destroyImage']
+        )->name('products.images.destroy');
+
+        Route::patch(
+            'products/{product}/images/{image}/primary',
+            [ProductController::class, 'setPrimaryImage']
+        )->name('products.images.primary');
+
 
         /*
         |--------------------------------------------------------------------------
@@ -91,6 +105,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
         */
 
         Route::resource('theme-sections', ThemeSectionController::class);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Banners
+        |--------------------------------------------------------------------------
+        */
+
+        Route::resource('banners', BannerController::class)
+            ->except(['show']);
 
 
         /*

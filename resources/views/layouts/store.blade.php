@@ -44,7 +44,7 @@
                         Home
                     </a>
 
-                    <a href="#categories"
+                    <a href="{{ route('store.home') }}#categories"
                        class="text-sm font-medium text-gray-700 transition hover:text-gray-950">
                         Categories
                     </a>
@@ -138,7 +138,7 @@
                     Home
                 </a>
 
-                <a href="#categories"
+                <a href="{{ route('store.home') }}#categories"
                    class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-gray-100">
                     Categories
                 </a>
@@ -216,7 +216,7 @@
                         </li>
 
                         <li>
-                            <a href="#categories" class="transition hover:text-white">
+                            <a href="{{ route('store.home') }}#categories" class="transition hover:text-white">
                                 Categories
                             </a>
                         </li>

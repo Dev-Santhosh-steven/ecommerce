@@ -100,7 +100,7 @@
             </p>
 
             <a
-                href="#"
+                href="{{ route('admin.categories.index') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
                     px-3 py-3 text-sm font-medium
@@ -117,7 +117,7 @@
 
 
             <a
-                href="#"
+                href="{{ route('admin.products.index') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
                     px-3 py-3 text-sm font-medium
@@ -178,7 +178,7 @@
             </p>
 
             <a
-                href="#"
+                href="{{ route('admin.theme-sections.index') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
                     px-3 py-3 text-sm font-medium
@@ -195,7 +195,7 @@
 
 
             <a
-                href="#"
+                href="{{ route('admin.banners.index') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
                     px-3 py-3 text-sm font-medium

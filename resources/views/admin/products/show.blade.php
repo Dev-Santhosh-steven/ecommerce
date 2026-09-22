@@ -10,6 +10,32 @@
             <a href="{{ route('admin.products.index') }}" class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700">Back</a>
         </div>
 
+        @if ($product->images->isNotEmpty())
+
+            <div class="mt-8 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+
+                @foreach ($product->images as $image)
+
+                    <div class="relative overflow-hidden rounded-lg border border-slate-200">
+
+                        <img src="{{ asset('storage/' . $image->image) }}" alt="{{ $product->name }}" class="aspect-square w-full object-cover">
+
+                        @if ($image->is_primary)
+
+                            <span class="absolute left-1 top-1 rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold text-white">
+                                Primary
+                            </span>
+
+                        @endif
+
+                    </div>
+
+                @endforeach
+
+            </div>
+
+        @endif
+
         <div class="mt-8 grid gap-6 md:grid-cols-2">
             <div class="rounded-xl bg-slate-50 p-5">
                 <p class="text-sm text-slate-500">Category</p>

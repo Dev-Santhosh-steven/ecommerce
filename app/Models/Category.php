@@ -17,6 +17,7 @@ class Category extends Model
         'slug',
         'description',
         'image',
+        'banner',
         'status',
         'sort_order',
     ];
@@ -47,5 +48,15 @@ class Category extends Model
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', true);
+    }
+
+    public function scopeTopLevel($query)
+    {
+        return $query->whereNull('parent_id');
     }
 }

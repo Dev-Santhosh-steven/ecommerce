@@ -35,7 +35,7 @@
                     </p>
 
                     <p class="mt-2 text-3xl font-bold text-slate-900">
-                        0
+                        {{ $productCount }}
                     </p>
 
                 </div>
@@ -66,7 +66,7 @@
                     </p>
 
                     <p class="mt-2 text-3xl font-bold text-slate-900">
-                        0
+                        {{ $categoryCount }}
                     </p>
 
                 </div>

@@ -12,7 +12,7 @@
                 <label class="mb-1 block text-sm font-medium text-slate-700">Parent Category</label>
                 <select name="parent_id" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
                     <option value="">None</option>
-                    @foreach ($categories as $item)
+                    @foreach ($parentCategories as $item)
                         <option value="{{ $item->id }}" {{ old('parent_id', $category->parent_id) == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                     @endforeach
                 </select>
@@ -34,10 +34,20 @@
             </div>
 
             <div>
-                <label class="mb-1 block text-sm font-medium text-slate-700">Image</label>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Thumbnail Image</label>
                 <input type="file" name="image" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Shown in category grids and menus.</p>
                 @if ($category->image)
                     <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" class="mt-3 h-20 w-20 rounded-lg object-cover">
+                @endif
+            </div>
+
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Banner Image</label>
+                <input type="file" name="banner" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Wide hero image shown at the top of this category's page.</p>
+                @if ($category->banner)
+                    <img src="{{ asset('storage/' . $category->banner) }}" alt="{{ $category->name }} banner" class="mt-3 h-20 w-40 rounded-lg object-cover">
                 @endif
             </div>
 

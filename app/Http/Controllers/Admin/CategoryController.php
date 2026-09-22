@@ -77,6 +77,13 @@ class CategoryController extends Controller
                 'max:2048',
             ],
 
+            'banner' => [
+                'nullable',
+                'image',
+                'mimes:jpg,jpeg,png,webp',
+                'max:4096',
+            ],
+
             'status' => [
                 'nullable',
                 'boolean',
@@ -131,6 +138,14 @@ class CategoryController extends Controller
                 ->store('categories', 'public');
         }
 
+        $bannerPath = null;
+
+        if ($request->hasFile('banner')) {
+            $bannerPath = $request
+                ->file('banner')
+                ->store('categories/banners', 'public');
+        }
+
 
         /*
         |--------------------------------------------------------------------------
@@ -144,6 +159,7 @@ class CategoryController extends Controller
             'slug' => $slug,
             'description' => $validated['description'] ?? null,
             'image' => $imagePath,
+            'banner' => $bannerPath,
             'status' => $request->boolean('status'),
             'sort_order' => $validated['sort_order'] ?? 0,
         ]);
@@ -211,6 +227,13 @@ class CategoryController extends Controller
                 'max:2048',
             ],
 
+            'banner' => [
+                'nullable',
+                'image',
+                'mimes:jpg,jpeg,png,webp',
+                'max:4096',
+            ],
+
             'status' => [
                 'nullable',
                 'boolean',
@@ -271,6 +294,15 @@ class CategoryController extends Controller
                 ->store('categories', 'public');
         }
 
+        $bannerPath = $category->banner;
+
+        if ($request->hasFile('banner')) {
+
+            $bannerPath = $request
+                ->file('banner')
+                ->store('categories/banners', 'public');
+        }
+
 
         /*
         |--------------------------------------------------------------------------
@@ -284,6 +316,7 @@ class CategoryController extends Controller
             'slug' => $slug,
             'description' => $validated['description'] ?? null,
             'image' => $imagePath,
+            'banner' => $bannerPath,
             'status' => $request->boolean('status'),
             'sort_order' => $validated['sort_order'] ?? 0,
         ]);

@@ -20,79 +20,144 @@
 
             <div class="swiper-wrapper">
 
-                {{-- Slide 1 --}}
-                <div class="swiper-slide">
+                @forelse ($banners as $banner)
 
-                    <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
+                    <div class="swiper-slide">
 
-                        <div class="max-w-2xl">
+                        <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
 
-                            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-                                <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
-                                Smart Technology for Modern Spaces
+                            <div class="max-w-2xl">
+
+                                @if ($banner->subtitle)
+
+                                    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
+                                        <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                                        {{ $banner->subtitle }}
+                                    </div>
+
+                                @endif
+
+                                @if ($banner->title)
+
+                                    <h1 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                                        {{ $banner->title }}
+                                    </h1>
+
+                                @endif
+
+                                @if ($banner->button_text && $banner->button_link)
+
+                                    <div class="mt-9 flex flex-wrap gap-4">
+
+                                        <a href="{{ $banner->button_link }}"
+                                           class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+
+                                            {{ $banner->button_text }}
+
+                                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                @endif
+
                             </div>
 
-                            <h1 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-                                Technology
-                                <span class="text-cyan-400">Built for</span>
-                                Life.
-                            </h1>
 
-                            <p class="mt-6 max-w-xl text-lg leading-8 text-gray-400">
-                                Explore next-generation TVs, interactive panels,
-                                commercial displays, audio systems and smart
-                                home appliances.
-                            </p>
+                            <div class="relative flex items-center justify-center">
 
-                            <div class="mt-9 flex flex-wrap gap-4">
+                                <div class="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
 
-                                <a href="#products"
-                                   class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+                                    <img
+                                        src="{{ asset('storage/' . $banner->image) }}"
+                                        alt="{{ $banner->title ?? 'Banner' }}"
+                                        class="aspect-[4/3] w-full object-cover"
+                                    >
 
-                                    Explore Products
-
-                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-                                </a>
-
-                                <a href="#categories"
-                                   class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
-
-                                    View Categories
-
-                                </a>
+                                </div>
 
                             </div>
 
                         </div>
 
+                    </div>
 
-                        {{-- Hero Product --}}
-                        <div class="relative flex items-center justify-center">
+                @empty
 
-                            <div class="absolute h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+                    <div class="swiper-slide">
 
-                            <div class="relative w-full max-w-xl">
+                        <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
 
-                                <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-gray-800 to-gray-950 shadow-2xl">
+                            <div class="max-w-2xl">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85"
-                                        alt="Modern television"
-                                        class="h-full w-full object-cover opacity-90"
-                                    >
+                                <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
+                                    <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                                    Smart Technology for Modern Spaces
+                                </div>
 
-                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent"></div>
+                                <h1 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                                    Technology
+                                    <span class="text-cyan-400">Built for</span>
+                                    Life.
+                                </h1>
 
-                                    <div class="absolute bottom-6 left-6">
+                                <p class="mt-6 max-w-xl text-lg leading-8 text-gray-400">
+                                    Explore next-generation TVs, interactive panels,
+                                    commercial displays, audio systems and smart
+                                    home appliances.
+                                </p>
 
-                                        <p class="text-sm text-gray-300">
-                                            Featured Technology
-                                        </p>
+                                <div class="mt-9 flex flex-wrap gap-4">
 
-                                        <h2 class="mt-1 text-2xl font-semibold">
-                                            Smart Entertainment
-                                        </h2>
+                                    <a href="#products"
+                                       class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+
+                                        Explore Products
+
+                                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+
+                                    </a>
+
+                                    <a href="#categories"
+                                       class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
+
+                                        View Categories
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="relative flex items-center justify-center">
+
+                                <div class="absolute h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+                                <div class="relative w-full max-w-xl">
+
+                                    <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-gray-800 to-gray-950 shadow-2xl">
+
+                                        <img
+                                            src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85"
+                                            alt="Modern television"
+                                            class="h-full w-full object-cover opacity-90"
+                                        >
+
+                                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent"></div>
+
+                                        <div class="absolute bottom-6 left-6">
+
+                                            <p class="text-sm text-gray-300">
+                                                Featured Technology
+                                            </p>
+
+                                            <h2 class="mt-1 text-2xl font-semibold">
+                                                Smart Entertainment
+                                            </h2>
+
+                                        </div>
 
                                     </div>
 
@@ -104,80 +169,7 @@
 
                     </div>
 
-                </div>
-
-
-                {{-- Slide 2 --}}
-                <div class="swiper-slide">
-
-                    <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
-
-                        <div class="max-w-2xl">
-
-                            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-
-                                <span class="h-2 w-2 rounded-full bg-purple-400"></span>
-
-                                Professional Display Solutions
-
-                            </div>
-
-                            <h2 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
-
-                                Displays That
-                                <span class="text-purple-400">Make an Impact.</span>
-
-                            </h2>
-
-                            <p class="mt-6 max-w-xl text-lg leading-8 text-gray-400">
-
-                                Interactive panels, commercial displays and
-                                digital signage solutions designed for modern
-                                businesses and institutions.
-
-                            </p>
-
-                            <div class="mt-9">
-
-                                <a href="#commercial"
-                                   class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
-
-                                    Explore Business Solutions
-
-                                    <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="relative flex items-center justify-center">
-
-                            <div class="absolute h-72 w-72 rounded-full bg-purple-500/10 blur-3xl"></div>
-
-                            <div class="relative w-full max-w-xl">
-
-                                <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-gray-900 shadow-2xl">
-
-                                    <img
-                                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=1200&q=85"
-                                        alt="Professional display"
-                                        class="h-full w-full object-cover"
-                                    >
-
-                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent"></div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                @endforelse
 
             </div>
 
@@ -248,236 +240,62 @@
 
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
 
-            {{-- TV --}}
-            <a href="#products"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
+            @forelse ($categories as $category)
 
-                <div class="aspect-[4/3]">
+                <a href="{{ route('store.category', $category) }}"
+                   class="group relative overflow-hidden rounded-2xl bg-gray-100">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80"
-                        alt="Televisions"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
+                    <div class="aspect-[4/3]">
 
+                        @if ($category->image)
+
+                            <img
+                                src="{{ asset('storage/' . $category->image) }}"
+                                alt="{{ $category->name }}"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            >
+
+                        @else
+
+                            <div class="flex h-full w-full items-center justify-center bg-gray-200 text-gray-400">
+                                <i data-lucide="layers" class="h-10 w-10"></i>
+                            </div>
+
+                        @endif
+
+                    </div>
+
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
+
+                        <h3 class="font-semibold text-white">
+                            {{ $category->name }}
+                        </h3>
+
+                        @if ($category->children_count > 0)
+
+                            <p class="mt-1 text-sm text-gray-300">
+                                {{ $category->children_count }} {{ \Illuminate\Support\Str::plural('subcategory', $category->children_count) }}
+                            </p>
+
+                        @elseif ($category->description)
+
+                            <p class="mt-1 text-sm text-gray-300">
+                                {{ $category->description }}
+                            </p>
+
+                        @endif
+
+                    </div>
+
+                </a>
+
+            @empty
+
+                <div class="col-span-full rounded-2xl border border-dashed border-gray-300 py-16 text-center text-gray-500">
+                    No categories yet. Add some from the admin panel.
                 </div>
 
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Televisions
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Smart TVs & entertainment
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- Interactive Panels --}}
-            <a href="#commercial"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
-                        alt="Interactive panels"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Interactive Panels
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Collaboration & education
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- Commercial Displays --}}
-            <a href="#commercial"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
-                        alt="Commercial displays"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Commercial Displays
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Business & digital signage
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- Audio --}}
-            <a href="#products"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
-                        alt="Speakers"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Audio
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Speakers & sound systems
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- AC --}}
-            <a href="#products"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1631545806609-4b7b1e2a3b3b?auto=format&fit=crop&w=800&q=80"
-                        alt="Air conditioners"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Air Conditioners
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Comfort & cooling
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- Washing Machines --}}
-            <a href="#products"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=80"
-                        alt="Washing machines"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        Washing Machines
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Smart home appliances
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- T Standees --}}
-            <a href="#commercial"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                        alt="Digital signage"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        T-Standees
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Digital advertising
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            {{-- A Standees --}}
-            <a href="#commercial"
-               class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                <div class="aspect-[4/3]">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
-                        alt="Digital display solutions"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                    <h3 class="font-semibold text-white">
-                        A-Standees
-                    </h3>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Interactive advertising
-                    </p>
-
-                </div>
-
-            </a>
+            @endforelse
 
         </div>
 

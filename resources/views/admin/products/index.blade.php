@@ -14,6 +14,7 @@
         <table class="min-w-full divide-y divide-slate-200">
             <thead class="bg-slate-50">
                 <tr>
+                    <th class="px-4 py-3 text-left text-sm font-semibold text-slate-700">Image</th>
                     <th class="px-4 py-3 text-left text-sm font-semibold text-slate-700">Name</th>
                     <th class="px-4 py-3 text-left text-sm font-semibold text-slate-700">Category</th>
                     <th class="px-4 py-3 text-left text-sm font-semibold text-slate-700">Price</th>
@@ -23,6 +24,15 @@
             <tbody class="divide-y divide-slate-200">
                 @forelse ($products as $product)
                     <tr>
+                        <td class="px-4 py-3 text-sm">
+                            @if ($product->primaryImage)
+                                <img src="{{ asset('storage/' . $product->primaryImage->image) }}" alt="{{ $product->name }}" class="h-12 w-12 rounded-lg object-cover">
+                            @else
+                                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-400">
+                                    <i data-lucide="image" class="h-5 w-5"></i>
+                                </div>
+                            @endif
+                        </td>
                         <td class="px-4 py-3 text-sm">{{ $product->name }}</td>
                         <td class="px-4 py-3 text-sm text-slate-600">{{ $product->category?->name ?? '—' }}</td>
                         <td class="px-4 py-3 text-sm">₹{{ number_format($product->price, 2) }}</td>
@@ -40,7 +50,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4" class="px-4 py-6 text-center text-sm text-slate-500">No products found.</td>
+                        <td colspan="5" class="px-4 py-6 text-center text-sm text-slate-500">No products found.</td>
                     </tr>
                 @endforelse
             </tbody>

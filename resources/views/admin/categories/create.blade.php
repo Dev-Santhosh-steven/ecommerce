@@ -11,7 +11,7 @@
                 <label class="mb-1 block text-sm font-medium text-slate-700">Parent Category</label>
                 <select name="parent_id" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
                     <option value="">None</option>
-                    @foreach ($categories as $category)
+                    @foreach ($parentCategories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
@@ -33,8 +33,15 @@
             </div>
 
             <div>
-                <label class="mb-1 block text-sm font-medium text-slate-700">Image</label>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Thumbnail Image</label>
                 <input type="file" name="image" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Shown in category grids and menus.</p>
+            </div>
+
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Banner Image</label>
+                <input type="file" name="banner" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Wide hero image shown at the top of this category's page.</p>
             </div>
 
             <div class="grid gap-5 md:grid-cols-2">
