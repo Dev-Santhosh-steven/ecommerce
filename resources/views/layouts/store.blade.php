@@ -326,15 +326,15 @@
                 <div class="flex items-center gap-4 text-gray-500">
 
                     <a href="#" class="transition hover:text-white" aria-label="Facebook">
-                        <i data-lucide="facebook" class="h-5 w-5"></i>
+                        <i data-lucide="globe" class="h-5 w-5"></i>
                     </a>
 
                     <a href="#" class="transition hover:text-white" aria-label="Instagram">
-                        <i data-lucide="instagram" class="h-5 w-5"></i>
+                        <i data-lucide="sparkles" class="h-5 w-5"></i>
                     </a>
 
                     <a href="#" class="transition hover:text-white" aria-label="Twitter">
-                        <i data-lucide="twitter" class="h-5 w-5"></i>
+                        <i data-lucide="message-circle" class="h-5 w-5"></i>
                     </a>
 
                 </div>
