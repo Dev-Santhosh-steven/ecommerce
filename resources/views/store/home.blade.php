@@ -5,33 +5,37 @@
 @section('content')
 
 {{-- =========================================================
-     HERO SECTION
+     HERO SECTION (full-screen banner)
 ========================================================= --}}
-<section class="relative overflow-hidden bg-gray-950 text-white">
+<section class="relative h-[calc(100dvh-5rem)] min-h-[520px] w-full overflow-hidden bg-gray-950 text-white">
 
-    <div class="absolute inset-0">
-        <div class="absolute -left-40 top-10 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
-        <div class="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
-    </div>
+    <div class="swiper hero-swiper h-full w-full">
 
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="swiper-wrapper h-full">
 
-        <div class="swiper hero-swiper">
+            @forelse ($banners as $banner)
 
-            <div class="swiper-wrapper">
+                <div class="swiper-slide relative h-full w-full">
 
-                @forelse ($banners as $banner)
+                    <img
+                        src="{{ asset('storage/' . $banner->image) }}"
+                        alt="{{ $banner->title ?? 'Banner' }}"
+                        class="absolute inset-0 h-full w-full object-cover"
+                    >
 
-                    <div class="swiper-slide">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-gray-950/10"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-gray-950/60 via-transparent to-transparent"></div>
 
-                        <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
+                    <div class="relative flex h-full items-end">
+
+                        <div class="mx-auto w-full max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
 
                             <div class="max-w-2xl">
 
                                 @if ($banner->subtitle)
 
-                                    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-                                        <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                                    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 backdrop-blur">
+                                        <span class="h-2 w-2 rounded-full bg-brand-red"></span>
                                         {{ $banner->subtitle }}
                                     </div>
 
@@ -39,7 +43,7 @@
 
                                 @if ($banner->title)
 
-                                    <h1 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                                    <h1 class="text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                                         {{ $banner->title }}
                                     </h1>
 
@@ -50,7 +54,7 @@
                                     <div class="mt-9 flex flex-wrap gap-4">
 
                                         <a href="{{ $banner->button_link }}"
-                                           class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+                                           class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500">
 
                                             {{ $banner->button_text }}
 
@@ -64,41 +68,36 @@
 
                             </div>
 
-
-                            <div class="relative flex items-center justify-center">
-
-                                <div class="relative w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-
-                                    <img
-                                        src="{{ asset('storage/' . $banner->image) }}"
-                                        alt="{{ $banner->title ?? 'Banner' }}"
-                                        class="aspect-[4/3] w-full object-cover"
-                                    >
-
-                                </div>
-
-                            </div>
-
                         </div>
 
                     </div>
 
-                @empty
+                </div>
 
-                    <div class="swiper-slide">
+            @empty
 
-                        <div class="grid min-h-[580px] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
+                <div class="swiper-slide relative h-full w-full bg-gray-950">
+
+                    <div class="absolute inset-0">
+                        <img src="{{ asset('images/brand/hero-showroom.jpg') }}" alt="" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-950/70 to-brand-900/40"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-brand-600 to-brand-red"></div>
+                    </div>
+
+                    <div class="relative flex h-full items-end">
+
+                        <div class="mx-auto w-full max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
 
                             <div class="max-w-2xl">
 
                                 <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-                                    <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                                    <span class="h-2 w-2 rounded-full bg-brand-red"></span>
                                     Smart Technology for Modern Spaces
                                 </div>
 
-                                <h1 class="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                                <h1 class="text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                                     Technology
-                                    <span class="text-cyan-400">Built for</span>
+                                    <span class="text-brand-400">Built for</span>
                                     Life.
                                 </h1>
 
@@ -111,7 +110,7 @@
                                 <div class="mt-9 flex flex-wrap gap-4">
 
                                     <a href="#products"
-                                       class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+                                       class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500">
 
                                         Explore Products
 
@@ -130,71 +129,47 @@
 
                             </div>
 
-
-                            <div class="relative flex items-center justify-center">
-
-                                <div class="absolute h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
-
-                                <div class="relative w-full max-w-xl">
-
-                                    <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-gray-800 to-gray-950 shadow-2xl">
-
-                                        <img
-                                            src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85"
-                                            alt="Modern television"
-                                            class="h-full w-full object-cover opacity-90"
-                                        >
-
-                                        <div class="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-transparent"></div>
-
-                                        <div class="absolute bottom-6 left-6">
-
-                                            <p class="text-sm text-gray-300">
-                                                Featured Technology
-                                            </p>
-
-                                            <h2 class="mt-1 text-2xl font-semibold">
-                                                Smart Entertainment
-                                            </h2>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
                         </div>
 
                     </div>
 
-                @endforelse
+                </div>
 
-            </div>
-
-
-            {{-- Hero Navigation --}}
-            <div class="absolute bottom-8 left-0 z-10 flex items-center gap-3">
-
-                <button
-                    class="hero-prev flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 transition hover:bg-white/10"
-                    aria-label="Previous slide"
-                >
-                    <i data-lucide="arrow-left" class="h-4 w-4"></i>
-                </button>
-
-                <button
-                    class="hero-next flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 transition hover:bg-white/10"
-                    aria-label="Next slide"
-                >
-                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
-                </button>
-
-            </div>
+            @endforelse
 
         </div>
 
+
+        {{-- Hero Navigation --}}
+        @if ($banners->count() > 1)
+
+            <button
+                class="hero-prev absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white/20 sm:left-6"
+                aria-label="Previous slide"
+            >
+                <i data-lucide="arrow-left" class="h-4 w-4"></i>
+            </button>
+
+            <button
+                class="hero-next absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition hover:bg-white/20 sm:right-6"
+                aria-label="Next slide"
+            >
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+
+            <div class="hero-pagination absolute bottom-8 right-4 z-10 flex w-auto items-center justify-end gap-2 sm:right-6"></div>
+
+        @endif
+
+    </div>
+
+
+    {{-- Scroll hint --}}
+    <div class="pointer-events-none absolute inset-x-0 bottom-6 z-10 flex justify-center">
+        <div class="flex animate-bounce flex-col items-center gap-1 text-white/70">
+            <span class="text-[11px] font-medium uppercase tracking-wider">Scroll</span>
+            <i data-lucide="chevron-down" class="h-5 w-5"></i>
+        </div>
     </div>
 
 </section>
@@ -211,12 +186,12 @@
 
             <div>
 
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
                     Explore
                 </p>
 
                 <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                    Shop by Category
+                    Shop by <span class="text-brand-600">Category</span>
                 </h2>
 
                 <p class="mt-3 max-w-xl text-gray-500">
@@ -227,7 +202,7 @@
             </div>
 
             <a href="#products"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:underline">
+               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
 
                 View all products
 
@@ -305,9 +280,118 @@
 
 
 {{-- =========================================================
+     LED VIDEO WALLS + CALCULATOR
+========================================================= --}}
+@if ($ledCategory)
+
+<section id="led-walls" class="brand-dots overflow-hidden bg-gray-950 py-20 text-white" data-reveal>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
+
+            <div>
+
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em] !text-brand-400">
+                    New &middot; LED Video Walls
+                </p>
+
+                <h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+                    Go big.
+                    <span class="text-brand-400">Plan your LED wall in seconds.</span>
+                </h2>
+
+                <p class="mt-6 max-w-xl leading-7 text-gray-400">
+                    Seamless LED video walls for lobbies, boardrooms, stages, storefronts and highway billboards &mdash;
+                    from P1.25 fine-pitch indoor to 7,000-nit outdoor. Enter your wall space and our calculator shows
+                    the exact screen size, resolution, power and viewing distance.
+                </p>
+
+                <dl class="mt-8 grid grid-cols-3 gap-4 border-y border-white/10 py-6">
+                    <div>
+                        <dt class="text-xs uppercase tracking-wider text-gray-500">Pixel pitch</dt>
+                        <dd class="mt-1 text-xl font-bold">P1.25&ndash;P10</dd>
+                    </div>
+                    <div>
+                        <dt class="text-xs uppercase tracking-wider text-gray-500">Brightness</dt>
+                        <dd class="mt-1 text-xl font-bold">7,000 nits</dd>
+                    </div>
+                    <div>
+                        <dt class="text-xs uppercase tracking-wider text-gray-500">Size</dt>
+                        <dd class="mt-1 text-xl font-bold">Any</dd>
+                    </div>
+                </dl>
+
+                <ol class="mt-8 space-y-3 text-sm text-gray-300">
+                    @foreach (['Choose indoor or outdoor', 'Pick a pixel pitch for your viewing distance', 'Enter your wall space — get the full solution'] as $i => $step)
+                        <li class="flex items-center gap-3">
+                            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-bold">{{ $i + 1 }}</span>
+                            {{ $step }}
+                        </li>
+                    @endforeach
+                </ol>
+
+                <div class="mt-9 flex flex-wrap gap-4">
+
+                    <a href="{{ route('store.led-calculator') }}"
+                       class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500">
+                        Explore More
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+
+                    <a href="{{ route('store.category', $ledCategory) }}"
+                       class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
+                        View LED Walls
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="relative">
+
+                <div class="absolute -inset-10 rounded-full bg-brand-600/10 blur-3xl"></div>
+
+                <div class="relative grid grid-cols-2 gap-4">
+
+                    @foreach ([
+                        ['home-outdoor', 'Outdoor billboards', 'Sunlight readable, IP65', 'col-span-2 aspect-[16/9]'],
+                        ['home-indoor', 'Indoor & corporate', 'Fine-pitch P1.25–P2.5', 'aspect-[4/3]'],
+                        ['home-stage', 'Rental & events', 'Tool-less cabinets', 'aspect-[4/3]'],
+                    ] as [$image, $title, $caption, $size])
+
+                        <a href="{{ route('store.led-calculator') }}" class="group relative overflow-hidden rounded-2xl border border-white/10 {{ $size }}">
+                            <img src="{{ asset('storage/led-video-walls/' . $image . '.jpg') }}"
+                                 alt="{{ $title }} LED video wall"
+                                 loading="lazy"
+                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4 sm:p-5">
+                                <p class="font-semibold">{{ $title }}</p>
+                                <p class="mt-0.5 text-xs text-gray-300">{{ $caption }}</p>
+                            </div>
+                        </a>
+
+                    @endforeach
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+@endif
+
+
+{{-- =========================================================
      FEATURED PRODUCTS
 ========================================================= --}}
-<section id="products" class="bg-gray-50 py-20">
+<section id="products" class="bg-gray-50 py-20" data-reveal>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -315,12 +399,12 @@
 
             <div>
 
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
                     Featured
                 </p>
 
                 <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                    Popular Products
+                    Popular <span class="text-brand-600">Products</span>
                 </h2>
 
                 <p class="mt-3 text-gray-500">
@@ -329,8 +413,8 @@
 
             </div>
 
-            <a href="#"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:underline">
+            <a href="{{ route('store.search') }}"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
 
                 View all
 
@@ -341,230 +425,128 @@
         </div>
 
 
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        @if ($featuredProducts->isEmpty())
 
-            {{-- Product 1 --}}
-            <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="rounded-2xl border border-dashed border-gray-300 bg-white py-16 text-center text-gray-500">
+                No featured products yet. Mark products as &ldquo;Featured&rdquo; from the admin panel to show them here.
+            </div>
 
-                <div class="relative aspect-square overflow-hidden bg-gray-100">
+        @else
 
-                    <span class="absolute left-4 top-4 z-10 rounded-full bg-gray-950 px-3 py-1 text-xs font-semibold text-white">
-                        Featured
-                    </span>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                    <button class="absolute right-4 top-4 z-10 rounded-full bg-white p-2 shadow-sm transition hover:bg-gray-950 hover:text-white">
+                @foreach ($featuredProducts as $product)
 
-                        <i data-lucide="heart" class="h-4 w-4"></i>
+                    @include('store.partials.product-card', ['product' => $product])
 
-                    </button>
+                @endforeach
 
-                    <img
-                        src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=85"
-                        alt="Smart TV"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
+            </div>
 
+        @endif
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     NEW ARRIVALS
+========================================================= --}}
+<section id="new-arrivals" class="bg-white py-20" data-reveal>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
+            <div>
+
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
+                    Just In
+                </p>
+
+                <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+                    New <span class="text-brand-600">Arrivals</span>
+                </h2>
+
+                <p class="mt-3 text-gray-500">
+                    The latest additions to our electronics range.
+                </p>
+
+            </div>
+
+            <a href="{{ route('store.search') }}"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
+
+                View all
+
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+
+            </a>
+
+        </div>
+
+
+        @if ($newArrivals->isEmpty())
+
+            <div class="rounded-2xl border border-dashed border-gray-300 py-16 text-center text-gray-500">
+                No products yet. Add some from the admin panel.
+            </div>
+
+        @else
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                @foreach ($newArrivals as $product)
+
+                    @include('store.partials.product-card', ['product' => $product])
+
+                @endforeach
+
+            </div>
+
+        @endif
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     BOOK A DEMO CTA
+========================================================= --}}
+<section class="bg-white py-16" data-reveal>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="brand-dots relative overflow-hidden rounded-3xl bg-gray-950 px-6 py-14 text-center text-white sm:px-16">
+
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-600 to-brand-red"></div>
+
+            <div class="relative">
+
+                <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+                    <i data-lucide="calendar-check" class="h-7 w-7 text-brand-400"></i>
                 </div>
 
-                <div class="p-5">
-
-                    <p class="text-xs font-medium uppercase tracking-wider text-gray-400">
-                        Television
-                    </p>
-
-                    <h3 class="mt-2 font-semibold text-gray-900">
-                        Premium Smart TV
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-500">
-                        4K Ultra HD Smart Entertainment
-                    </p>
-
-                    <div class="mt-5 flex items-center justify-between">
-
-                        <span class="text-lg font-bold">
-                            ₹49,999
-                        </span>
-
-                        <button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-950 text-white transition hover:bg-gray-700">
-
-                            <i data-lucide="shopping-bag" class="h-4 w-4"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            {{-- Product 2 --}}
-            <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-
-                <div class="relative aspect-square overflow-hidden bg-gray-100">
-
-                    <span class="absolute left-4 top-4 z-10 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
-                        Business
-                    </span>
-
-                    <button class="absolute right-4 top-4 z-10 rounded-full bg-white p-2 shadow-sm transition hover:bg-gray-950 hover:text-white">
-
-                        <i data-lucide="heart" class="h-4 w-4"></i>
-
-                    </button>
-
-                    <img
-                        src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=85"
-                        alt="Interactive panel"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="p-5">
-
-                    <p class="text-xs font-medium uppercase tracking-wider text-gray-400">
-                        Interactive Panel
-                    </p>
-
-                    <h3 class="mt-2 font-semibold text-gray-900">
-                        Interactive Smart Panel
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-500">
-                        Collaboration & presentation display
-                    </p>
-
-                    <div class="mt-5 flex items-center justify-between">
-
-                        <span class="text-lg font-bold">
-                            ₹89,999
-                        </span>
-
-                        <button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-950 text-white transition hover:bg-gray-700">
-
-                            <i data-lucide="shopping-bag" class="h-4 w-4"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            {{-- Product 3 --}}
-            <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-
-                <div class="relative aspect-square overflow-hidden bg-gray-100">
-
-                    <span class="absolute left-4 top-4 z-10 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white">
-                        Commercial
-                    </span>
-
-                    <button class="absolute right-4 top-4 z-10 rounded-full bg-white p-2 shadow-sm transition hover:bg-gray-950 hover:text-white">
-
-                        <i data-lucide="heart" class="h-4 w-4"></i>
-
-                    </button>
-
-                    <img
-                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=85"
-                        alt="Commercial display"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="p-5">
-
-                    <p class="text-xs font-medium uppercase tracking-wider text-gray-400">
-                        Commercial Display
-                    </p>
-
-                    <h3 class="mt-2 font-semibold text-gray-900">
-                        Professional Display
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-500">
-                        High-performance business display
-                    </p>
-
-                    <div class="mt-5 flex items-center justify-between">
-
-                        <span class="text-lg font-bold">
-                            ₹74,999
-                        </span>
-
-                        <button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-950 text-white transition hover:bg-gray-700">
-
-                            <i data-lucide="shopping-bag" class="h-4 w-4"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            {{-- Product 4 --}}
-            <article class="group overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-
-                <div class="relative aspect-square overflow-hidden bg-gray-100">
-
-                    <span class="absolute left-4 top-4 z-10 rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white">
-                        New
-                    </span>
-
-                    <button class="absolute right-4 top-4 z-10 rounded-full bg-white p-2 shadow-sm transition hover:bg-gray-950 hover:text-white">
-
-                        <i data-lucide="heart" class="h-4 w-4"></i>
-
-                    </button>
-
-                    <img
-                        src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=85"
-                        alt="Speaker"
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    >
-
-                </div>
-
-                <div class="p-5">
-
-                    <p class="text-xs font-medium uppercase tracking-wider text-gray-400">
-                        Audio
-                    </p>
-
-                    <h3 class="mt-2 font-semibold text-gray-900">
-                        Premium Wireless Speaker
-                    </h3>
-
-                    <p class="mt-2 text-sm text-gray-500">
-                        Powerful sound for every space
-                    </p>
-
-                    <div class="mt-5 flex items-center justify-between">
-
-                        <span class="text-lg font-bold">
-                            ₹14,999
-                        </span>
-
-                        <button class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-950 text-white transition hover:bg-gray-700">
-
-                            <i data-lucide="shopping-bag" class="h-4 w-4"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
+                <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
+                    See It Before You Buy It
+                </h2>
+
+                <p class="mx-auto mt-3 max-w-xl text-gray-400">
+                    Book a free, no-obligation demo and experience our TVs, ACs and appliances up
+                    close &mdash; at our showroom or wherever suits you.
+                </p>
+
+                <a
+                    href="{{ route('store.demo.create') }}"
+                    class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500"
+                >
+                    Book a Demo
+                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </a>
+
+            </div>
 
         </div>
 
@@ -576,7 +558,7 @@
 {{-- =========================================================
      COMMERCIAL SOLUTIONS
 ========================================================= --}}
-<section id="commercial" class="overflow-hidden bg-gray-950 py-20 text-white">
+<section id="commercial" class="brand-dots overflow-hidden bg-gray-950 py-20 text-white">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -584,13 +566,13 @@
 
             <div>
 
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em] !text-brand-400">
                     Business Solutions
                 </p>
 
                 <h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
                     Technology that
-                    <span class="text-cyan-400">works for your business.</span>
+                    <span class="text-brand-400">works for your business.</span>
                 </h2>
 
                 <p class="mt-6 max-w-xl leading-7 text-gray-400">
@@ -605,7 +587,7 @@
 
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 
-                        <i data-lucide="monitor-smartphone" class="h-6 w-6 text-cyan-400"></i>
+                        <i data-lucide="monitor-smartphone" class="h-6 w-6 text-brand-400"></i>
 
                         <h3 class="mt-4 font-semibold">
                             Interactive Panels
@@ -620,7 +602,7 @@
 
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 
-                        <i data-lucide="monitor" class="h-6 w-6 text-cyan-400"></i>
+                        <i data-lucide="monitor" class="h-6 w-6 text-brand-400"></i>
 
                         <h3 class="mt-4 font-semibold">
                             Commercial Displays
@@ -635,7 +617,7 @@
 
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 
-                        <i data-lucide="megaphone" class="h-6 w-6 text-cyan-400"></i>
+                        <i data-lucide="megaphone" class="h-6 w-6 text-brand-400"></i>
 
                         <h3 class="mt-4 font-semibold">
                             T-Standees
@@ -650,7 +632,7 @@
 
                     <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 
-                        <i data-lucide="presentation" class="h-6 w-6 text-cyan-400"></i>
+                        <i data-lucide="presentation" class="h-6 w-6 text-brand-400"></i>
 
                         <h3 class="mt-4 font-semibold">
                             A-Standees
@@ -665,7 +647,7 @@
                 </div>
 
                 <a href="#"
-                   class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200">
+                   class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500">
 
                     Explore Commercial Solutions
 
@@ -678,7 +660,7 @@
 
             <div class="relative">
 
-                <div class="absolute -inset-10 rounded-full bg-cyan-500/10 blur-3xl"></div>
+                <div class="absolute -inset-10 rounded-full bg-brand-600/10 blur-3xl"></div>
 
                 <div class="relative overflow-hidden rounded-3xl border border-white/10">
 
@@ -708,12 +690,12 @@
 
         <div class="mb-12">
 
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
                 Smart Living
             </p>
 
             <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                Upgrade Your Home
+                Upgrade Your <span class="text-brand-600">Home</span>
             </h2>
 
             <p class="mt-3 max-w-xl text-gray-500">
@@ -729,8 +711,8 @@
             <div class="group relative overflow-hidden rounded-3xl bg-gray-100">
 
                 <img
-                    src="https://images.unsplash.com/photo-1631545806609-4b7b1e2a3b3b?auto=format&fit=crop&w=1000&q=80"
-                    alt="Air conditioner"
+                    src="{{ asset('storage/categories/air-conditioners.jpg') }}"
+                    alt="Yara air conditioners"
                     class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
                 >
 
@@ -746,7 +728,7 @@
                         Air Conditioners
                     </h3>
 
-                    <a href="#products"
+                    <a href="{{ url('/category/air-conditioners') }}"
                        class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
 
                         Shop now
@@ -764,8 +746,8 @@
             <div class="group relative overflow-hidden rounded-3xl bg-gray-100">
 
                 <img
-                    src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1000&q=80"
-                    alt="Washing machine"
+                    src="{{ asset('storage/categories/washing-machines.jpg') }}"
+                    alt="Yara washing machines"
                     class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
                 >
 
@@ -781,7 +763,7 @@
                         Washing Machines
                     </h3>
 
-                    <a href="#products"
+                    <a href="{{ url('/category/washing-machine') }}"
                        class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
 
                         Shop now
@@ -845,12 +827,12 @@
 
         <div class="mx-auto max-w-2xl text-center">
 
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
                 Why Choose Us
             </p>
 
             <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                Technology you can trust.
+                Technology you can <span class="text-brand-600">trust.</span>
             </h2>
 
             <p class="mt-4 text-gray-500">
@@ -952,15 +934,13 @@
 
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 
-        <div class="relative overflow-hidden rounded-3xl bg-gray-950 px-6 py-14 text-center text-white sm:px-12">
+        <div class="brand-dots relative overflow-hidden rounded-3xl bg-gray-950 px-6 py-14 text-center text-white sm:px-12">
 
-            <div class="absolute -left-20 -top-20 h-60 w-60 rounded-full bg-cyan-500/20 blur-3xl"></div>
-
-            <div class="absolute -bottom-20 -right-20 h-60 w-60 rounded-full bg-blue-500/20 blur-3xl"></div>
+            <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-600 to-brand-red"></div>
 
             <div class="relative">
 
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em] !text-brand-400">
                     Stay Updated
                 </p>
 
@@ -977,12 +957,12 @@
                     <input
                         type="email"
                         placeholder="Enter your email address"
-                        class="min-w-0 flex-1 rounded-full border border-white/10 bg-white/10 px-5 py-3.5 text-sm text-white outline-none placeholder:text-gray-500 focus:border-cyan-400"
+                        class="min-w-0 flex-1 rounded-full border border-white/10 bg-white/10 px-5 py-3.5 text-sm text-white outline-none placeholder:text-gray-500 focus:border-brand-400"
                     >
 
                     <button
                         type="submit"
-                        class="rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 transition hover:bg-gray-200"
+                        class="rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500"
                     >
                         Subscribe
                     </button>
@@ -998,6 +978,32 @@
 </section>
 
 
+{{-- WhatsApp Chat Button --}}
+<a href="https://wa.me/919677712000?text={{ rawurlencode('Hi Yara Electronics, I would like to know more about your products.') }}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp"
+   class="group fixed bottom-6 right-6 z-50 flex items-center">
+
+    {{-- Hover popup --}}
+    <span class="pointer-events-none mr-3 translate-x-2 whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-800 opacity-0 shadow-lg ring-1 ring-gray-200 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
+        Chat with us
+    </span>
+
+    {{-- Icon --}}
+    <span class="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition duration-200 group-hover:scale-110 group-hover:bg-[#1ebe5b]">
+
+        <span class="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-30"></span>
+
+        <svg class="relative h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+
+    </span>
+
+</a>
+
+
 @push('scripts')
 
 <script>
@@ -1008,13 +1014,18 @@
             loop: true,
 
             autoplay: {
-                delay: 5000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
 
             navigation: {
                 nextEl: '.hero-next',
                 prevEl: '.hero-prev',
+            },
+
+            pagination: {
+                el: '.hero-pagination',
+                clickable: true,
             },
 
             effect: 'slide',

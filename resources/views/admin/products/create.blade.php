@@ -58,7 +58,119 @@
                 <textarea name="description" rows="5" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">{{ old('description') }}</textarea>
             </div>
 
-            <div class="grid gap-5 md:grid-cols-3">
+            <div
+                x-data="{
+                    specs: [{ key: '', value: '' }],
+                    async importCsv(event) {
+                        const file = event.target.files[0];
+                        if (!file) return;
+                        let rows = await window.readCsvFile(file);
+                        if (rows.length && /^(key|title)$/i.test(rows[0][0] || '') && /^value$/i.test(rows[0][1] || '')) {
+                            rows = rows.slice(1);
+                        }
+                        const parsed = rows.filter((r) => r[0]).map((r) => ({ key: r[0] || '', value: r[1] || '' }));
+                        if (!parsed.length) return;
+                        const isEmpty = this.specs.length === 1 && !this.specs[0].key && !this.specs[0].value;
+                        this.specs = isEmpty ? parsed : [...this.specs, ...parsed];
+                        event.target.value = '';
+                    },
+                }"
+            >
+                <label class="mb-1 block text-sm font-medium text-slate-700">Specifications</label>
+                <p class="mb-3 text-xs text-slate-500">Shown as a spec table on the product page (e.g. Screen Size &rarr; 55").</p>
+
+                <div class="mb-3 flex flex-wrap items-center gap-3 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-3">
+                    <label class="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-3 py-1.5 text-sm font-medium text-slate-700 ring-1 ring-slate-300 hover:bg-slate-100">
+                        <i data-lucide="upload" class="h-4 w-4"></i>
+                        Upload CSV
+                        <input type="file" accept=".csv" class="hidden" @change="importCsv($event)">
+                    </label>
+                    <a href="data:text/csv;charset=utf-8,Screen%20Size,55%20inch%0AResolution,4K%20Ultra%20HD%0ARefresh%20Rate,120Hz" download="specifications-template.csv" class="text-xs font-medium text-slate-500 underline hover:text-slate-700">
+                        Download sample CSV
+                    </a>
+                    <span class="text-xs text-slate-400">Format: Title,Value &mdash; one per line.</span>
+                </div>
+
+                <div class="space-y-2">
+                    <template x-for="(spec, index) in specs" :key="index">
+                        <div class="flex gap-2">
+                            <input type="text" :name="`specifications[${index}][key]`" x-model="spec.key" placeholder="Screen Size" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
+                            <input type="text" :name="`specifications[${index}][value]`" x-model="spec.value" placeholder="55 inch" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
+                            <button type="button" @click="specs.length > 1 && specs.splice(index, 1)" class="shrink-0 rounded-lg px-3 text-lg leading-none text-slate-400 hover:bg-red-50 hover:text-red-600" title="Remove">
+                                &times;
+                            </button>
+                        </div>
+                    </template>
+                </div>
+
+                <button type="button" @click="specs.push({ key: '', value: '' })" class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+                    <i data-lucide="plus" class="h-4 w-4"></i>
+                    Add Specification
+                </button>
+            </div>
+
+            <div
+                x-data="{
+                    features: [{ icon: 'sparkles', title: '', description: '' }],
+                    validIcons: {{ \Illuminate\Support\Js::from(array_keys($featureIcons)) }},
+                    async importCsv(event) {
+                        const file = event.target.files[0];
+                        if (!file) return;
+                        let rows = await window.readCsvFile(file);
+                        if (rows.length && /^icon$/i.test(rows[0][0] || '') && /^title$/i.test(rows[0][1] || '')) {
+                            rows = rows.slice(1);
+                        }
+                        const parsed = rows.filter((r) => r[1]).map((r) => ({
+                            icon: this.validIcons.includes((r[0] || '').toLowerCase().trim()) ? r[0].toLowerCase().trim() : 'sparkles',
+                            title: r[1] || '',
+                            description: r[2] || '',
+                        }));
+                        if (!parsed.length) return;
+                        const isEmpty = this.features.length === 1 && !this.features[0].title;
+                        this.features = isEmpty ? parsed : [...this.features, ...parsed];
+                        event.target.value = '';
+                    },
+                }"
+            >
+                <label class="mb-1 block text-sm font-medium text-slate-700">Key Features</label>
+                <p class="mb-3 text-xs text-slate-500">Marketing highlights shown as feature cards on the product page (e.g. Dolby Atmos Sound &mdash; Immersive audio with deep, powerful bass).</p>
+
+                <div class="mb-3 flex flex-wrap items-center gap-3 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-3">
+                    <label class="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-3 py-1.5 text-sm font-medium text-slate-700 ring-1 ring-slate-300 hover:bg-slate-100">
+                        <i data-lucide="upload" class="h-4 w-4"></i>
+                        Upload CSV
+                        <input type="file" accept=".csv" class="hidden" @change="importCsv($event)">
+                    </label>
+                    <a href="data:text/csv;charset=utf-8,icon,title,description%0Aeye,4K%20Ultra%20HD%20Picture,Stunning%20clarity%20with%20vibrant%20colours%0Avolume-2,Dolby%20Atmos%20Sound,Rich%20theatre-like%20sound%20built%20in%0Awifi,Smart%20Connectivity,Built-in%20Wi-Fi%20and%20screen%20mirroring" download="features-template.csv" class="text-xs font-medium text-slate-500 underline hover:text-slate-700">
+                        Download sample CSV
+                    </a>
+                    <span class="text-xs text-slate-400">Format: icon,title,description &mdash; icon is optional (leave blank for default).</span>
+                </div>
+
+                <div class="space-y-3">
+                    <template x-for="(feature, index) in features" :key="index">
+                        <div class="grid gap-2 rounded-lg border border-slate-200 p-3 sm:grid-cols-[140px_1fr_1fr_auto]">
+                            <select :name="`features[${index}][icon]`" x-model="feature.icon" class="rounded-lg border border-slate-300 px-2 py-2 text-sm focus:border-slate-500 focus:outline-none">
+                                @foreach ($featureIcons as $iconValue => $iconLabel)
+                                    <option value="{{ $iconValue }}">{{ $iconLabel }}</option>
+                                @endforeach
+                            </select>
+                            <input type="text" :name="`features[${index}][title]`" x-model="feature.title" placeholder="Dolby Atmos Sound" class="rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none">
+                            <input type="text" :name="`features[${index}][description]`" x-model="feature.description" placeholder="Immersive audio with deep, powerful bass" class="rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none">
+                            <button type="button" @click="features.length > 1 && features.splice(index, 1)" class="shrink-0 rounded-lg px-3 text-lg leading-none text-slate-400 hover:bg-red-50 hover:text-red-600" title="Remove">
+                                &times;
+                            </button>
+                        </div>
+                    </template>
+                </div>
+
+                <button type="button" @click="features.push({ icon: 'sparkles', title: '', description: '' })" class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 hover:text-slate-900">
+                    <i data-lucide="plus" class="h-4 w-4"></i>
+                    Add Feature
+                </button>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                 <div>
                     <label class="mb-1 block text-sm font-medium text-slate-700">Price</label>
                     <input type="number" step="0.01" name="price" value="{{ old('price') }}" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none" required>
@@ -67,6 +179,11 @@
                 <div>
                     <label class="mb-1 block text-sm font-medium text-slate-700">Sale Price</label>
                     <input type="number" step="0.01" name="sale_price" value="{{ old('sale_price') }}" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="mb-1 block text-sm font-medium text-slate-700">Price Unit</label>
+                    <input type="text" name="price_unit" value="{{ old('price_unit') }}" placeholder="Blank = per piece, or e.g. sq ft" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">
                 </div>
 
                 <div>
@@ -114,6 +231,60 @@
                 <label class="mb-1 block text-sm font-medium text-slate-700">Meta Description</label>
                 <textarea name="meta_description" rows="3" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-slate-500 focus:outline-none">{{ old('meta_description') }}</textarea>
             </div>
+
+            @if ($attributes->isNotEmpty())
+
+                <div>
+                    <label class="mb-2 block text-sm font-medium text-slate-700">Attributes</label>
+                    <p class="mb-3 text-xs text-slate-500">Select every value that applies to this product (e.g. Size: 55").</p>
+
+                    <div class="grid gap-4 rounded-lg border border-slate-200 p-4 sm:grid-cols-2">
+
+                        @foreach ($attributes as $attribute)
+
+                            <div>
+                                <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                    {{ $attribute->name }}
+                                </p>
+
+                                @if ($attribute->values->isEmpty())
+
+                                    <p class="text-xs text-slate-400">No values yet.</p>
+
+                                @else
+
+                                    <div class="flex flex-wrap gap-2">
+
+                                        @foreach ($attribute->values as $value)
+
+                                            <label
+                                                x-data="{ checked: {{ in_array($value->id, old('attribute_values', [])) ? 'true' : 'false' }} }"
+                                                :style="checked ? 'background-color:#0f172a;border-color:#0f172a;color:#fff' : 'background-color:transparent;border-color:#cbd5e1;color:#334155'"
+                                                class="inline-flex cursor-pointer items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition"
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    name="attribute_values[]"
+                                                    value="{{ $value->id }}"
+                                                    x-model="checked"
+                                                    class="hidden"
+                                                >
+                                                {{ $value->value }}
+                                            </label>
+
+                                        @endforeach
+
+                                    </div>
+
+                                @endif
+                            </div>
+
+                        @endforeach
+
+                    </div>
+                </div>
+
+            @endif
 
             <div>
                 <label class="mb-1 block text-sm font-medium text-slate-700">Product Images</label>

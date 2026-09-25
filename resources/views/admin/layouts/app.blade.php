@@ -133,10 +133,53 @@
             </a>
 
 
+            <a
+                href="{{ route('admin.attributes.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="sliders-horizontal" class="h-5 w-5"></i>
+
+                <span>
+                    Attributes
+                </span>
+            </a>
+
+
             <!-- Sales -->
             <p class="mb-3 mt-8 px-3 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Sales
             </p>
+
+            <a
+                href="{{ route('admin.demo-requests.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="calendar-check" class="h-5 w-5"></i>
+
+                <span class="flex-1">
+                    Demo Requests
+                </span>
+
+                @if ($unreadDemoRequestsCount > 0)
+
+                    <span class="flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-red-500 px-1.5 text-xs font-semibold text-white">
+                        {{ $unreadDemoRequestsCount > 99 ? '99+' : $unreadDemoRequestsCount }}
+                    </span>
+
+                @endif
+
+            </a>
+
 
             <a
                 href="#"
@@ -211,13 +254,47 @@
             </a>
 
 
+            <a
+                href="{{ route('admin.catalogues.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="file-text" class="h-5 w-5"></i>
+
+                <span>
+                    Catalogues
+                </span>
+            </a>
+
+
+            <a
+                href="{{ route('admin.led-modules.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="grid-3x3" class="h-5 w-5"></i>
+
+                <span>
+                    LED Modules
+                </span>
+            </a>
+
+
             <!-- Settings -->
             <p class="mb-3 mt-8 px-3 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 System
             </p>
 
             <a
-                href="#"
+                href="{{ route('admin.settings.edit') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
                     px-3 py-3 text-sm font-medium

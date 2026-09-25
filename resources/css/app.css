@@ -3,7 +3,172 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+/*
+ * Yara brand theme — taken from the B2B Catalogue 2026.
+ * Crimson (#A51D35) + logo red (#ED1C24) on charcoal (#221F1F) and cool light greys.
+ * The gray scale is remapped to the catalogue's neutrals so every existing gray-* utility follows the brand.
+ */
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-brand-50: #fcf2f4;
+    --color-brand-100: #f9e2e6;
+    --color-brand-200: #f2c3cc;
+    --color-brand-300: #e693a3;
+    --color-brand-400: #e24a63;
+    --color-brand-500: #c4213f;
+    --color-brand-600: #a51d35;
+    --color-brand-700: #8a1829;
+    --color-brand-800: #721524;
+    --color-brand-900: #5c1420;
+    --color-brand-950: #33070f;
+    --color-brand-red: #ed1c24;
+
+    --color-gray-50: #f6f6f7;
+    --color-gray-100: #eeeff0;
+    --color-gray-200: #e6e7e8;
+    --color-gray-300: #d1d2d4;
+    --color-gray-400: #a7a9ac;
+    --color-gray-500: #7f8184;
+    --color-gray-600: #5d5f62;
+    --color-gray-700: #414042;
+    --color-gray-800: #2e2b2c;
+    --color-gray-900: #242222;
+    --color-gray-950: #1b1919;
+}
+
+/* ---------------------------------------------------------------
+ * Brochure motifs
+ * ------------------------------------------------------------- */
+
+/* Soft grey page wash used on every catalogue page */
+.brand-page {
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, #f6f6f7 55%, #e6e7e8 100%);
+    background-attachment: fixed;
+}
+
+/* Red halftone dots from the catalogue back cover. Put on a relative, overflow-hidden parent. */
+.brand-dots {
+    position: relative;
+    isolation: isolate;
+}
+
+.brand-dots::before,
+.brand-dots::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    width: 42rem;
+    height: 42rem;
+    background-image: radial-gradient(circle, var(--color-brand-600) 1.6px, transparent 2.2px);
+    background-size: 12px 12px;
+}
+
+.brand-dots::before {
+    top: -14rem;
+    right: -14rem;
+    mask-image: radial-gradient(circle at center, #000 0%, rgb(0 0 0 / 0.55) 35%, transparent 68%);
+}
+
+.brand-dots::after {
+    bottom: -16rem;
+    left: -16rem;
+    background-image: radial-gradient(circle, var(--color-brand-red) 1.4px, transparent 2px);
+    mask-image: radial-gradient(circle at center, rgb(0 0 0 / 0.7) 0%, rgb(0 0 0 / 0.3) 35%, transparent 65%);
+}
+
+/* Inner page banner: showroom photo from the catalogue cover under a charcoal → crimson wash */
+.brand-banner {
+    background-color: var(--color-gray-950);
+    background-image:
+        linear-gradient(100deg, rgb(27 25 25 / 0.96) 0%, rgb(27 25 25 / 0.86) 45%, rgb(165 29 53 / 0.72) 100%),
+        url('/images/brand/hero-showroom.jpg');
+    background-size: cover;
+    background-position: center 40%;
+}
+
+/* Crimson strip at the bottom of banners, like the catalogue page footers */
+.brand-banner::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-brand-600), var(--color-brand-red));
+}
+
+/* "—— Heading" eyebrow: short red rule before the label */
+.brand-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-brand-600);
+}
+
+.brand-eyebrow::before {
+    content: '';
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 9999px;
+    background-color: currentColor;
+}
+
+/* Angled crimson label, like "LED Wall Displays" tabs in the catalogue */
+.brand-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.4rem 0.4rem 1rem;
+    background: var(--color-brand-600);
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 0.9rem) 100%, 0 100%);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-reveal].is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Hero banner slideshow pagination — pill-shaped active dot */
+.hero-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 2rem !important;
+    left: auto !important;
+    width: auto !important;
+    text-align: right !important;
+}
+
+.hero-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 !important;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.45);
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-pagination .swiper-pagination-bullet-active {
+    width: 28px;
+    background-color: var(--color-brand-red);
 }

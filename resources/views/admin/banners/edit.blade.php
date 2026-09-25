@@ -31,6 +31,7 @@
             <div>
                 <label class="mb-1 block text-sm font-medium text-slate-700">Image</label>
                 <input type="file" name="image" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">This displays as a full-screen background banner. Recommended: at least 1920&times;1080px, landscape orientation.</p>
                 <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->title }}" class="mt-3 h-24 w-40 rounded-lg object-cover">
                 @error('image')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
