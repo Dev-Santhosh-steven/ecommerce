@@ -34,7 +34,7 @@
 {{-- =========================================================
      CATALOGUE GRID
 ========================================================= --}}
-<section class="bg-white py-14" data-reveal>
+<section class="bg-gray-50 py-14">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -53,55 +53,55 @@
 
         @else
 
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-                @foreach ($catalogues as $catalogue)
+                @foreach ($catalogues as $i => $catalogue)
 
-                    <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <article data-reveal style="--reveal-delay: {{ ($i % 4) * 90 }}ms"
+                             class="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1.5 hover:border-brand-200 hover:shadow-2xl">
 
                         {{-- Cover --}}
-                        <div class="relative flex aspect-[3/4] items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700">
+                        <a href="{{ asset('storage/' . $catalogue->file) }}" target="_blank" rel="noopener noreferrer"
+                           class="relative block aspect-[3/4] overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700" title="View {{ $catalogue->title }}">
 
-                            <i data-lucide="file-text" class="h-16 w-16 text-white/25"></i>
+                            @if ($catalogue->coverUrl())
+                                <img src="{{ $catalogue->coverUrl() }}" alt="{{ $catalogue->title }}" loading="lazy"
+                                     class="h-full w-full object-cover object-top transition duration-700 group-hover:scale-105">
+                            @else
+                                <span class="flex h-full w-full items-center justify-center">
+                                    <i data-lucide="file-text" class="h-16 w-16 text-white/25"></i>
+                                </span>
+                            @endif
 
-                            <span class="absolute right-3 top-3 rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
-                                PDF
+                            <span class="absolute right-3 top-3 rounded-full bg-gray-950/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">PDF</span>
+
+                            <span class="absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-center gap-2 bg-gradient-to-t from-gray-950/90 to-transparent pb-5 pt-12 text-sm font-semibold text-white transition duration-300 group-hover:translate-y-0">
+                                <i data-lucide="eye" class="h-4 w-4"></i>
+                                Open catalogue
                             </span>
 
-                            {{-- Hover overlay --}}
-                            <div class="absolute inset-0 flex items-center justify-center gap-3 bg-gray-950/70 opacity-0 backdrop-blur-sm transition duration-300 group-hover:opacity-100">
+                        </a>
 
-                                <a
-                                    href="{{ asset('storage/' . $catalogue->file) }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="flex h-11 w-11 -translate-y-2 items-center justify-center rounded-full bg-white text-gray-950 opacity-0 shadow-lg transition duration-300 delay-75 hover:bg-gray-100 group-hover:translate-y-0 group-hover:opacity-100"
-                                    title="View catalogue"
-                                >
-                                    <i data-lucide="eye" class="h-5 w-5"></i>
+                        {{-- Title + actions (always visible, also on phones) --}}
+                        <div class="flex flex-1 flex-col p-5">
+                            <h3 class="line-clamp-2 font-semibold leading-snug text-gray-900">{{ $catalogue->title }}</h3>
+                            @if ($catalogue->sizeLabel())
+                                <p class="mt-1 text-xs text-gray-400">{{ $catalogue->sizeLabel() }}</p>
+                            @endif
+
+                            <div class="mt-auto flex gap-2 pt-4">
+                                <a href="{{ asset('storage/' . $catalogue->file) }}" target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 transition hover:border-gray-300 hover:bg-gray-50">
+                                    <i data-lucide="eye" class="h-4 w-4"></i> View
                                 </a>
-
-                                <a
-                                    href="{{ asset('storage/' . $catalogue->file) }}"
-                                    download
-                                    class="flex h-11 w-11 -translate-y-2 items-center justify-center rounded-full bg-white text-gray-950 opacity-0 shadow-lg transition duration-300 delay-150 hover:bg-gray-100 group-hover:translate-y-0 group-hover:opacity-100"
-                                    title="Download catalogue"
-                                >
-                                    <i data-lucide="download" class="h-5 w-5"></i>
+                                <a href="{{ asset('storage/' . $catalogue->file) }}" download
+                                   class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-brand-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-brand-700">
+                                    <i data-lucide="download" class="h-4 w-4"></i> Download
                                 </a>
-
                             </div>
-
                         </div>
 
-                        {{-- Title --}}
-                        <div class="p-4">
-                            <h3 class="line-clamp-2 text-sm font-semibold text-gray-900">
-                                {{ $catalogue->title }}
-                            </h3>
-                        </div>
-
-                    </div>
+                    </article>
 
                 @endforeach
 

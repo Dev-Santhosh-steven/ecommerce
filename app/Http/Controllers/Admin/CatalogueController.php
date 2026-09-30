@@ -35,7 +35,8 @@ class CatalogueController extends Controller
     {
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'file' => ['required', 'file', 'mimes:pdf', 'max:20480'],
+            'file' => ['required', 'file', 'mimes:pdf', 'max:25600'],
+            'cover' => ['nullable', 'image', 'max:4096'],
             'status' => ['nullable', 'boolean'],
             'sort_order' => ['nullable', 'integer', 'min:0'],
         ]);
@@ -45,6 +46,7 @@ class CatalogueController extends Controller
         Catalogue::create([
             'title' => $validated['title'],
             'file' => $filePath,
+            'cover' => $request->hasFile('cover') ? $request->file('cover')->store('catalogues/covers', 'public') : null,
             'status' => $request->boolean('status'),
             'sort_order' => $validated['sort_order'] ?? 0,
         ]);
@@ -71,7 +73,8 @@ class CatalogueController extends Controller
     {
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'file' => ['nullable', 'file', 'mimes:pdf', 'max:20480'],
+            'file' => ['nullable', 'file', 'mimes:pdf', 'max:25600'],
+            'cover' => ['nullable', 'image', 'max:4096'],
             'status' => ['nullable', 'boolean'],
             'sort_order' => ['nullable', 'integer', 'min:0'],
         ]);
@@ -82,9 +85,16 @@ class CatalogueController extends Controller
             $filePath = $request->file('file')->store('catalogues', 'public');
         }
 
+        $cover = $catalogue->cover;
+
+        if ($request->hasFile('cover')) {
+            $cover = $request->file('cover')->store('catalogues/covers', 'public');
+        }
+
         $catalogue->update([
             'title' => $validated['title'],
             'file' => $filePath,
+            'cover' => $cover,
             'status' => $request->boolean('status'),
             'sort_order' => $validated['sort_order'] ?? 0,
         ]);

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Catalogue extends Model
 {
@@ -12,6 +13,7 @@ class Catalogue extends Model
     protected $fillable = [
         'title',
         'file',
+        'cover',
         'sort_order',
         'status',
     ];
@@ -23,5 +25,20 @@ class Catalogue extends Model
     public function scopeActive($query)
     {
         return $query->where('status', true)->orderBy('sort_order');
+    }
+
+    public function coverUrl(): ?string
+    {
+        return $this->cover ? asset('storage/' . $this->cover) : null;
+    }
+
+    /** "PDF · 3.6 MB" (null when the file is missing). */
+    public function sizeLabel(): ?string
+    {
+        if (! $this->file || ! Storage::disk('public')->exists($this->file)) {
+            return null;
+        }
+
+        return 'PDF · ' . round(Storage::disk('public')->size($this->file) / 1048576, 1) . ' MB';
     }
 }

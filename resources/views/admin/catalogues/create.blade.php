@@ -22,8 +22,22 @@
             <div>
                 <label class="mb-1 block text-sm font-medium text-slate-700">PDF File</label>
                 <input type="file" name="file" accept="application/pdf" class="w-full rounded-lg border border-slate-300 px-3 py-2" required>
-                <p class="mt-1 text-xs text-slate-500">PDF only, up to 20MB.</p>
+                <p class="mt-1 text-xs text-slate-500">PDF only, up to 25MB.</p>
                 @error('file')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Cover image (optional)</label>
+                <input type="file" name="cover" accept="image/*" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">Shown on the Catalogue page, e.g. a picture of the first page. JPG or PNG, up to 4MB.</p>
+                @isset($catalogue)
+                    @if ($catalogue->coverUrl())
+                        <img src="{{ $catalogue->coverUrl() }}" alt="" class="mt-2 h-32 w-auto rounded-lg ring-1 ring-slate-200">
+                    @endif
+                @endisset
+                @error('cover')
                     <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
