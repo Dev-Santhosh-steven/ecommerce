@@ -12,10 +12,11 @@ class SpecSheet
     /** Keys never shown to shoppers. */
     private const HIDDEN = ['model number', 'model'];
 
-    /** Spec labels worth a headline tile, in order of preference. */
+    /** Spec labels worth a headline tile, in order of preference (including the specification sheets' own labels). */
     private const HEADLINE = [
-        'Screen Size', 'Wash Capacity', 'Capacity', 'Pixel Pitch', 'Resolution', 'Energy Rating', 'Type', 'Display Technology',
-        'ISEER', 'Brightness', 'Spin Speed', 'Refresh Rate', 'Audio Output', 'Air Circulation', 'Bezel-to-Bezel', 'Operating System', 'Motor', 'RAM',
+        'Screen Size', 'Wash Capacity', 'Rated wash capacity (kg)', 'Capacity', 'Pixel Pitch', 'Resolution', 'Energy Rating', 'Energy Star',
+        'Type', 'Display Technology', 'ISEER', 'Brightness', 'Spin Speed', 'Refresh Rate', 'Audio Output', 'Maximum Audio Output',
+        'Out Put Power', 'Air Circulation', 'Water Level Selection', 'Bezel-to-Bezel', 'Operating System', 'OS', 'Motor', 'RAM',
     ];
 
     public static function visible(?array $specs): array

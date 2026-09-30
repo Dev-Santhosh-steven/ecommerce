@@ -8,10 +8,10 @@ use Illuminate\Database\Seeder;
 /**
  * Specifications from the Yara B2B Catalogue (March 2026), "Product Specifications" pages.
  *
- * Merged into the products by SKU: catalogue values replace the same spec rows, new rows are added,
- * other rows (orientation, uses, branding…) are kept, and "… on request" placeholders are dropped
- * once the catalogue gives the real values. Size-specific values are only applied where the catalogue
- * lists that exact size.
+ * Products the catalogue lists by size show only the catalogue's specifications (plus their screen
+ * size, and for LED walls the pixel pitch and indoor / outdoor application, which the catalogue gives
+ * as column and section headings). Sizes the catalogue doesn't list (e.g. the 85" and 100" panels)
+ * keep their own specifications, with the catalogue's common values merged in.
  *
  * Run after the product seeders (their updateOrCreate resets specifications):
  *
@@ -46,7 +46,7 @@ class CatalogueSpecSeeder extends Seeder
             'Touch Life' => '> 60 million touches in the same spot',
             'Writing Surface' => '4 mm anti-glare glass',
             'Processor' => 'Quad-core ARM Cortex-A73',
-            'Operating System' => 'Android 14 (Windows / Linux via OPS)',
+            'Operating System' => 'Android 14',
             'RAM / Storage' => '8 GB / 128 GB, DDR4',
             'Camera' => '48 MP AI camera with 8-array mic (optional)',
             'Wi-Fi / Bluetooth' => '2.4G + 5G / v5.2',
@@ -80,7 +80,7 @@ class CatalogueSpecSeeder extends Seeder
                 ];
             }
 
-            $this->merge("YE-IFP-{$inch}", $set);
+            $this->merge("YE-IFP-{$inch}", $set, [], isset($sizes[$inch]));
         }
     }
 
@@ -126,7 +126,7 @@ class CatalogueSpecSeeder extends Seeder
                 $set['Technical Data'] = 'Dimensions, brightness & power on request';
             }
 
-            $this->merge("YE-TST-{$inch}", $set, $drop);
+            $this->merge("YE-TST-{$inch}", $set, $drop, isset($sizes[$inch]));
         }
     }
 
@@ -151,12 +151,12 @@ class CatalogueSpecSeeder extends Seeder
             'RAM / Storage' => '1 GB / 8 GB',
             'Dimensions' => '1470 × 160 × 535 mm',
             'Gross Weight' => '26.9 kg',
-        ], ['Technical Data']);
+        ], ['Technical Data'], true);
 
         $this->merge('YE-AST-43', $common + [
             'Resolution' => '1080 × 1920',
             'RAM / Storage' => '2 GB / 16 GB',
-        ], ['Technical Data']);
+        ], ['Technical Data'], true);
     }
 
     private function commercialDisplays(): void
@@ -170,7 +170,8 @@ class CatalogueSpecSeeder extends Seeder
             'Viewing Angle' => '±178° / ±178°',
             'HDR' => 'Supported',
             'Speakers' => '2 × 5 W (8 Ω)',
-            'Media Player' => 'Built-in Android 14, 4 GB DDR / 32 GB',
+            'Operating System' => 'Android 14',
+            'RAM / ROM' => '4 GB DDR / 32 GB',
             'Wi-Fi / Bluetooth' => 'Wi-Fi · Bluetooth (optional)',
             'Inputs' => 'HDMI, RJ45 × 1, TF card × 1, USB 3.0 × 1, AUX × 1, USB OTG × 1',
             'SIM Card Slot' => 'Optional',
@@ -208,7 +209,7 @@ class CatalogueSpecSeeder extends Seeder
                 $drop = ['Technical Data'];
             }
 
-            $this->merge("YE-CD-{$inch}", $set, $drop);
+            $this->merge("YE-CD-{$inch}", $set, $drop, isset($sizes[$inch]));
         }
     }
 
@@ -230,7 +231,7 @@ class CatalogueSpecSeeder extends Seeder
             'Power Requirement' => 'AC 100–240 V, 50/60 Hz',
             'Dimensions' => '850 × 160 × 580 mm',
             'Gross Weight' => '26.9 kg',
-        ], ['Technical Data']);
+        ], ['Technical Data'], true);
     }
 
     private function printingKiosk(): void
@@ -246,7 +247,7 @@ class CatalogueSpecSeeder extends Seeder
             'Communication' => 'RJ45 × 1, USB 2.0 × 2',
             'Kiosk Cabinet' => 'Moisture-proof, anti-rust, anti-acid, static-free',
             'Power Supply' => '100–240 V AC, 50–60 Hz',
-        ], ['Technical Data']);
+        ], ['Technical Data'], true);
     }
 
     private function digitalPodium(): void
@@ -262,7 +263,7 @@ class CatalogueSpecSeeder extends Seeder
             'Microphones' => '2 × gooseneck microphones',
             'Height' => '1130–1326 mm, electrically adjustable (1–1.2 m travel)',
             'Battery' => 'Optional 13,000 mAh (about 5 hours backup)',
-        ], ['Android Configuration']);
+        ], ['Android Configuration'], true);
     }
 
     private function tableTopStandee(): void
@@ -282,7 +283,7 @@ class CatalogueSpecSeeder extends Seeder
             'Ports' => 'Wi-Fi, LAN, HDMI, USB 2.0 × 2, 3.5 mm earphone out',
             'Audio' => '2 W (max)',
             'Battery' => 'Optional 6,000 mAh',
-        ], ['Technical Data']);
+        ], ['Technical Data'], true);
     }
 
     /**
@@ -305,13 +306,13 @@ class CatalogueSpecSeeder extends Seeder
             'Input Voltage' => '220 V ±10%',
         ];
 
-        $indoor = $shared + [
+        $indoor = ['Application' => 'Indoor'] + $shared + [
             'Brightness' => '500 cd/m²',
             'Scan Mode' => '1/43',
             'Power Consumption' => 'Max 300 W/m² · Avg 120 W/m²',
         ];
 
-        $outdoor = $shared + [
+        $outdoor = ['Application' => 'Outdoor'] + $shared + [
             'Brightness' => '5,000 cd/m²',
             'Scan Mode' => '1/20',
             'Power Consumption' => 'Max 600 W/m² · Avg 270 W/m²',
@@ -332,14 +333,16 @@ class CatalogueSpecSeeder extends Seeder
                 $set['Module Resolution'] = $resolution;
             }
 
-            $this->merge($sku, $set);
+            $this->merge($sku, $set, [], true);
         }
     }
 
     /**
-     * Replace / add spec rows (existing rows keep their position) and drop the listed rows.
+     * $only: the product shows only the catalogue's rows (plus its screen size / pixel pitch, which the
+     * catalogue gives as headings). Otherwise the rows are merged in: existing rows keep their position,
+     * and the $drop rows are removed.
      */
-    private function merge(string $sku, array $set, array $drop = []): void
+    private function merge(string $sku, array $set, array $drop = [], bool $only = false): void
     {
         $product = Product::where('sku', $sku)->first();
 
@@ -352,8 +355,15 @@ class CatalogueSpecSeeder extends Seeder
         $specs = $product->specifications ?: [];
 
         // The LED set is for walls built on the 320 × 160 mm module only.
-        if (str_starts_with($sku, 'YE-LED-') && ($specs['Module Size'] ?? '') !== '320 × 160 mm') {
+        if (str_starts_with($sku, 'YE-LED-') && ! in_array($specs['Module Size'] ?? '', ['320 × 160 mm'], true)) {
             $this->command?->warn("Skipped {$sku}: different module ({$specs['Module Size']}).");
+
+            return;
+        }
+
+        if ($only) {
+            $headings = array_intersect_key($specs, array_flip(['Screen Size', 'Pixel Pitch']));
+            $product->update(['specifications' => $headings + $set]);
 
             return;
         }
