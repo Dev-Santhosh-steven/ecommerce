@@ -1,13 +1,19 @@
 import Alpine from 'alpinejs';
 import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, FreeMode, Mousewheel, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { createIcons, icons } from 'lucide';
+import { initMotion } from './motion';
+import './home-audio';
+import './video-walls';
+import './shop';
 
 import 'swiper/css';
+import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-Swiper.use([Autoplay, Navigation, Pagination]);
+Swiper.use([Autoplay, FreeMode, Mousewheel, Navigation, Pagination, Scrollbar]);
 
 window.Alpine = Alpine;
 window.Swiper = Swiper;
@@ -16,19 +22,11 @@ Alpine.start();
 
 createIcons({ icons });
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    },
-    { threshold: 0.15, rootMargin: '0px 0px -80px 0px' },
-);
+// Re-draw icons inside content Alpine renders later (mini cart, toasts).
+window.refreshIcons = () => createIcons({ icons });
 
-document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
+// Scroll reveals, header scroll state, reading progress, back-to-top.
+initMotion();
 
 /**
  * Minimal CSV line parser (handles quoted fields containing commas).

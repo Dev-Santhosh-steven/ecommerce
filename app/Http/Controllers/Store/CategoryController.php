@@ -7,6 +7,7 @@ use App\Models\Attribute;
 use App\Models\AttributeValue;
 use App\Models\Category;
 use App\Models\LedModule;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -32,7 +33,10 @@ class CategoryController extends Controller
         $priceMin = is_numeric($request->input('price_min')) ? (float) $request->input('price_min') : null;
         $priceMax = is_numeric($request->input('price_max')) ? (float) $request->input('price_max') : null;
 
-        $products = $category->products()
+        // A parent category lists the products of all its sub-categories too.
+        $categoryIds = $this->descendantIds($category);
+
+        $products = Product::whereIn('category_id', $categoryIds)
             ->where('status', true)
             ->with('primaryImage');
 
@@ -69,24 +73,24 @@ class CategoryController extends Controller
             ->appends($request->query());
 
         // Attributes/values that are actually used by active products in this category.
-        $filterAttributes = Attribute::whereHas('values.products', function ($query) use ($category) {
-                $query->where('category_id', $category->id)->where('status', true);
+        $filterAttributes = Attribute::whereHas('values.products', function ($query) use ($categoryIds) {
+                $query->whereIn('category_id', $categoryIds)->where('status', true);
             })
-            ->with(['values' => function ($query) use ($category) {
-                $query->whereHas('products', function ($q) use ($category) {
-                    $q->where('category_id', $category->id)->where('status', true);
+            ->with(['values' => function ($query) use ($categoryIds) {
+                $query->whereHas('products', function ($q) use ($categoryIds) {
+                    $q->whereIn('category_id', $categoryIds)->where('status', true);
                 })->orderBy('sort_order');
             }])
             ->orderBy('sort_order')
             ->get();
 
-        $priceBounds = $category->products()
+        $priceBounds = Product::whereIn('category_id', $categoryIds)
             ->where('status', true)
             ->selectRaw('MIN(COALESCE(sale_price, price)) as min_price, MAX(COALESCE(sale_price, price)) as max_price')
             ->first();
 
         $hasLedCalculator = LedModule::where('is_active', true)
-            ->whereHas('product', fn ($query) => $query->where('category_id', $category->id))
+            ->whereHas('product', fn ($query) => $query->whereIn('category_id', $categoryIds))
             ->exists();
 
         return view('store.category', compact(
@@ -101,5 +105,21 @@ class CategoryController extends Controller
             'sort',
             'selectedAttributeValues',
         ));
+    }
+
+    /**
+     * The category's own id plus every active sub-category below it.
+     */
+    private function descendantIds(Category $category): array
+    {
+        $ids = [$category->id];
+        $level = [$category->id];
+
+        while ($level) {
+            $level = Category::whereIn('parent_id', $level)->where('status', true)->pluck('id')->all();
+            $ids = array_merge($ids, $level);
+        }
+
+        return $ids;
     }
 }

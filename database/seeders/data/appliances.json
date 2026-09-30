@@ -1,0 +1,6498 @@
+{
+ "tv": [
+  {
+   "type": "tv",
+   "sku": "YE-TV-24NH22M",
+   "model": "24NH22M",
+   "category": "non-smart-tv",
+   "name": "Yara 24\" HD LED TV",
+   "mrp": 13900,
+   "inch": 24,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": false,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": null,
+   "rom": null,
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD LED TV",
+   "os": "",
+   "specs": {
+    "Screen Size": "24 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "196 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Non-smart (plug & play)",
+    "HDMI": "2",
+    "USB": "2",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Power Consumption": "45W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "550 × 80 × 325 mm",
+    "Box Dimensions": "605 × 115 × 380 mm",
+    "Net / Gross Weight": "2.2 kg / 2.9 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "usb",
+     "Plug & Play",
+     "Watch movies and play music from USB, and connect set-top boxes over 2 HDMI ports."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2."
+    ]
+   ],
+   "page": 1,
+   "short": "24\" HD LED TV with 20W stereo sound."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32NH21M",
+   "model": "32NH21M",
+   "category": "non-smart-tv",
+   "name": "Yara 32\" HD LED TV",
+   "mrp": 20900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": false,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": null,
+   "rom": null,
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD LED TV",
+   "os": "",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "170 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Non-smart (plug & play)",
+    "HDMI": "2",
+    "USB": "2",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "usb",
+     "Plug & Play",
+     "Watch movies and play music from USB, and connect set-top boxes over 2 HDMI ports."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2."
+    ]
+   ],
+   "page": 2,
+   "short": "32\" HD LED TV with 24W stereo sound."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH21B",
+   "model": "32SH21B",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Cloud OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": null,
+   "rom": "4 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "170 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "Storage": "4 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 3,
+   "short": "32\" HD Basic Smart TV with 24W stereo sound."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH22B",
+   "model": "32SH22B",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Prism OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": null,
+   "rom": "4 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Prism OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "220 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 9",
+    "Storage": "4 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, AirScreen",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 4,
+   "short": "32\" HD Basic Smart TV with 24W stereo sound."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH24B",
+   "model": "32SH24B",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Prism OS (Edition 2)",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "512 MB",
+   "rom": "4 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Prism OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "220 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 9",
+    "RAM": "512 MB",
+    "Storage": "4 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, AirScreen",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "512 MB RAM · 4 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 5,
+   "short": "32\" HD Basic Smart TV with 24W stereo sound, 512 MB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH21M",
+   "model": "32SH21M",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart LED TV · Android 9 · Cloud OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "170 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 3000:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 6,
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH22M",
+   "model": "32SH22M",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart LED TV · Android 9 · Cloud OS (Edition 2)",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "170 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 3000:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 7,
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH23M",
+   "model": "32SH23M",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart LED TV · Android 11 · GAIA OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "GAIA OS, Android 11",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "170 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "GAIA OS, Android 11",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 3000:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "GAIA OS, Android 11 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 8,
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH24M",
+   "model": "32SH24M",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart LED TV · Android 12 · Prism OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Prism OS, Android 12",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "270 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 12",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, AirScreen",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 12 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 9,
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH24N",
+   "model": "32SH24N",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart LED TV · Android 14 · Prism OS",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Prism OS, Android 14",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "270 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 14",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 10,
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SQ24N",
+   "model": "32SQ24N",
+   "category": "qled-tv",
+   "name": "Yara 32\" HD QLED Smart TV",
+   "mrp": 29900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Smart TV",
+   "os": "Prism OS, Android 14",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "QLED",
+    "Brightness": "270 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 14",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD QLED Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 11,
+   "short": "32\" HD QLED Smart TV with 24W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH24G",
+   "model": "32SH24G",
+   "category": "google-tv",
+   "name": "Yara 32\" HD Google TV",
+   "mrp": 29900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 24,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Google TV",
+   "os": "Google TV (Android 11)",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "270 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Google TV (Android 11)",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, ZEE5, Miracast",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV (Android 11) with Netflix, YouTube, Prime Video, ZEE5 and more."
+    ],
+    [
+     "volume-2",
+     "24W Stereo Sound",
+     "2×12W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi · Optical."
+    ]
+   ],
+   "page": 12,
+   "short": "32\" HD Google TV with 24W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-32SH21MV",
+   "model": "32SH21MV",
+   "category": "smart-tv",
+   "name": "Yara 32\" HD Smart Voice TV",
+   "mrp": 23900,
+   "inch": 32,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Albonsa OS, Android 9",
+   "specs": {
+    "Screen Size": "32 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "270 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Albonsa OS, Android 9",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "60W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "730 × 100 × 430 mm",
+    "Box Dimensions": "780 × 130 × 510 mm",
+    "Net / Gross Weight": "3.76 kg / 5.1 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Albonsa OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 13,
+   "short": "32\" HD Smart Voice TV with 20W stereo sound, 1 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-40SH21M",
+   "model": "40SH21M",
+   "category": "smart-tv",
+   "name": "Yara 40\" HD Smart LED TV",
+   "mrp": 34900,
+   "inch": 40,
+   "resolution": "HD",
+   "badge": [
+    "HD",
+    "HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "HD Smart TV",
+   "os": "Wisdom Share, Android 9",
+   "specs": {
+    "Screen Size": "40 inch",
+    "Resolution": "1280 × 720 (HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Wisdom Share, Android 9",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "884 × 95 × 510 mm",
+    "Box Dimensions": "970 × 150 × 615 mm",
+    "Net / Gross Weight": "6 kg / 7.6 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "HD Display",
+     "1280 × 720 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Wisdom Share, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 14,
+   "short": "40\" HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF22B",
+   "model": "43SF22B",
+   "category": "smart-tv",
+   "name": "Yara 43\" Full HD Basic Smart TV · Android 9 · Cloud OS",
+   "mrp": 34900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "512 MB",
+   "rom": "4 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "512 MB",
+    "Storage": "4 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "65W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "512 MB RAM · 4 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 15,
+   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF24B",
+   "model": "43SF24B",
+   "category": "smart-tv",
+   "name": "Yara 43\" Full HD Basic Smart TV · Android 12 · Prism OS",
+   "mrp": 34900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "512 MB",
+   "rom": "4 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Smart TV",
+   "os": "Prism OS, Android 12",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 12",
+    "RAM": "512 MB",
+    "Storage": "4 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 12 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "512 MB RAM · 4 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 16,
+   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF22M",
+   "model": "43SF22M",
+   "category": "smart-tv",
+   "name": "Yara 43\" Full HD Smart LED TV · Android 9 · Cloud OS",
+   "mrp": 38900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 17,
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF24M",
+   "model": "43SF24M",
+   "category": "smart-tv",
+   "name": "Yara 43\" Full HD Smart LED TV · Android 12 · Prism OS",
+   "mrp": 38900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Smart TV",
+   "os": "Prism OS, Android 12",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 12",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, AirScreen",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 12 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 18,
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF24N",
+   "model": "43SF24N",
+   "category": "smart-tv",
+   "name": "Yara 43\" Full HD Smart LED TV · Android 14 · Prism OS",
+   "mrp": 38900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Smart TV",
+   "os": "Prism OS, Android 14",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 14",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast, AirScreen",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 19,
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SQ24N",
+   "model": "43SQ24N",
+   "category": "qled-tv",
+   "name": "Yara 43\" Full HD QLED Smart TV",
+   "mrp": 49900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Smart TV",
+   "os": "Prism OS, Android 14",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "QLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 14",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "1 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast, AirScreen",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD QLED Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 1 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 20,
+   "short": "43\" Full HD QLED Smart TV with 20W stereo sound, 1 GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SF24G",
+   "model": "43SF24G",
+   "category": "google-tv",
+   "name": "Yara 43\" Full HD Google TV",
+   "mrp": 51900,
+   "inch": 43,
+   "resolution": "Full HD",
+   "badge": [
+    "FHD",
+    "FULL HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Full HD Google TV",
+   "os": "Google TV (Android 11)",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "1920 × 1080 (Full HD)",
+    "Display Technology": "DLED",
+    "Brightness": "230 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Google TV (Android 11)",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Miracast",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "Full HD Display",
+     "1920 × 1080 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV (Android 11) with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi · Optical."
+    ]
+   ],
+   "page": 21,
+   "short": "43\" Full HD Google TV with 20W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SU21MV",
+   "model": "43SU21MV",
+   "category": "smart-tv",
+   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 9 · Cloud OS",
+   "mrp": 51900,
+   "inch": 43,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 22,
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SU22MV",
+   "model": "43SU22MV",
+   "category": "smart-tv",
+   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 9 · Cloud OS (Edition 2)",
+   "mrp": 51900,
+   "inch": 43,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Cloud OS, Android 9",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Cloud OS, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Cloud OS, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 23,
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SU24MV",
+   "model": "43SU24MV",
+   "category": "smart-tv",
+   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 12 · Prism OS",
+   "mrp": 51900,
+   "inch": 43,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Prism OS, Android 12",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 12",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Google Play, AirScreen, EShare",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 12 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2."
+    ]
+   ],
+   "page": 24,
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-43SU24N",
+   "model": "43SU24N",
+   "category": "smart-tv",
+   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 14 · Prism OS",
+   "mrp": 51900,
+   "inch": 43,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": false,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Prism OS, Android 14",
+   "specs": {
+    "Screen Size": "43 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Stereo sound",
+    "Sound Modes": "Yes",
+    "Operating System": "Prism OS, Android 14",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Google Play, AirScreen, EShare",
+    "Power Consumption": "75W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "970 × 105 × 555 mm",
+    "Box Dimensions": "1070 × 130 × 660 mm",
+    "Net / Gross Weight": "6.72 kg / 8.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Prism OS, Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Stereo Sound",
+     "2×10W speakers with multiple sound modes."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2."
+    ]
+   ],
+   "page": 25,
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-50SU22B",
+   "model": "50SU22B",
+   "category": "smart-tv",
+   "name": "Yara 50\" 4K UHD Smart LED TV",
+   "mrp": 49900,
+   "inch": 50,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 20,
+   "ram": null,
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Wisdom Share, Android 9",
+   "specs": {
+    "Screen Size": "50 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Wisdom Share, Android 9",
+    "Storage": "8 GB",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "2",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5",
+    "Power Consumption": "110W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1110 × 75 × 645 mm",
+    "Box Dimensions": "1220 × 150 × 765 mm",
+    "Net / Gross Weight": "9.6 kg / 14.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Wisdom Share, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 27,
+   "short": "50\" 4K UHD Smart LED TV with 20W Dolby Audio."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-50SU22MV",
+   "model": "50SU22MV",
+   "category": "smart-tv",
+   "name": "Yara 50\" 4K UHD Smart Voice TV",
+   "mrp": 55900,
+   "inch": 50,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Chita, Android 9",
+   "specs": {
+    "Screen Size": "50 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Chita, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "110W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1110 × 75 × 645 mm",
+    "Box Dimensions": "1220 × 150 × 765 mm",
+    "Net / Gross Weight": "9.6 kg / 14.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Chita, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 28,
+   "short": "50\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-50SQ24N",
+   "model": "50SQ24N",
+   "category": "qled-tv",
+   "name": "Yara 50\" 4K UHD QLED Smart TV",
+   "mrp": 55900,
+   "inch": 50,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "1 GB",
+   "rom": "8 GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Smart TV",
+   "os": "Android 14",
+   "specs": {
+    "Screen Size": "50 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "240 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Android 14",
+    "RAM": "1 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "110W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1110 × 75 × 645 mm",
+    "Box Dimensions": "1220 × 150 × 765 mm",
+    "Net / Gross Weight": "9.6 kg / 14.7 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "1 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 29,
+   "short": "50\" 4K UHD QLED Smart TV with 20W Dolby Audio, 1 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SU22D",
+   "model": "55SU22D",
+   "category": "smart-tv",
+   "name": "Yara 55\" 4K UHD Smart LED TV",
+   "mrp": 64900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Chita, Android 9",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "347 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Chita, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "3",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "WIFI",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1235 × 75 × 715 mm",
+    "Box Dimensions": "1350 × 155 × 840 mm",
+    "Net / Gross Weight": "12 kg / 15 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Chita, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 3 · Optical."
+    ]
+   ],
+   "page": 30,
+   "short": "55\" 4K UHD Smart LED TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SU22MV",
+   "model": "55SU22MV",
+   "category": "smart-tv",
+   "name": "Yara 55\" 4K UHD Smart Voice TV · Android 9 · Chita",
+   "mrp": 64900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Chita, Android 9",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "268 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Chita, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "135W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1230 × 70 × 710 mm",
+    "Box Dimensions": "1350 × 155 × 840 mm",
+    "Net / Gross Weight": "12 kg / 15 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Chita, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 31,
+   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SU24BV",
+   "model": "55SU24BV",
+   "category": "smart-tv",
+   "name": "Yara 55\" 4K UHD Smart Voice TV · Android 12",
+   "mrp": 69900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2 GB",
+   "rom": "16 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Android 12",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "268 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Android 12",
+    "RAM": "2 GB",
+    "Storage": "16 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "2",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Miracast",
+    "Power Consumption": "135W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1230 × 70 × 710 mm",
+    "Box Dimensions": "1350 × 155 × 840 mm",
+    "Net / Gross Weight": "12 kg / 15 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Android 12 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "2 GB RAM · 16 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 32,
+   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 2 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SU23G",
+   "model": "55SU23G",
+   "category": "google-tv",
+   "name": "Yara 55\" 4K UHD Google TV",
+   "mrp": 69900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 30,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Google TV",
+   "os": "Android 11",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "250 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "9ms",
+    "Audio Output": "2×15W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 11",
+    "Processor": "ARM Cortex-A55/1.5GHz/Quad core",
+    "GPU": "G52MP2 (Dual core)",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (Mini AV-IN)",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "130W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1228 × 73 × 711 mm",
+    "Box Dimensions": "1346 × 124 × 806 mm",
+    "Net / Gross Weight": "12.5 kg / 16 kg",
+    "Colour": "Black & Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 11 with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "30W Dolby Audio",
+     "2×15W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.5GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 33,
+   "short": "55\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SQ25B",
+   "model": "55SQ25B",
+   "category": "qled-tv",
+   "name": "Yara 55\" 4K UHD QLED Google TV · Android 11",
+   "mrp": 79900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 30,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Google TV",
+   "os": "Android 11",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "280 cd/m²",
+    "Contrast Ratio": "5000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×15W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 11",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "IEEE 802.11 a/b/g/n/ac+",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "140W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1226 × 78 × 705 mm",
+    "Box Dimensions": "1320 × 112 × 785 mm",
+    "Net / Gross Weight": "9.7 kg / 13.2 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 5000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 11 with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "30W Dolby Audio",
+     "2×15W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 34,
+   "short": "55\" 4K UHD QLED Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-55SQ24G",
+   "model": "55SQ24G",
+   "category": "qled-tv",
+   "name": "Yara 55\" 4K UHD QLED Google TV · Android 11 · Google TV 3.0",
+   "mrp": 79900,
+   "inch": 55,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "8GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Google TV",
+   "os": "Google TV 3.0 (Android 11)",
+   "specs": {
+    "Screen Size": "55 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "280 cd/m²",
+    "Contrast Ratio": "5000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV 3.0 (Android 11)",
+    "Processor": "Quad-core Cortex-A53",
+    "GPU": "G52MC1",
+    "RAM": "2GB",
+    "Storage": "8GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "4 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "138W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1226 × 78 × 705 mm",
+    "Box Dimensions": "1320 × 112 × 785 mm",
+    "Net / Gross Weight": "9.7 kg / 13.2 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 5000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV 3.0 (Android 11) with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 8GB Storage",
+     "Quad-core Cortex-A53 processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 4 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 35,
+   "short": "55\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-65SU22MV",
+   "model": "65SU22MV",
+   "category": "smart-tv",
+   "name": "Yara 65\" 4K UHD Smart Voice TV",
+   "mrp": 99900,
+   "inch": 65,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 24,
+   "ram": "1.5 GB",
+   "rom": "8 GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Chita, Android 9",
+   "specs": {
+    "Screen Size": "65 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "268 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "16.7 million",
+    "Response Time": "6.5ms",
+    "Audio Output": "2×12W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (6 Modes)",
+    "Operating System": "Chita, Android 9",
+    "RAM": "1.5 GB",
+    "Storage": "8 GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Coaxial Out": "1",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, ZEE5, Kindlink",
+    "Power Consumption": "160W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1465 × 90 × 840 mm",
+    "Box Dimensions": "1588 × 152 × 938 mm",
+    "Net / Gross Weight": "17.6 kg / 23 kg",
+    "Wall-Mount Bracket": "Optional",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 16.7 million colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Chita, Android 9 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Dolby Audio",
+     "2×12W speakers with multiple sound modes (6 modes)."
+    ],
+    [
+     "cpu",
+     "1.5 GB RAM · 8 GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi."
+    ]
+   ],
+   "page": 36,
+   "short": "65\" 4K UHD Smart Voice TV with 24W Dolby Audio, 1.5 GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-65SU23G",
+   "model": "65SU23G",
+   "category": "google-tv",
+   "name": "Yara 65\" 4K UHD Google TV",
+   "mrp": 99900,
+   "inch": 65,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Google TV",
+   "os": "Google TV 3.0 (Android 11)",
+   "specs": {
+    "Screen Size": "65 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "330 cd/m²",
+    "Contrast Ratio": "1300:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "9ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV 3.0 (Android 11)",
+    "Processor": "ARM Cortex-A55/1.5GHz/Quad core",
+    "GPU": "G52MP2 (Dual core)",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (Mini AV-IN)",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "160W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1445 × 89 × 833 mm",
+    "Box Dimensions": "1588 × 152 × 938 mm",
+    "Net / Gross Weight": "14.8 kg / 19.8 kg",
+    "Colour": "Black & Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1300:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV 3.0 (Android 11) with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.5GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 37,
+   "short": "65\" 4K UHD Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-65SQ25B",
+   "model": "65SQ25B",
+   "category": "qled-tv",
+   "name": "Yara 65\" 4K UHD QLED Google TV · Android 11",
+   "mrp": 109900,
+   "inch": 65,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 24,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Google TV",
+   "os": "Android 11",
+   "specs": {
+    "Screen Size": "65 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "330 cd/m²",
+    "Contrast Ratio": "1300:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 11",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "230W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1446 × 95 × 834 mm",
+    "Box Dimensions": "1598 × 140 × 955 mm",
+    "Net / Gross Weight": "15.9 kg / 21.2 kg",
+    "Colour": "Black & Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1300:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 11 with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "24W Dolby Audio",
+     "2×12W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 38,
+   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-65SQ24G",
+   "model": "65SQ24G",
+   "category": "qled-tv",
+   "name": "Yara 65\" 4K UHD QLED Google TV · Android 11 · Google TV 3.0",
+   "mrp": 109900,
+   "inch": 65,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 24,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Google TV",
+   "os": "Google TV 3.0 (Android 11)",
+   "specs": {
+    "Screen Size": "65 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "330 cd/m²",
+    "Contrast Ratio": "1300:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV 3.0 (Android 11)",
+    "Processor": "ARM Cortex-A55/1.5GHz/Quad core",
+    "GPU": "G52MP2 (Dual core)",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (Mini AV-IN)",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "230W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1446 × 95 × 834 mm",
+    "Box Dimensions": "1598 × 140 × 955 mm",
+    "Net / Gross Weight": "15.9 kg / 21.2 kg",
+    "Colour": "Black & Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1300:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV 3.0 (Android 11) with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "24W Dolby Audio",
+     "2×12W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.5GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 39,
+   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-65SQ25S",
+   "model": "65SQ25S",
+   "category": "anti-glare-tv",
+   "name": "Yara 65\" 4K UHD Anti-Glare QLED Smart TV",
+   "mrp": 109900,
+   "inch": 65,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 24,
+   "ram": "2GB",
+   "rom": "32GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": true,
+   "headline": "Anti-Glare QLED TV",
+   "os": "",
+   "specs": {
+    "Screen Size": "65 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "350 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "6.5ms",
+    "Screen Finish": "Anti-glare matte (anti-reflective)",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Processor": "Quad-core Cortex-A53 @ 1.5 GHz",
+    "GPU": "Mali G52",
+    "RAM": "2GB",
+    "Storage": "32GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "200W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1445 × 837 × 98 mm",
+    "Box Dimensions": "1600 × 185 × 955 mm",
+    "Net / Gross Weight": "18.2 kg / 24.9 kg",
+    "Colour": "Metallic & Gray",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 3000:1 contrast."
+    ],
+    [
+     "sun",
+     "Anti-Glare Screen",
+     "A matte, anti-reflective finish turns lamps and windows into a soft haze, not a mirror image."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Dolby Audio",
+     "2×12W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 32GB Storage",
+     "Quad-core Cortex-A53 @ 1.5 GHz processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 40,
+   "short": "65\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-75SU23G",
+   "model": "75SU23G",
+   "category": "google-tv",
+   "name": "Yara 75\" 4K UHD Google TV",
+   "mrp": 154900,
+   "inch": 75,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 30,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Google TV",
+   "os": "Google TV 3.0 (Android 11)",
+   "specs": {
+    "Screen Size": "75 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "DLED",
+    "Brightness": "330 cd/m²",
+    "Contrast Ratio": "1200:1",
+    "Viewing Angle": "176° × 176°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "9ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×15W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV 3.0 (Android 11)",
+    "Processor": "ARM Cortex-A55/1.5GHz/Quad core",
+    "GPU": "G52MP2 (Dual core)",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (Mini AV-IN)",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "250W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1669 × 103 × 958 mm",
+    "Box Dimensions": "1840 × 173 × 1095 mm",
+    "Net / Gross Weight": "28.68 kg / 38 kg",
+    "Colour": "Black & Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1200:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV 3.0 (Android 11) with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "30W Dolby Audio",
+     "2×15W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.5GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 41,
+   "short": "75\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-75SQ25S",
+   "model": "75SQ25S",
+   "category": "anti-glare-tv",
+   "name": "Yara 75\" 4K UHD Anti-Glare QLED Smart TV",
+   "mrp": 154900,
+   "inch": 75,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 24,
+   "ram": "2GB",
+   "rom": "32GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": true,
+   "headline": "Anti-Glare QLED TV",
+   "os": "",
+   "specs": {
+    "Screen Size": "75 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "350 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "6.5ms",
+    "Screen Finish": "Anti-glare matte (anti-reflective)",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Processor": "Quad-core Cortex-A53 @ 1.5 GHz",
+    "GPU": "Mali G52",
+    "RAM": "2GB",
+    "Storage": "32GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "280W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1668 × 964 × 84.9 mm",
+    "Box Dimensions": "1790 × 203 × 1178 mm",
+    "Net / Gross Weight": "27.6 kg / 38.9 kg",
+    "Colour": "Metallic & Gray",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 3000:1 contrast."
+    ],
+    [
+     "sun",
+     "Anti-Glare Screen",
+     "A matte, anti-reflective finish turns lamps and windows into a soft haze, not a mirror image."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "24W Dolby Audio",
+     "2×12W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 32GB Storage",
+     "Quad-core Cortex-A53 @ 1.5 GHz processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 42,
+   "short": "75\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-75SQM25G",
+   "model": "75SQM25G",
+   "category": "mini-qled-tv",
+   "name": "Yara 75\" 4K UHD Mini QLED Google TV",
+   "mrp": 229900,
+   "inch": 75,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 44,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": true,
+   "anti_glare": false,
+   "headline": "Mini QLED Google TV",
+   "os": "Android 14",
+   "specs": {
+    "Screen Size": "75 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "Mini QLED",
+    "Brightness": "700 cd/m²",
+    "Contrast Ratio": "10000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W + 20W woofer",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 14",
+    "Processor": "ARM Cortex-A55/1.53GHz/Quad core",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (mini av)",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "250W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Colour": "Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Mini QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 10000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "44W Dolby Audio",
+     "2×12W + 20W woofer speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.53GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 43,
+   "short": "75\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-85SQ24G",
+   "model": "85SQ24G",
+   "category": "qled-tv",
+   "name": "Yara 85\" 4K UHD QLED Google TV",
+   "mrp": 199900,
+   "inch": 85,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": true,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "8GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "QLED Google TV",
+   "os": "Google TV 3.0 (Android 11)",
+   "specs": {
+    "Screen Size": "85 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "300 cd/m²",
+    "Contrast Ratio": "5000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV 3.0 (Android 11)",
+    "Processor": "Quad-core (2 × Cortex-A75 + 2 × Cortex-A55)",
+    "GPU": "BXE4-32MC1",
+    "RAM": "2GB",
+    "Storage": "8GB",
+    "Voice Control": "Yes, voice remote",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "4 (HDMI-1 supports eARC function)",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Google Play, Chromecast built-in",
+    "Power Consumption": "400W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1908 × 96 × 1095 mm",
+    "Box Dimensions": "2094 × 232 × 1302 mm",
+    "Net / Gross Weight": "50 kg / 60 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote (voice), batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 5000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV 3.0 (Android 11) with Netflix, YouTube, Prime Video, Google Play and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 8GB Storage",
+     "Quad-core (2 × Cortex-A75 + 2 × Cortex-A55) processor keeps apps and menus smooth."
+    ],
+    [
+     "mic",
+     "Voice Control",
+     "Search, play and control with your voice from the remote."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 4 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 44,
+   "short": "85\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-85WU23B",
+   "model": "85WU23B",
+   "category": "smart-tv",
+   "name": "Yara 86\" 4K UHD Smart LED TV",
+   "mrp": 599900,
+   "inch": 86,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "UHD Smart TV",
+   "os": "Android 11",
+   "specs": {
+    "Screen Size": "86 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "LED",
+    "Brightness": "450 cd/m²",
+    "Contrast Ratio": "1300:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 11",
+    "Processor": "Quad-core Cortex-A55",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Wi-Fi": "2.4G/5G+BT5.0",
+    "Bluetooth": "Yes",
+    "HDMI": "3",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "550W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1950 × 90 × 1130 mm",
+    "Box Dimensions": "2150 × 220 × 1330 mm",
+    "Net / Gross Weight": "77 kg / 88 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Not included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1300:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Android 11 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "Quad-core Cortex-A55 processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 45,
+   "short": "86\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-85SQ25S",
+   "model": "85SQ25S",
+   "category": "anti-glare-tv",
+   "name": "Yara 86\" 4K UHD Anti-Glare QLED Google TV",
+   "mrp": 199900,
+   "inch": 86,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "32GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": true,
+   "headline": "Anti-Glare QLED TV",
+   "os": "Google TV (Android 11), certified by Google",
+   "specs": {
+    "Screen Size": "86 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "400 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "6.5ms",
+    "Refresh Rate": "Up to 144Hz",
+    "Screen Finish": "Anti-glare matte (anti-reflective)",
+    "HDR": "Dolby Vision · HDR10",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV (Android 11), certified by Google",
+    "GPU": "IMG BXE, Open GL ES3.2",
+    "RAM": "2GB",
+    "Storage": "32GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "2 (1 × ARC)",
+    "USB": "1 × USB 2.0 + 1 × USB 3.0",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "450W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1924 × 393 × 1173.5 mm",
+    "Box Dimensions": "2020 × 1230 × 225 mm",
+    "Net / Gross Weight": "21.7 kg / 30.3 kg",
+    "Colour": "Metallic & Gray",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 3000:1 contrast."
+    ],
+    [
+     "sun",
+     "Anti-Glare Screen",
+     "A matte, anti-reflective finish turns lamps and windows into a soft haze, not a mirror image."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV (Android 11), certified by Google with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 32GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision · HDR10",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "gauge",
+     "Up to 144Hz",
+     "Ultra-smooth motion for sport and gaming."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 2 · USB 1 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 46,
+   "short": "86\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-85SQM25G",
+   "model": "85SQM25G",
+   "category": "mini-qled-tv",
+   "name": "Yara 86\" 4K UHD Mini QLED Google TV",
+   "mrp": 299900,
+   "inch": 86,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 44,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": true,
+   "anti_glare": false,
+   "headline": "Mini QLED Google TV",
+   "os": "Android 14",
+   "specs": {
+    "Screen Size": "86 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "Mini QLED",
+    "Brightness": "700 cd/m²",
+    "Contrast Ratio": "10000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "9.5ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×12W + 20W woofer",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 14",
+    "Processor": "ARM Cortex-A55/1.53GHz/Quad core",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (mini av)",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "350W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "1890 × 82 × 1081 mm",
+    "Box Dimensions": "2080 × 173 × 1217 mm",
+    "Net / Gross Weight": "38.4 kg / 49.1 kg",
+    "Colour": "Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Mini QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 10000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "44W Dolby Audio",
+     "2×12W + 20W woofer speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "ARM Cortex-A55/1.53GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 47,
+   "short": "86\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-98WU22B",
+   "model": "98WU22B",
+   "category": "smart-tv",
+   "name": "Yara Centum 98\" 4K UHD Smart LED TV",
+   "mrp": 790000,
+   "inch": 98,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": false,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "16GB",
+   "qled": false,
+   "mini": false,
+   "anti_glare": false,
+   "headline": "Centum UHD Smart TV",
+   "os": "Android 11",
+   "specs": {
+    "Screen Size": "98 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "LED",
+    "Brightness": "450 cd/m²",
+    "Contrast Ratio": "1300:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 11",
+    "Processor": "A55*4 ARM Cortex",
+    "RAM": "2GB",
+    "Storage": "16GB",
+    "Wi-Fi": "2.4G/5G+BT5.0",
+    "Bluetooth": "Yes",
+    "HDMI": "3",
+    "USB": "2",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "550W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "2193 × 90 × 1255 mm",
+    "Box Dimensions": "2465 × 261 × 1650 mm",
+    "Net / Gross Weight": "83 kg / 97 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Not included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 1300:1 contrast."
+    ],
+    [
+     "tv",
+     "Smart TV",
+     "Android 11 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 16GB Storage",
+     "A55*4 ARM Cortex processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 48,
+   "short": "98\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-98SQ25S",
+   "model": "98SQ25S",
+   "category": "anti-glare-tv",
+   "name": "Yara 100\" 4K UHD Anti-Glare QLED Google TV",
+   "mrp": 790900,
+   "inch": 100,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 20,
+   "ram": "2GB",
+   "rom": "32GB",
+   "qled": true,
+   "mini": false,
+   "anti_glare": true,
+   "headline": "Centum Anti-Glare QLED TV",
+   "os": "Google TV (Android 11), certified by Google",
+   "specs": {
+    "Screen Size": "100 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "QLED",
+    "Brightness": "450 cd/m²",
+    "Contrast Ratio": "3000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "6.5ms",
+    "Refresh Rate": "Up to 144Hz",
+    "Screen Finish": "Anti-glare matte (anti-reflective)",
+    "HDR": "Dolby Vision · HDR10",
+    "Audio Output": "2×10W",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Google TV (Android 11), certified by Google",
+    "GPU": "IMG BXE, Open GL ES3.2",
+    "RAM": "2GB",
+    "Storage": "32GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3 (1 × ARC)",
+    "USB": "1 × USB 2.0 + 1 × USB 3.0",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1",
+    "RF / Antenna In": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "503W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "2193.4 × 1255.3 × 90 mm",
+    "Box Dimensions": "2366 × 1405 × 253 mm",
+    "Net / Gross Weight": "62.3 kg / 82.9 kg",
+    "Colour": "Black",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 3000:1 contrast."
+    ],
+    [
+     "sun",
+     "Anti-Glare Screen",
+     "A matte, anti-reflective finish turns lamps and windows into a soft haze, not a mirror image."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Google TV (Android 11), certified by Google with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "20W Dolby Audio",
+     "2×10W speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "2GB RAM · 32GB Storage",
+     "Quad-core processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision · HDR10",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "gauge",
+     "Up to 144Hz",
+     "Ultra-smooth motion for sport and gaming."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 1 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 49,
+   "short": "100\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen."
+  },
+  {
+   "type": "tv",
+   "sku": "YE-TV-100SQM25G",
+   "model": "100SQM25G",
+   "category": "mini-qled-tv",
+   "name": "Yara 100\" 4K UHD Mini QLED Google TV",
+   "mrp": 599000,
+   "inch": 100,
+   "resolution": "4K UHD",
+   "badge": [
+    "4K",
+    "ULTRA HD"
+   ],
+   "google": true,
+   "smart": true,
+   "voice": false,
+   "dolby": true,
+   "watts": 52,
+   "ram": "3GB",
+   "rom": "16GB",
+   "qled": true,
+   "mini": true,
+   "anti_glare": false,
+   "headline": "Centum Mini QLED Google TV",
+   "os": "Android 14",
+   "specs": {
+    "Screen Size": "100 inch",
+    "Resolution": "3840 × 2160 (4K Ultra HD)",
+    "Display Technology": "Mini QLED",
+    "Brightness": "700 cd/m²",
+    "Contrast Ratio": "10000:1",
+    "Viewing Angle": "178° × 178°",
+    "Display Colours": "1.07 billion",
+    "Response Time": "8ms",
+    "HDR": "Dolby Vision",
+    "Audio Output": "4×8W + 20W woofer",
+    "Sound": "Dolby Audio",
+    "Sound Modes": "Yes (7 Modes)",
+    "Operating System": "Android 14",
+    "Processor": "CA73 MP4/1.53GHz/Quad core",
+    "RAM": "3GB",
+    "Storage": "16GB",
+    "Wi-Fi": "Yes",
+    "Bluetooth": "Yes",
+    "HDMI": "3",
+    "USB": "2 × USB 2.0 + 1 × USB 3.0",
+    "Optical Audio Out": "1",
+    "LAN (RJ45)": "1",
+    "AV In": "1 (mini av)",
+    "Earphone Out": "1",
+    "Apps & Casting": "Netflix, YouTube, Prime Video, Hotstar, Google Play, Chrome",
+    "Power Consumption": "500W",
+    "Standby Power": "≤ 0.5W",
+    "Power Supply": "AC 100-240V 50/60Hz",
+    "Product Dimensions": "2232 × 69 × 1274 mm",
+    "Box Dimensions": "2385 × 243 × 1482 mm",
+    "Net / Gross Weight": "70.2 kg / 90 kg",
+    "Colour": "Silver",
+    "Wall-Mount Bracket": "Included",
+    "In the Box": "TV, table stand, remote, batteries, user manual"
+   },
+   "features": [
+    [
+     "monitor",
+     "4K UHD Mini QLED Display",
+     "3840 × 2160 resolution with 1.07 billion colours and 10000:1 contrast."
+    ],
+    [
+     "tv",
+     "Google TV",
+     "Android 14 with Netflix, YouTube, Prime Video, Hotstar and more."
+    ],
+    [
+     "volume-2",
+     "52W Dolby Audio",
+     "4×8W + 20W woofer speakers with multiple sound modes (7 modes)."
+    ],
+    [
+     "cpu",
+     "3GB RAM · 16GB Storage",
+     "CA73 MP4/1.53GHz/Quad core processor keeps apps and menus smooth."
+    ],
+    [
+     "sparkles",
+     "Dolby Vision",
+     "Brighter highlights and deeper shadows on HDR content."
+    ],
+    [
+     "cable",
+     "Easy Connectivity",
+     "HDMI 3 · USB 2 · Wi-Fi · Bluetooth · Optical."
+    ]
+   ],
+   "page": 50,
+   "short": "100\" 4K UHD Mini QLED Google TV with 52W Dolby Audio, 3GB RAM."
+  }
+ ],
+ "ac": [
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS123BS24E",
+   "model": "AS123BS24E",
+   "category": "1-ton-ac",
+   "name": "Yara 1 Ton 3 Star Inverter Split AC (AS123BS24E)",
+   "mrp": 57900,
+   "ton": "1 Ton",
+   "star": 3,
+   "iseer": "3.6",
+   "btu_k": 12,
+   "display": "LED Display",
+   "colour": "White with Wood Brown",
+   "specs": {
+    "Capacity": "1 Ton (12K)",
+    "Cooling Capacity": "3400 / 1700 W (100% / 50%) · 12,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.6",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (420 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "BLDC",
+    "Air Circulation": "630 m³/h",
+    "Noise Level": "43-50 dB(A)",
+    "Moisture Removal": "1.1 L/h",
+    "Condenser Type": "L-type",
+    "Power Consumption (100% / 50%)": "1090 W / 380 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "770 × 270 × 210 mm",
+    "Outdoor Unit (W × H × D)": "705 × 471 × 300 mm",
+    "Indoor Box": "850 × 330 × 275 mm",
+    "Outdoor Box": "775 × 355 × 530 mm",
+    "Indoor Weight (Net / Gross)": "8.5 kg / 11.5 kg",
+    "Outdoor Weight (Net / Gross)": "18 kg / 21 kg",
+    "Colour": "White with Wood Brown"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.6",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 630 m³/h."
+    ]
+   ],
+   "page": 1,
+   "short": "1 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS123BS25E",
+   "model": "AS123BS25E",
+   "category": "1-ton-ac",
+   "name": "Yara 1 Ton 3 Star Inverter Split AC (AS123BS25E)",
+   "mrp": 57900,
+   "ton": "1 Ton",
+   "star": 3,
+   "iseer": "3.9",
+   "btu_k": 12,
+   "display": "LED Display",
+   "colour": "White with Blue",
+   "specs": {
+    "Capacity": "1 Ton (12K)",
+    "Cooling Capacity": "3300 / 1670 W (100% / 50%) · 12,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.9",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (380 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "AC Motor",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1250/1050/1000/950 RPM",
+    "Air Circulation": "780 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "1090 W / 400 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "800 × 295 × 230 mm",
+    "Outdoor Unit (W × H × D)": "705 × 475 × 285 mm",
+    "Indoor Box": "890 × 352 × 290 mm",
+    "Outdoor Box": "770 × 520 × 350 mm",
+    "Indoor Weight (Net / Gross)": "9.3 kg / 11 kg",
+    "Outdoor Weight (Net / Gross)": "20.8 kg / 25.3 kg",
+    "Colour": "White with Blue"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.9",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 780 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 2,
+   "short": "1 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS125PD25E",
+   "model": "AS125PD25E",
+   "category": "1-ton-ac",
+   "name": "Yara 1 Ton 5 Star Inverter Split AC",
+   "mrp": 65900,
+   "ton": "1 Ton",
+   "star": 5,
+   "iseer": "5.11",
+   "btu_k": 12,
+   "display": "LED Display",
+   "colour": "White with Blue",
+   "specs": {
+    "Capacity": "1 Ton (12K)",
+    "Cooling Capacity": "3400 / 1700 W (100% / 50%) · 12,000 BTU/h",
+    "Energy Rating": "5 Star (BEE)",
+    "ISEER": "5.11",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (570 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "AC Motor",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1500/1400/1250/1100 RPM",
+    "Air Circulation": "1000 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "810 W / 320 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "840 × 270 × 210 mm",
+    "Outdoor Unit (W × H × D)": "840 × 300 × 600 mm",
+    "Indoor Box": "920 × 340 × 280 mm",
+    "Outdoor Box": "900 × 355 × 660 mm",
+    "Indoor Weight (Net / Gross)": "9 kg / 11 kg",
+    "Outdoor Weight (Net / Gross)": "23.2 kg / 28 kg",
+    "Colour": "White with Blue"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "5 Star · ISEER 5.11",
+     "Top 5-star efficiency for the lowest running cost."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1000 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 3,
+   "short": "1 Ton 5-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS183BS24E",
+   "model": "AS183BS24E",
+   "category": "1-5-ton-ac",
+   "name": "Yara 1.5 Ton 3 Star Inverter Split AC (AS183BS24E)",
+   "mrp": 65900,
+   "ton": "1.5 Ton",
+   "star": 3,
+   "iseer": "3.6",
+   "btu_k": 17,
+   "display": "LED Display",
+   "colour": "White with Wood Brown",
+   "specs": {
+    "Capacity": "1.5 Ton (17K)",
+    "Cooling Capacity": "17,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.6",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (500 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "BLDC",
+    "Air Circulation": "900 m³/h",
+    "Noise Level": "47-54 dB(A)",
+    "Moisture Removal": "1.9 L/h",
+    "Condenser Type": "L-type",
+    "Power Consumption (100% / 50%)": "1635 W / 565 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "840 × 210 × 270 mm",
+    "Outdoor Unit (W × H × D)": "811 × 596 × 298 mm",
+    "Indoor Box": "910 × 275 × 330 mm",
+    "Outdoor Box": "910 × 350 × 670 mm",
+    "Indoor Weight (Net / Gross)": "11.5 kg / 14.5 kg",
+    "Outdoor Weight (Net / Gross)": "27.5 kg / 31 kg",
+    "Colour": "White with Wood Brown"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.6",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 900 m³/h."
+    ]
+   ],
+   "page": 4,
+   "short": "1.5 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS183BS25E",
+   "model": "AS183BS25E",
+   "category": "1-5-ton-ac",
+   "name": "Yara 1.5 Ton 3 Star Inverter Split AC (AS183BS25E)",
+   "mrp": 65900,
+   "ton": "1.5 Ton",
+   "star": 3,
+   "iseer": "3.84",
+   "btu_k": 18,
+   "display": "LED Display",
+   "colour": "White with Blue",
+   "specs": {
+    "Capacity": "1.5 Ton (18K)",
+    "Cooling Capacity": "4800 / 2400 W (100% / 50%) · 18,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.84",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (530 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "AC Motor",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1400/1200/1100/970 RPM",
+    "Air Circulation": "1125 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "1635 W / 565 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "960 × 315 × 235 mm",
+    "Outdoor Unit (W × H × D)": "754 × 531 × 298 mm",
+    "Indoor Box": "1020 × 380 × 295 mm",
+    "Outdoor Box": "860 × 590 × 350 mm",
+    "Indoor Weight (Net / Gross)": "11.5 kg / 14.5 kg",
+    "Outdoor Weight (Net / Gross)": "25.6 kg / 29 kg",
+    "Colour": "White with Blue"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.84",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1125 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 5,
+   "short": "1.5 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS185PD25E",
+   "model": "AS185PD25E",
+   "category": "1-5-ton-ac",
+   "name": "Yara 1.5 Ton 5 Star Inverter Split AC",
+   "mrp": 76900,
+   "ton": "1.5 Ton",
+   "star": 5,
+   "iseer": "5.08",
+   "btu_k": 18,
+   "display": "LED Display",
+   "colour": "White with Blue",
+   "specs": {
+    "Capacity": "1.5 Ton (18K)",
+    "Cooling Capacity": "5050 / 2525 W (100% / 50%) · 18,000 BTU/h",
+    "Energy Rating": "5 Star (BEE)",
+    "ISEER": "5.08",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (680 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "AC Motor",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1400/1200/1100/970 RPM",
+    "Air Circulation": "1125 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "1300 W / 450 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "960 × 315 × 235 mm",
+    "Outdoor Unit (W × H × D)": "840 × 300 × 601 mm",
+    "Indoor Box": "1020 × 380 × 295 mm",
+    "Outdoor Box": "900 × 355 × 661 mm",
+    "Indoor Weight (Net / Gross)": "11.5 kg / 14.5 kg",
+    "Outdoor Weight (Net / Gross)": "25.6 kg / 29 kg",
+    "Colour": "White with Blue"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "5 Star · ISEER 5.08",
+     "Top 5-star efficiency for the lowest running cost."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1125 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 6,
+   "short": "1.5 Ton 5-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS243BS25E",
+   "model": "AS243BS25E",
+   "category": "2-ton-ac",
+   "name": "Yara 2 Ton 3 Star Inverter Split AC (AS243BS25E)",
+   "mrp": 82900,
+   "ton": "2 Ton",
+   "star": 3,
+   "iseer": "3.84",
+   "btu_k": 22,
+   "display": "LED Display",
+   "colour": "White",
+   "specs": {
+    "Capacity": "2 Ton (22K)",
+    "Cooling Capacity": "6200 / 3100 W (100% / 50%) · 22,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.84",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (660 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "BLDC",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1400/1200/1100/970 RPM",
+    "Air Circulation": "1125 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "1980 W / 770 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "960 × 315 × 235 mm",
+    "Outdoor Unit (W × H × D)": "840 × 300 × 601 mm",
+    "Indoor Box": "1020 × 380 × 295 mm",
+    "Outdoor Box": "900 × 355 × 661 mm",
+    "Indoor Weight (Net / Gross)": "11.5 kg / 14.5 kg",
+    "Outdoor Weight (Net / Gross)": "25.6 kg / 29 kg",
+    "Colour": "White"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.84",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1125 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 7,
+   "short": "2 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS225BS24E",
+   "model": "AS225BS24E",
+   "category": "2-ton-ac",
+   "name": "Yara 2 Ton 3 Star Inverter Split AC (AS225BS24E)",
+   "mrp": 99900,
+   "ton": "2 Ton",
+   "star": 3,
+   "iseer": "3.6",
+   "btu_k": 24,
+   "display": "LED Display",
+   "colour": "White",
+   "specs": {
+    "Capacity": "2 Ton (24K)",
+    "Cooling Capacity": "24,000 BTU/h",
+    "Energy Rating": "3 Star (BEE)",
+    "ISEER": "3.6",
+    "Compressor": "High-performance inverter (rotary)",
+    "Refrigerant": "R-32 (1120 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "BLDC",
+    "Air Circulation": "1140 m³/h",
+    "Noise Level": "48-56 dB(A)",
+    "Condenser Type": "L-type",
+    "Power Consumption (100% / 50%)": "1570 W / 540 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "1132 × 330 × 332 mm",
+    "Outdoor Unit (W × H × D)": "825 × 655 × 310 mm",
+    "Indoor Box": "1205 × 400 × 317 mm",
+    "Outdoor Box": "945 × 725 × 435 mm",
+    "Indoor Weight (Net / Gross)": "14.5 kg / 16 kg",
+    "Outdoor Weight (Net / Gross)": "38.5 kg / 40 kg",
+    "Colour": "White"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "3 Star · ISEER 3.6",
+     "BEE-rated energy efficiency."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1140 m³/h."
+    ]
+   ],
+   "page": 8,
+   "short": "2 Ton 3-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  },
+  {
+   "type": "ac",
+   "sku": "YE-AC-AS245PD25E",
+   "model": "AS245PD25E",
+   "category": "2-ton-ac",
+   "name": "Yara 2 Ton 5 Star Inverter Split AC",
+   "mrp": 99900,
+   "ton": "2 Ton",
+   "star": 5,
+   "iseer": "5.01",
+   "btu_k": 22,
+   "display": "LED Display",
+   "colour": "White",
+   "specs": {
+    "Capacity": "2 Ton (22K)",
+    "Cooling Capacity": "6000 / 3000 W (100% / 50%) · 22,000 BTU/h",
+    "Energy Rating": "5 Star (BEE)",
+    "ISEER": "5.01",
+    "Compressor": "High-performance inverter",
+    "Refrigerant": "R-32 (750 g)",
+    "Condenser Coil": "Copper (100% copper)",
+    "Evaporator": "Bluefin anti-corrosion fins",
+    "Filter": "PM 2.5",
+    "Display": "LED Display",
+    "Indoor Fan Motor": "BLDC",
+    "Outdoor Fan Motor": "BLDC",
+    "Fan Speeds (Turbo / High / Mid / Low)": "1500/1400/1250/1100 RPM",
+    "Air Circulation": "1200 m³/h",
+    "Modes": "Eco / saving, Sleep, Timer, Long air throw, Stabiliser-free operation",
+    "Power Consumption (100% / 50%)": "1570 W / 540 W",
+    "Power Supply": "AC 220-240V 50Hz",
+    "Indoor Unit (W × H × D)": "1070 × 315 × 235 mm",
+    "Outdoor Unit (W × H × D)": "855 × 364 × 646 mm",
+    "Indoor Box": "1140 × 400 × 320 mm",
+    "Outdoor Box": "965 × 407 × 696 mm",
+    "Indoor Weight (Net / Gross)": "12.5 kg / 16 kg",
+    "Outdoor Weight (Net / Gross)": "31.5 kg / 35.5 kg",
+    "Colour": "White"
+   },
+   "features": [
+    [
+     "zap",
+     "Inverter Compressor",
+     "Adjusts speed to the room, for steady cooling and lower bills."
+    ],
+    [
+     "star",
+     "5 Star · ISEER 5.01",
+     "Top 5-star efficiency for the lowest running cost."
+    ],
+    [
+     "shield-check",
+     "100% Copper Coil",
+     "Copper condenser with Bluefin anti-corrosion fins for long life."
+    ],
+    [
+     "leaf",
+     "R-32 Refrigerant",
+     "Eco-friendly refrigerant with high cooling efficiency."
+    ],
+    [
+     "wind",
+     "PM 2.5 Filter",
+     "Traps fine dust for cleaner indoor air."
+    ],
+    [
+     "fan",
+     "BLDC Fan Motor",
+     "Quiet, efficient indoor fan moving up to 1200 m³/h."
+    ],
+    [
+     "plug-zap",
+     "Stabiliser-Free",
+     "Handles voltage swings without an external stabiliser."
+    ],
+    [
+     "moon",
+     "Sleep & Eco Modes",
+     "Comfortable nights and extra savings with one touch."
+    ]
+   ],
+   "page": 9,
+   "short": "2 Ton 5-star inverter split AC with 100% copper coil, R-32 refrigerant, PM 2.5 filter and LED display."
+  }
+ ],
+ "wm": [
+  {
+   "type": "wm",
+   "sku": "YE-WM-WS65K1PF",
+   "model": "WS65K1PF",
+   "category": "only-washer",
+   "name": "Yara 6.5 kg Only Washer – Pink Flower",
+   "mrp": 8900,
+   "capacity": "6.5",
+   "kind": "Only Washer",
+   "load": "Top Load (washer only)",
+   "style": "Pink Flower",
+   "colour": "Pink & White",
+   "specs": {
+    "Wash Capacity": "6.5 kg",
+    "Type": "Only Washer",
+    "Loading": "Top Load (washer only)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 1-layer",
+    "Water Inlets": "1",
+    "Wash Power": "300W",
+    "Washing Performance": "≥60%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, Heavy / regular wash",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "560 × 470 × 845 mm",
+    "Box Dimensions": "500 × 440 × 850 mm",
+    "Net / Gross Weight": "12.5 kg / 14.5 kg",
+    "Colour": "Pink & White"
+   },
+   "features": [
+    [
+     "weight",
+     "6.5 kg Capacity",
+     "Washes a family load; pair it with any spin dryer."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ]
+   ],
+   "page": 1,
+   "short": "6.5 kg only washer washing machine in pink & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA65K1BR",
+   "model": "WA65K1BR",
+   "category": "fully_automatic",
+   "name": "Yara 6.5 kg Fully Automatic Top Load Washing Machine – Blue Strip",
+   "mrp": 25900,
+   "capacity": "6.5",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Blue Strip",
+   "colour": "Blue & Gray",
+   "specs": {
+    "Wash Capacity": "6.5 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ410 × 405 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "320W",
+    "Spin Power": "230W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "545 × 555 × 895 mm",
+    "Box Dimensions": "590 × 578 × 950 mm",
+    "Net / Gross Weight": "26 kg / 29 kg",
+    "Colour": "Blue & Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "6.5 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 2,
+   "short": "6.5 kg fully automatic top load washing machine in blue & gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA65K1RR",
+   "model": "WA65K1RR",
+   "category": "fully_automatic",
+   "name": "Yara 6.5 kg Fully Automatic Top Load Washing Machine – Red Flow",
+   "mrp": 25900,
+   "capacity": "6.5",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Red Flow",
+   "colour": "White Red",
+   "specs": {
+    "Wash Capacity": "6.5 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ410 × 405 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "320W",
+    "Spin Power": "230W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "545 × 555 × 895 mm",
+    "Box Dimensions": "590 × 578 × 950 mm",
+    "Net / Gross Weight": "26 kg / 29 kg",
+    "Colour": "White Red"
+   },
+   "features": [
+    [
+     "weight",
+     "6.5 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 3,
+   "short": "6.5 kg fully automatic top load washing machine in white red."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA65K1BS",
+   "model": "WA65K1BS",
+   "category": "fully_automatic",
+   "name": "Yara 6.5 kg Fully Automatic Top Load Washing Machine – Black Strip",
+   "mrp": 25900,
+   "capacity": "6.5",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Black Strip",
+   "colour": "Black Shadow Gray",
+   "specs": {
+    "Wash Capacity": "6.5 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ410 × 405 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "320W",
+    "Spin Power": "230W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "545 × 555 × 895 mm",
+    "Box Dimensions": "590 × 578 × 950 mm",
+    "Net / Gross Weight": "26 kg / 29 kg",
+    "Colour": "Black Shadow Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "6.5 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 4,
+   "short": "6.5 kg fully automatic top load washing machine in black shadow gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT70C1MT",
+   "model": "WT70C1MT",
+   "category": "semi-automatic",
+   "name": "Yara 7 kg Semi Automatic Top Load Washing Machine – Maroon Lid",
+   "mrp": 15400,
+   "capacity": "7",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Maroon Lid",
+   "colour": "Maroon & White",
+   "specs": {
+    "Wash Capacity": "7 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "PLASTIC",
+    "Cabinet": "PP (rust-proof), 1-layer",
+    "Water Inlets": "1",
+    "Wash Power": "300W",
+    "Spin Power": "160W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "720 × 440 × 940 mm",
+    "Box Dimensions": "790 × 490 × 990 mm",
+    "Net / Gross Weight": "21 kg / 24 kg",
+    "Colour": "Maroon & White"
+   },
+   "features": [
+    [
+     "weight",
+     "7 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (160W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 5,
+   "short": "7 kg semi automatic top load washing machine in maroon & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WF70J1GB",
+   "model": "WF70J1GB",
+   "category": "fully_automatic",
+   "name": "Yara 7 kg Fully Automatic Front Load Washing Machine – Black Strip",
+   "mrp": 51900,
+   "capacity": "7",
+   "kind": "Fully Automatic Front Load",
+   "load": "Front Load",
+   "style": "Black Strip",
+   "colour": "Metallic & Gray",
+   "specs": {
+    "Wash Capacity": "7 kg",
+    "Type": "Fully Automatic Front Load",
+    "Loading": "Front Load",
+    "Motor": "BLDC",
+    "Spin Speed": "1000 RPM",
+    "Spin Speed Selection": "0 / 600 / 800 / 1000 RPM",
+    "Temperature Selection": "0 / 20 / 40 / 60 / 90 °C",
+    "Drum / Inner Tub": "Stainless Steel (44 Liters)",
+    "Inner Tub Size": "Φ500 × 245 mm",
+    "Controls": "Rotary knob + Push Button",
+    "Display": "LED Display",
+    "Door / Lid": "Electrical Door Lock",
+    "Door Open Angle": "150°",
+    "Cabinet": "Stainless Steel",
+    "Wash Power": "1300W",
+    "Noise (Wash / Spin)": "62 / 72 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Features": "Child lock, Built-in heater, Power-cut memory, Overflow control, Overheating control, Auto balance",
+    "Power Supply": "220-240V/50HZ",
+    "Product Dimensions": "598 × 485 × 850 mm",
+    "Box Dimensions": "668 × 550 × 920 mm",
+    "Net / Gross Weight": "51 kg / 55 kg",
+    "Colour": "Metallic & Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "7 kg Capacity",
+     "Gentle tumble wash that uses less water and detergent."
+    ],
+    [
+     "cog",
+     "BLDC Inverter Motor",
+     "Quiet, efficient motor with spin speeds up to 1000 RPM."
+    ],
+    [
+     "thermometer",
+     "Built-in Heater",
+     "Hot washes from 20 °C to 90 °C for stains and hygiene."
+    ],
+    [
+     "baby",
+     "Child Lock & Door Lock",
+     "Electric door lock and child lock keep little hands safe."
+    ],
+    [
+     "scale",
+     "Auto Balance",
+     "Spreads the load for a smooth, stable spin."
+    ],
+    [
+     "power",
+     "Power-Cut Memory",
+     "Resumes the cycle where it stopped after a power cut."
+    ]
+   ],
+   "page": 6,
+   "short": "7 kg fully automatic front load washing machine, 1000 RPM in metallic & gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA75K1BS",
+   "model": "WA75K1BS",
+   "category": "fully_automatic",
+   "name": "Yara 7.5 kg Fully Automatic Top Load Washing Machine – Black Strip",
+   "mrp": 30900,
+   "capacity": "7.5",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Black Strip",
+   "colour": "Black Shadow Gray",
+   "specs": {
+    "Wash Capacity": "7.5 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ440 × 405 mm",
+    "Spin Tub Size": "Φ410 × 405 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "410W",
+    "Spin Power": "300W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "577 × 592 × 922 mm",
+    "Box Dimensions": "624 × 630 × 965 mm",
+    "Net / Gross Weight": "30 kg / 33 kg",
+    "Colour": "Black Shadow Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "7.5 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 7,
+   "short": "7.5 kg fully automatic top load washing machine in black shadow gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT80C1BT",
+   "model": "WT80C1BT",
+   "category": "semi-automatic",
+   "name": "Yara 8 kg Semi Automatic Top Load Washing Machine – Blue Lid",
+   "mrp": 15900,
+   "capacity": "8",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Blue Lid",
+   "colour": "Blue & White",
+   "specs": {
+    "Wash Capacity": "8 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "PLASTIC",
+    "Cabinet": "PP (rust-proof), 1-layer",
+    "Water Inlets": "2",
+    "Wash Power": "300W",
+    "Spin Power": "150W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "720 × 440 × 940 mm",
+    "Box Dimensions": "790 × 490 × 990 mm",
+    "Net / Gross Weight": "21 kg / 24 kg",
+    "Colour": "Blue & White"
+   },
+   "features": [
+    [
+     "weight",
+     "8 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (150W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 8,
+   "short": "8 kg semi automatic top load washing machine in blue & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT80W1BT",
+   "model": "WT80W1BT",
+   "category": "semi-automatic",
+   "name": "Yara 8 kg Semi Automatic Top Load Washing Machine – Black Lid",
+   "mrp": 15900,
+   "capacity": "8",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Black Lid",
+   "colour": "Black & Grey",
+   "specs": {
+    "Wash Capacity": "8 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "PLASTIC",
+    "Cabinet": "PP (rust-proof), 1-layer",
+    "Water Inlets": "2",
+    "Wash Power": "300W",
+    "Spin Power": "150W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Lint filter, End-of-cycle buzzer, Regular / gentle wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "735 × 435 × 860 mm",
+    "Box Dimensions": "870 × 555 × 1080 mm",
+    "Net / Gross Weight": "18 kg / 21 kg",
+    "Colour": "Black & Grey"
+   },
+   "features": [
+    [
+     "weight",
+     "8 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (150W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 9,
+   "short": "8 kg semi automatic top load washing machine in black & grey."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WF80J1GB",
+   "model": "WF80J1GB",
+   "category": "fully_automatic",
+   "name": "Yara 8 kg Fully Automatic Front Load Washing Machine – Black Strip",
+   "mrp": 55900,
+   "capacity": "8",
+   "kind": "Fully Automatic Front Load",
+   "load": "Front Load",
+   "style": "Black Strip",
+   "colour": "Metallic & Gray",
+   "specs": {
+    "Wash Capacity": "8 kg",
+    "Type": "Fully Automatic Front Load",
+    "Loading": "Front Load",
+    "Motor": "BLDC",
+    "Spin Speed": "1200 RPM",
+    "Spin Speed Selection": "0 / 600 / 800 / 1000 / 1200 RPM",
+    "Temperature Selection": "0 / 20 / 40 / 60 / 90 °C",
+    "Drum / Inner Tub": "Stainless Steel (54 Liters)",
+    "Inner Tub Size": "Φ500 × 295 mm",
+    "Controls": "Rotary knob + Push Button",
+    "Display": "LED Display",
+    "Door / Lid": "Electrical Door Lock",
+    "Door Open Angle": "150°",
+    "Cabinet": "Stainless Steel",
+    "Wash Power": "1300W",
+    "Noise (Wash / Spin)": "62 / 72 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Features": "Child lock, Built-in heater, Power-cut memory, Overflow control, Overheating control, Auto balance",
+    "Power Supply": "220-240V/50HZ",
+    "Product Dimensions": "598 × 535 × 850 mm",
+    "Box Dimensions": "668 × 600 × 920 mm",
+    "Net / Gross Weight": "54 kg / 58 kg",
+    "Colour": "Metallic & Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "8 kg Capacity",
+     "Gentle tumble wash that uses less water and detergent."
+    ],
+    [
+     "cog",
+     "BLDC Inverter Motor",
+     "Quiet, efficient motor with spin speeds up to 1200 RPM."
+    ],
+    [
+     "thermometer",
+     "Built-in Heater",
+     "Hot washes from 20 °C to 90 °C for stains and hygiene."
+    ],
+    [
+     "baby",
+     "Child Lock & Door Lock",
+     "Electric door lock and child lock keep little hands safe."
+    ],
+    [
+     "scale",
+     "Auto Balance",
+     "Spreads the load for a smooth, stable spin."
+    ],
+    [
+     "power",
+     "Power-Cut Memory",
+     "Resumes the cycle where it stopped after a power cut."
+    ]
+   ],
+   "page": 10,
+   "short": "8 kg fully automatic front load washing machine, 1200 RPM in metallic & gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA85K1BS",
+   "model": "WA85K1BS",
+   "category": "fully_automatic",
+   "name": "Yara 8.5 kg Fully Automatic Top Load Washing Machine – Black Strip",
+   "mrp": 39900,
+   "capacity": "8.5",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Black Strip",
+   "colour": "Black Shadow Gray",
+   "specs": {
+    "Wash Capacity": "8.5 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ460 × 427 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "410W",
+    "Spin Power": "300W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "595 × 620 × 940 mm",
+    "Box Dimensions": "640 × 655 × 980 mm",
+    "Net / Gross Weight": "34 kg / 37 kg",
+    "Colour": "Black Shadow Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "8.5 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 11,
+   "short": "8.5 kg fully automatic top load washing machine in black shadow gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT90C1PF",
+   "model": "WT90C1PF",
+   "category": "semi-automatic",
+   "name": "Yara 9 kg Semi Automatic Top Load Washing Machine – Pink Flower",
+   "mrp": 16900,
+   "capacity": "9",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Pink Flower",
+   "colour": "Pink & White",
+   "specs": {
+    "Wash Capacity": "9 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "2",
+    "Wash Power": "360W",
+    "Spin Power": "200W",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "810 × 480 × 990 mm",
+    "Box Dimensions": "850 × 510 × 1020 mm",
+    "Net / Gross Weight": "23.8 kg / 27 kg",
+    "Colour": "Pink & White"
+   },
+   "features": [
+    [
+     "weight",
+     "9 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (200W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 12,
+   "short": "9 kg semi automatic top load washing machine in pink & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WA10K1BS",
+   "model": "WA10K1BS",
+   "category": "fully_automatic",
+   "name": "Yara 10 kg Fully Automatic Top Load Washing Machine – Black Strip",
+   "mrp": 35900,
+   "capacity": "10",
+   "kind": "Fully Automatic Top Load",
+   "load": "Top Load",
+   "style": "Black Strip",
+   "colour": "Black Shadow Gray",
+   "specs": {
+    "Wash Capacity": "10 kg",
+    "Type": "Fully Automatic Top Load",
+    "Loading": "Top Load",
+    "Drum / Inner Tub": "Stainless Steel",
+    "Inner Tub Size": "Φ482 × 435 mm",
+    "Pulsator": "PP",
+    "Water Level Selection": "8 Levels",
+    "Controls": "Electronic (PCB)",
+    "Display": "LED Display",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "1",
+    "Wash Power": "450W",
+    "Spin Power": "340W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "620 × 673 × 955 mm",
+    "Box Dimensions": "690 × 735 × 1025 mm",
+    "Net / Gross Weight": "38 kg / 42.5 kg",
+    "Colour": "Black Shadow Gray"
+   },
+   "features": [
+    [
+     "weight",
+     "10 kg Capacity",
+     "Load, choose and walk away: fills, washes, rinses and spins by itself."
+    ],
+    [
+     "cylinder",
+     "Stainless Steel Drum",
+     "Rust-free, hygienic drum that is gentle on clothes."
+    ],
+    [
+     "droplets",
+     "8 Water Levels",
+     "Use just the water each load needs."
+    ],
+    [
+     "monitor-dot",
+     "LED Display",
+     "Clear programme and time display with electronic controls."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Catches lint and fluff so clothes come out clean."
+    ],
+    [
+     "bell",
+     "Soak & Buzzer",
+     "Soak for tough dirt, with a buzzer when the wash is done."
+    ]
+   ],
+   "page": 13,
+   "short": "10 kg fully automatic top load washing machine in black shadow gray."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT10K1TF",
+   "model": "WT10K1TF",
+   "category": "semi-automatic",
+   "name": "Yara 10.2 kg Semi Automatic Top Load Washing Machine – Turquoise Flower",
+   "mrp": 23900,
+   "capacity": "10.2",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Turquoise Flower",
+   "colour": "Green & White",
+   "specs": {
+    "Wash Capacity": "10.2 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Spin Speed": "~1620 RPM (at 60 Hz)",
+    "Drum / Inner Tub": "PP",
+    "Wash Tub Size": "440 × 415 × 485 mm",
+    "Spin Tub Size": "Φ268 × 385 mm",
+    "Pulsator": "PP",
+    "Controls": "Knob timers",
+    "Wash Timer": "15+20 min (soak + wash)",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "2",
+    "Wash Power": "410W",
+    "Spin Power": "200W",
+    "Noise (Wash / Spin)": "62 / 72 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥80%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor, Transparent lid",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "832 × 480 × 890 mm",
+    "Box Dimensions": "861 × 505 × 905 mm",
+    "Net / Gross Weight": "25 kg / 28 kg",
+    "Colour": "Green & White"
+   },
+   "features": [
+    [
+     "weight",
+     "10.2 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (200W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 14,
+   "short": "10.2 kg semi automatic top load washing machine in green & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT10K1MF",
+   "model": "WT10K1MF",
+   "category": "semi-automatic",
+   "name": "Yara 10.2 kg Semi Automatic Top Load Washing Machine – Maroon Flower",
+   "mrp": 23900,
+   "capacity": "10.2",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Maroon Flower",
+   "colour": "Maroon & White",
+   "specs": {
+    "Wash Capacity": "10.2 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Spin Speed": "~1620 RPM (at 60 Hz)",
+    "Drum / Inner Tub": "PP",
+    "Wash Tub Size": "440 × 415 × 485 mm",
+    "Spin Tub Size": "Φ268 × 385 mm",
+    "Pulsator": "PP",
+    "Controls": "Knob timers",
+    "Wash Timer": "15+20 min (soak + wash)",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "2",
+    "Wash Power": "410W",
+    "Spin Power": "200W",
+    "Noise (Wash / Spin)": "62 / 72 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥80%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor, Transparent lid",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "832 × 480 × 890 mm",
+    "Box Dimensions": "861 × 505 × 920 mm",
+    "Net / Gross Weight": "25 kg / 28 kg",
+    "Colour": "Maroon & White"
+   },
+   "features": [
+    [
+     "weight",
+     "10.2 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (200W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 15,
+   "short": "10.2 kg semi automatic top load washing machine in maroon & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT11K1PF",
+   "model": "WT11K1PF",
+   "category": "semi-automatic",
+   "name": "Yara 11 kg Semi Automatic Top Load Washing Machine – Pink Flower",
+   "mrp": 25900,
+   "capacity": "11",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Pink Flower",
+   "colour": "Pink & White",
+   "specs": {
+    "Wash Capacity": "11 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "2",
+    "Wash Power": "410W",
+    "Spin Power": "200W",
+    "Noise (Wash / Spin)": "61 / 71 dB(A)",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "850 × 485 × 1000 mm",
+    "Box Dimensions": "900 × 520 × 1000 mm",
+    "Net / Gross Weight": "26.5 kg / 30 kg",
+    "Colour": "Pink & White"
+   },
+   "features": [
+    [
+     "weight",
+     "11 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (200W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 16,
+   "short": "11 kg semi automatic top load washing machine in pink & white."
+  },
+  {
+   "type": "wm",
+   "sku": "YE-WM-WT11K1MT",
+   "model": "WT11K1MT",
+   "category": "semi-automatic",
+   "name": "Yara 11 kg Semi Automatic Top Load Washing Machine – Maroon Strip",
+   "mrp": 25900,
+   "capacity": "11",
+   "kind": "Semi Automatic Top Load",
+   "load": "Top Load (twin tub)",
+   "style": "Maroon Strip",
+   "colour": "Maroon & White",
+   "specs": {
+    "Wash Capacity": "11 kg",
+    "Type": "Semi Automatic Top Load",
+    "Loading": "Top Load (twin tub)",
+    "Drum / Inner Tub": "Plastic",
+    "Pulsator": "PP",
+    "Water Level Selection": "Manual",
+    "Controls": "Knob timers",
+    "Display": "Timer dials",
+    "Door / Lid": "ABS+GLASS",
+    "Cabinet": "PP (rust-proof), 2-layer",
+    "Water Inlets": "2",
+    "Wash Power": "410W",
+    "Spin Power": "200W",
+    "Washing Performance": "≥60%",
+    "Spin Efficiency": "≥70%",
+    "Max Water Temperature": "≤ 50 °C",
+    "Features": "Soak, Lint filter, End-of-cycle buzzer, Heavy / regular wash, Spin lid safety sensor",
+    "Power Supply": "AC 230V 50Hz",
+    "Product Dimensions": "850 × 485 × 1000 mm",
+    "Box Dimensions": "900 × 520 × 1000 mm",
+    "Net / Gross Weight": "26.5 kg / 30 kg",
+    "Colour": "Maroon & White"
+   },
+   "features": [
+    [
+     "weight",
+     "11 kg Capacity",
+     "Separate wash and spin tubs: wash one load while the next one spins."
+    ],
+    [
+     "layers",
+     "Rust-proof Body",
+     "Tough PP cabinet and base built for Indian homes."
+    ],
+    [
+     "filter",
+     "Lint Filter",
+     "Collects lint during every wash."
+    ],
+    [
+     "shirt",
+     "Heavy / Regular Wash",
+     "Switch between wash actions for heavy or everyday loads."
+    ],
+    [
+     "timer",
+     "Easy Timer Knobs",
+     "Simple dials for wash and spin timers."
+    ],
+    [
+     "rotate-cw",
+     "Built-in Spin Dryer (200W)",
+     "Separate spin tub dries clothes fast."
+    ]
+   ],
+   "page": 17,
+   "short": "11 kg semi automatic top load washing machine in maroon & white."
+  }
+ ]
+}

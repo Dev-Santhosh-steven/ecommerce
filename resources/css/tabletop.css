@@ -1,0 +1,157 @@
+/*
+ * 10" Table Top Standee explore page — navy & gold jewellery boutique:
+ * gold arches, a glowing halo ring, marble counter, an ornate try-on mirror and a wavy digital-menu band.
+ */
+
+.tts-navy {
+    background:
+        radial-gradient(ellipse 60% 50% at 70% 60%, rgba(232, 196, 120, 0.14), transparent 70%),
+        linear-gradient(180deg, #0d1428 0%, #121b36 55%, #0b1122 100%);
+}
+
+.tts-gold {
+    background: linear-gradient(100deg, #f8e6b4 0%, #d8aa52 40%, #fff3cf 55%, #b98a35 75%, #efd08a 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: tts-shine 8s ease-in-out infinite;
+}
+
+@keyframes tts-shine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Concentric gold arches (boutique ceiling) */
+.tts-arches {
+    position: absolute;
+    inset: -30% -10% auto -10%;
+    height: 120%;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 50% 60% at 50% 0%, transparent 60%, rgba(232, 196, 120, 0.35) 60.3%, transparent 60.9%),
+        radial-gradient(ellipse 60% 72% at 50% 0%, transparent 60%, rgba(232, 196, 120, 0.22) 60.3%, transparent 60.8%),
+        radial-gradient(ellipse 70% 84% at 50% 0%, transparent 60%, rgba(232, 196, 120, 0.14) 60.3%, transparent 60.8%),
+        radial-gradient(ellipse 80% 96% at 50% 0%, transparent 60%, rgba(232, 196, 120, 0.08) 60.3%, transparent 60.8%);
+}
+
+.tts-spots {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 30%;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255, 236, 190, 0.9) 0 2px, rgba(255, 220, 150, 0.25) 3px, transparent 8px);
+    background-size: 140px 90px;
+    background-position: 30px 20px;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black, transparent);
+    animation: tts-twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes tts-twinkle {
+    from { opacity: 0.55; }
+    to { opacity: 1; }
+}
+
+/* Glowing halo ring behind the product */
+.tts-halo {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 78%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 3px solid rgba(255, 226, 160, 0.85);
+    box-shadow: 0 0 30px rgba(255, 210, 130, 0.6), inset 0 0 40px rgba(255, 210, 130, 0.35), 0 0 120px rgba(232, 196, 120, 0.25);
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 80%);
+    mask-image: linear-gradient(to bottom, black 55%, transparent 80%);
+    animation: tts-halo 6s ease-in-out infinite;
+}
+
+@keyframes tts-halo {
+    0%, 100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.65; transform: translate(-50%, -50%) scale(1.02); }
+}
+
+/* Marble counter */
+.tts-marble {
+    background:
+        linear-gradient(115deg, transparent 20%, rgba(80, 90, 120, 0.35) 21%, transparent 23%, transparent 48%, rgba(60, 70, 100, 0.3) 49%, transparent 51%),
+        linear-gradient(160deg, transparent 35%, rgba(120, 128, 150, 0.35) 36%, transparent 37.5%, transparent 70%, rgba(90, 100, 130, 0.25) 71%, transparent 73%),
+        linear-gradient(180deg, #f4f2ee, #d9d6d0);
+    box-shadow: inset 0 3px 0 rgba(255, 228, 170, 0.8), 0 -10px 40px rgba(232, 196, 120, 0.25);
+}
+
+/* Ornate try-on mirror */
+.tts-mirror {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 50%;
+    padding: 5%;
+    background:
+        conic-gradient(from 0deg, #b8862f, #f8e3a6, #a8761f, #f3d27f, #8f6420, #f8e3a6, #b8862f);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6), inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+.tts-mirror::before {
+    content: '';
+    position: absolute;
+    inset: 2.2%;
+    border-radius: 50%;
+    border: 3px dotted rgba(255, 244, 210, 0.85);
+    pointer-events: none;
+}
+
+.tts-mirror-glass {
+    position: relative;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 4px rgba(80, 55, 15, 0.8), inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.tts-mirror-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(130deg, rgba(255, 255, 255, 0.28), transparent 35%, transparent 70%, rgba(255, 255, 255, 0.08));
+    pointer-events: none;
+}
+
+/* Digital menu band: cream / olive wave with floating plates */
+.tts-menu-band {
+    position: relative;
+    background: #f6f2e8;
+    overflow: hidden;
+}
+
+.tts-wave {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 55%;
+    color: #5c6e3a;
+}
+
+.tts-plate {
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #1a1a1a, 0 24px 40px rgba(0, 0, 0, 0.35);
+    animation: tts-plate 7s ease-in-out infinite;
+    animation-delay: var(--d, 0s);
+}
+
+@keyframes tts-plate {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(6deg); }
+}
+
+.tts-crumb {
+    position: absolute;
+    border-radius: 50%;
+    animation: tts-plate 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tts-gold, .tts-spots, .tts-halo, .tts-plate, .tts-crumb { animation: none; }
+}

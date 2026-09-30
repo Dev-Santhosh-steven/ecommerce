@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 /**
- * Interactive Panels category with the 55" – 98" Yara Interactive Flat Panel range,
+ * Interactive Panels category with the 55" – 100" Yara Interactive Flat Panel range,
  * product galleries, highlight features, category artwork and a home hero banner.
  *
  * Idempotent: re-running updates the same records (matched by slug / SKU / image path).
@@ -26,6 +26,16 @@ class InteractivePanelSeeder extends Seeder
     public function run(): void
     {
         DB::transaction(function () {
+            $this->publishExplore();
+
+            // The top model is now 100" (was 98"): keep the same product record, orders and reviews.
+            if ($old = Product::where('sku', 'YE-IFP-98')->first()) {
+                $old->update(['sku' => 'YE-IFP-100']);
+                $old->attributeValues()->detach(
+                    AttributeValue::whereHas('attribute', fn ($q) => $q->where('slug', 'size'))->where('value', '98"')->pluck('id'),
+                );
+            }
+
             $category = $this->seedCategory();
 
             foreach ($this->models() as $index => $model) {
@@ -43,8 +53,8 @@ class InteractivePanelSeeder extends Seeder
             [
                 'parent_id' => null,
                 'name' => 'Interactive Panels',
-                'description' => 'Yara Interactive Flat Panels in 55" to 98" — 4K UHD, 20-point touch and Android 14 built in. '
-                    . 'Made for smart classrooms, boardrooms and training spaces.',
+                'description' => 'Yara Interactive Flat Panels in 55" to 100" for education: smart classrooms in schools, colleges and coaching centres. '
+                    . '4K UHD, 20-point touch, Android 14 and built-in PhET science simulations. Also suited to boardrooms and training spaces.',
                 'image' => $this->publish('category-card.jpg', 'categories/interactive-panels.jpg'),
                 'banner' => $this->publish('category-banner.jpg', 'categories/banners/interactive-panels-banner.jpg'),
                 'status' => true,
@@ -61,7 +71,7 @@ class InteractivePanelSeeder extends Seeder
             ['sku' => "YE-IFP-{$inch}"],
             [
                 'category_id' => $category->id,
-                'name' => "Yara {$inch}\" 4K Interactive Flat Panel",
+                'name' => "Yara {$model['label']} 4K Interactive Flat Panel",
                 'slug' => "yara-{$inch}-inch-4k-interactive-flat-panel",
                 'model_number' => "YE-IFP{$inch}-A14",
                 'brand' => 'Yara',
@@ -75,29 +85,38 @@ class InteractivePanelSeeder extends Seeder
                 'status' => true,
                 'featured' => in_array($inch, [65, 75], true),
                 'sort_order' => $index,
-                'meta_title' => "Yara {$inch} inch 4K Interactive Flat Panel | Smart Board for Classrooms & Boardrooms",
+                'meta_title' => "Yara {$inch} inch 4K Interactive Flat Panel | Smart Board for Schools, Classrooms & Boardrooms",
                 'meta_description' => "Buy the Yara {$inch}\" 4K Interactive Flat Panel — 20-point touch, Android 14, 8GB/128GB, "
                     . 'anti-glare glass and wireless screen sharing. Free installation and 3-year warranty.',
             ],
         );
 
-        $gallery = [
-            'front' => "Yara {$inch}\" Interactive Flat Panel — front view",
-            'angle' => "Yara {$inch}\" Interactive Flat Panel — side angle",
-            'stand' => "Yara {$inch}\" Interactive Flat Panel on mobile trolley stand",
-            'highlights' => "Yara {$inch}\" Interactive Flat Panel — key highlights",
-            'ports' => "Yara {$inch}\" Interactive Flat Panel — front connectivity",
+        $name = "Yara {$model['label']} Interactive Flat Panel";
+        $asset = $model['asset'] ?? $inch; // product detail shots are shared with the earlier 98" model
+
+        // Education renders first (on the trolley stand, wall-mounted, in a classroom), then the product detail shots.
+        $slots = [
+            ["explore/ifp-card-{$model['stand']}.jpg", $name],
+            ["explore/ifp-stand-{$model['stand']}.png", "{$name} on stand — {$model['stand']} lesson"],
+            ["explore/ifp-wall-{$model['wall']}.png", "{$name} wall-mounted, without stand — {$model['wall']} lesson"],
+            ['explore/' . ($index % 2 ? 'ifp-classroom-science.jpg' : 'ifp-classroom.jpg'), "{$name} in a smart classroom"],
+            ["products/yara-ifp-{$asset}-stand.jpg", "{$name} — whiteboard on trolley stand"],
+            ["products/yara-ifp-{$asset}-highlights.jpg", "{$name} — key highlights"],
+            ["products/yara-ifp-{$asset}-ports.jpg", "{$name} — front connectivity"],
         ];
 
         $keep = [];
 
-        foreach (array_keys($gallery) as $order => $view) {
-            $path = $this->publish("products/yara-ifp-{$inch}-{$view}.jpg", "products/interactive-panels/yara-ifp-{$inch}-{$view}.jpg");
+        foreach ($slots as $order => [$file, $alt]) {
+            $path = 'products/interactive-panels/' . $file;
+            if (str_starts_with($file, 'products/')) {
+                $path = $this->publish($file, 'products/interactive-panels/' . basename($file));
+            }
             $keep[] = $path;
 
             $product->images()->updateOrCreate(
                 ['image' => $path],
-                ['alt_text' => $gallery[$view], 'sort_order' => $order, 'is_primary' => $order === 0],
+                ['alt_text' => $alt, 'sort_order' => $order, 'is_primary' => $order === 0],
             );
         }
 
@@ -119,17 +138,37 @@ class InteractivePanelSeeder extends Seeder
 
     private function seedHomeBanner(): void
     {
+        $image = $this->publish('home-banner.jpg', 'banners/interactive-panels-hero.jpg');
+
         Banner::updateOrCreate(
-            ['image' => $this->publish('home-banner.jpg', 'banners/interactive-panels-hero.jpg')],
+            ['image' => $image],
             [
-                'title' => 'Interactive Flat Panels',
-                'subtitle' => 'New · 55" to 98" · 4K Touch',
-                'button_text' => 'Explore the Range',
-                'button_link' => '/category/interactive-panels',
-                'sort_order' => 0,
+                'title' => 'Interactive Panels for Smart Classrooms',
+                'subtitle' => 'Teach, explain and engage every student · 55" to 100"',
+                'button_text' => 'See it in class',
+                'button_link' => '/interactive-panels',
+                // keep the slide where an admin placed it; new installs put it first
+                'sort_order' => Banner::where('image', $image)->value('sort_order') ?? 0,
                 'status' => true,
             ],
         );
+    }
+
+    /**
+     * Education renders for the /interactive-panels explore page and product galleries:
+     * the panel on its trolley stand and wall-mounted (no stand) with lesson content on screen,
+     * the 55" – 100" range line-up and classroom scenes.
+     */
+    private function publishExplore(): void
+    {
+        Storage::disk('public')->deleteDirectory('products/interactive-panels/explore');
+        foreach (glob(self::ASSETS . '/explore/*.{png,jpg}', GLOB_BRACE) as $file) {
+            $this->publish('explore/' . basename($file), 'products/interactive-panels/explore/' . basename($file));
+        }
+        // animated classroom lessons (SVG) and photo slides shown live on the panel screens
+        foreach (glob(self::ASSETS . '/lessons/*.{svg,jpg}', GLOB_BRACE) as $file) {
+            $this->publish('lessons/' . basename($file), 'products/interactive-panels/lessons/' . basename($file));
+        }
     }
 
     /**
@@ -151,7 +190,9 @@ class InteractivePanelSeeder extends Seeder
 
         Share wirelessly from laptops and phones with screen mirroring and reverse mirroring, split the screen for multiple users, and connect over HDMI, USB 3.0, USB-C and LAN. Zero-bonding, 4 mm anti-glare toughened glass and an eye-protective display keep images sharp and comfortable all day.
 
-        Mount it on the wall with the bracket included, or pair it with our mobile trolley stand to move it between rooms.
+        Built for education: teachers get a ready-made whiteboard, PhET science and maths simulations, split screen for group work and annotation over any app or video, so STEM, chemistry, art, geography and astronomy lessons come alive for the whole class.
+
+        Mount it on the wall with the bracket included, or pair it with our trolley stand to move it between rooms.
         TEXT;
     }
 
@@ -196,30 +237,31 @@ class InteractivePanelSeeder extends Seeder
             ['icon' => 'cast', 'title' => 'Wireless Screen Sharing', 'description' => 'Mirror and reverse-mirror laptops and phones in seconds.'],
             ['icon' => 'shield-check', 'title' => 'Anti-Glare Toughened Glass', 'description' => '4 mm tempered glass with an eye-protective display.'],
             ['icon' => 'camera', 'title' => '48 MP AI Camera (Optional)', 'description' => 'Built-in camera with 8-array mic for hybrid classes and meetings.'],
+            ['icon' => 'graduation-cap', 'title' => 'Built for Education', 'description' => 'Whiteboard, PhET simulations and split screen for schools, colleges and coaching centres.'],
         ];
     }
 
     /**
-     * Size-specific figures. 55" – 75" follow the Yara B2B Catalogue 2026; 85" and 98" are scaled from the 86" model.
+     * Size-specific figures. 55" – 75" follow the Yara B2B Catalogue 2026; 85" and 100" are scaled from the 86" model.
      */
     private function models(): array
     {
         return [
-            ['inch' => 55, 'ideal' => 'classrooms and huddle rooms', 'price' => 125000, 'sale_price' => 98500,
+            ['inch' => 55, 'label' => "55\"", 'stand' => 'elearning', 'wall' => 'maths', 'ideal' => 'classrooms and tuition centres', 'price' => 125000, 'sale_price' => 98500,
                 'display_area' => '1209.6 × 680.4', 'brightness' => 350, 'audio' => '2 × 10 W', 'power' => 150,
                 'dimensions' => '1271.9 × 769.1 × 85.5', 'weight' => '26 kg / 35 kg'],
-            ['inch' => 65, 'ideal' => 'classrooms and meeting rooms', 'price' => 155000, 'sale_price' => 124900,
+            ['inch' => 65, 'label' => "65\"", 'stand' => 'chemistry', 'wall' => 'science', 'ideal' => 'classrooms and smart labs', 'price' => 155000, 'sale_price' => 124900,
                 'display_area' => '1428.5 × 803.5', 'brightness' => 350, 'audio' => '2 × 15 W', 'power' => 210,
                 'dimensions' => '1485.2 × 890.8 × 97.8', 'weight' => '42 kg / 54 kg'],
-            ['inch' => 75, 'ideal' => 'large classrooms and boardrooms', 'price' => 199000, 'sale_price' => 159900,
+            ['inch' => 75, 'label' => "75\"", 'stand' => 'maths', 'wall' => 'biology', 'ideal' => 'large classrooms and seminar rooms', 'price' => 199000, 'sale_price' => 159900,
                 'display_area' => '1650.2 × 928.3', 'brightness' => 350, 'audio' => '2 × 15 W', 'power' => 250,
                 'dimensions' => '1707.6 × 1016.6 × 97.8', 'weight' => '53 kg / 72.3 kg'],
-            ['inch' => 85, 'ideal' => 'boardrooms and training halls', 'price' => 265000, 'sale_price' => 214900,
+            ['inch' => 85, 'label' => "85\"", 'stand' => 'science', 'wall' => 'computing', 'ideal' => 'lecture halls and training rooms', 'price' => 265000, 'sale_price' => 214900,
                 'display_area' => '1872.0 × 1053.0', 'brightness' => 450, 'audio' => '2 × 15 W', 'power' => 340,
                 'dimensions' => '1930.5 × 1142.0 × 98.0', 'weight' => '60 kg / 86 kg'],
-            ['inch' => 98, 'ideal' => 'auditoriums, lecture halls and command centres', 'price' => 475000, 'sale_price' => 389900,
-                'display_area' => '2158.8 × 1214.3', 'brightness' => 450, 'audio' => '2 × 20 W', 'power' => 450,
-                'dimensions' => '2211.0 × 1283.0 × 98.0', 'weight' => '95 kg / 125 kg'],
+            ['inch' => 100, 'asset' => 98, 'label' => "100\"", 'stand' => 'ai', 'wall' => 'chemistry', 'ideal' => 'auditoriums and lecture theatres', 'price' => 475000, 'sale_price' => 389900,
+                'display_area' => '2213.8 × 1245.2', 'brightness' => 450, 'audio' => '2 × 20 W', 'power' => 450,
+                'dimensions' => '2268.0 × 1318.0 × 98.0', 'weight' => '98 kg / 130 kg'],
         ];
     }
 }

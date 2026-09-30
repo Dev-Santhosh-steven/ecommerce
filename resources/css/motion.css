@@ -1,0 +1,325 @@
+/* ===============================================================
+ * SITE-WIDE MOTION & POLISH SYSTEM
+ * Store pages (body.brand-page). One set of easing curves and durations
+ * used everywhere, so motion feels consistent and professional.
+ * =============================================================== */
+
+:root {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ---------- Typography refinements ---------- */
+
+.brand-page {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65;
+}
+
+.brand-page h1,
+.brand-page h2 {
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+}
+
+.brand-page h3,
+.brand-page h4 {
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.brand-page p {
+    text-wrap: pretty;
+}
+
+.brand-page .tabular-nums {
+    font-feature-settings: 'tnum' 1;
+}
+
+::selection {
+    background: var(--color-brand-600);
+    color: #fff;
+}
+
+.brand-page :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* Slim branded scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brand-600) var(--color-gray-100);
+}
+
+/* ---------- Reveal variants (added automatically by app.js, or by hand) ---------- */
+
+/* Doubled attribute selector so these beat the base [data-reveal] rule in app.css. */
+[data-reveal][data-reveal='left'] {
+    transform: translateX(-40px);
+}
+
+[data-reveal][data-reveal='right'] {
+    transform: translateX(40px);
+}
+
+[data-reveal][data-reveal='zoom'] {
+    transform: scale(0.94);
+}
+
+[data-reveal][data-reveal='fade'] {
+    transform: none;
+}
+
+[data-reveal][data-reveal].is-revealed {
+    transform: none;
+}
+
+/* ---------- Page transitions (cross-document View Transitions) ---------- */
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: page-out 0.25s var(--ease-in-out) both;
+}
+
+::view-transition-new(root) {
+    animation: page-in 0.5s var(--ease-out-expo) both;
+}
+
+/* The header stays in place while the page changes underneath it. */
+.site-header {
+    view-transition-name: site-header;
+}
+
+@keyframes page-out {
+    to {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+}
+
+/* ---------- Header: slims down after scrolling, with reading progress ---------- */
+
+.site-header .header-row {
+    transition: height 0.45s var(--ease-out-expo);
+}
+
+.site-header .header-logo {
+    transition: height 0.45s var(--ease-out-expo);
+}
+
+.site-header {
+    transition: box-shadow 0.45s var(--ease-out-expo);
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 12px 32px -12px rgb(0 0 0 / 0.6);
+}
+
+.site-header.is-scrolled .header-row {
+    height: 4.25rem;
+}
+
+.site-header.is-scrolled .header-logo {
+    height: 3.1rem;
+}
+
+.scroll-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b7d, var(--color-brand-red));
+    box-shadow: 0 0 10px rgb(237 28 36 / 0.7);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* ---------- Hero: cinematic zoom + staged text on every slide ---------- */
+
+.hero-swiper .swiper-slide > img,
+.hero-swiper .swiper-slide > video {
+    transform: scale(1.08);
+}
+
+.hero-swiper .swiper-slide-active > img,
+.hero-swiper .swiper-slide-active > video {
+    transform: scale(1);
+    transition: transform 7s var(--ease-out-quart);
+}
+
+.hero-swiper .hero-copy > * {
+    opacity: 0;
+}
+
+.hero-swiper .swiper-slide-active .hero-copy > * {
+    animation: hero-rise 1s var(--ease-out-expo) forwards;
+}
+
+.hero-swiper .swiper-slide-active .hero-copy > *:nth-child(1) { animation-delay: 0.25s; }
+.hero-swiper .swiper-slide-active .hero-copy > *:nth-child(2) { animation-delay: 0.4s; }
+.hero-swiper .swiper-slide-active .hero-copy > *:nth-child(3) { animation-delay: 0.55s; }
+.hero-swiper .swiper-slide-active .hero-copy > *:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes hero-rise {
+    from {
+        opacity: 0;
+        transform: translateY(36px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+        filter: blur(0);
+    }
+}
+
+/* ---------- Buttons & links: micro-interactions ---------- */
+
+/* Light sweep over solid brand buttons */
+.brand-page .btn-sweep,
+.brand-page a.rounded-full.bg-brand-600,
+.brand-page button.rounded-full.bg-brand-600 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.brand-page .btn-sweep::before,
+.brand-page a.rounded-full.bg-brand-600::before,
+.brand-page button.rounded-full.bg-brand-600::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 25%, rgb(255 255 255 / 0.28) 50%, transparent 75%);
+    transform: translateX(-130%);
+    transition: transform 0.8s var(--ease-out-quart);
+}
+
+.brand-page .btn-sweep:hover::before,
+.brand-page a.rounded-full.bg-brand-600:hover::before,
+.brand-page button.rounded-full.bg-brand-600:hover::before {
+    transform: translateX(130%);
+}
+
+.brand-page a.rounded-full.bg-brand-600:active,
+.brand-page button.rounded-full.bg-brand-600:active {
+    scale: 0.97;
+}
+
+/* Arrows nudge forward when their link or button is hovered */
+.brand-page a svg.lucide-arrow-right,
+.brand-page button svg.lucide-arrow-right {
+    transition: transform 0.35s var(--ease-out-expo);
+}
+
+.brand-page a:hover svg.lucide-arrow-right,
+.brand-page button:hover svg.lucide-arrow-right {
+    transform: translateX(4px);
+}
+
+/* Softer, slower image zoom inside hover cards */
+.brand-page .group img {
+    transition-duration: 0.9s;
+    transition-timing-function: var(--ease-out-quart);
+}
+
+/* ---------- Home: New Arrivals carousel ---------- */
+
+.arrivals-swiper .swiper-slide > div > a {
+    height: 100%;
+}
+
+.arrivals-swiper {
+    cursor: grab;
+}
+
+.arrivals-swiper:active {
+    cursor: grabbing;
+}
+
+.arrivals-scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-gray-200);
+}
+
+.arrivals-scrollbar .swiper-scrollbar-drag {
+    background: linear-gradient(90deg, var(--color-brand-600), var(--color-brand-red));
+    cursor: grab;
+}
+
+/* ---------- Eyebrow rule grows in when revealed ---------- */
+
+.brand-eyebrow::before {
+    transition: width 0.9s var(--ease-out-expo) 0.2s;
+}
+
+[data-reveal]:not(.is-revealed) .brand-eyebrow::before {
+    width: 0;
+}
+
+/* ---------- Back to top ---------- */
+
+.back-to-top {
+    opacity: 0;
+    transform: translateY(16px) scale(0.9);
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+
+/* ---------- Reduced motion: keep everything calm ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+
+    .hero-swiper .swiper-slide > img,
+    .hero-swiper .swiper-slide > video,
+    .hero-swiper .swiper-slide-active > img,
+    .hero-swiper .swiper-slide-active > video {
+        transform: none;
+        transition: none;
+    }
+
+    .hero-swiper .hero-copy > *,
+    .hero-swiper .swiper-slide-active .hero-copy > * {
+        opacity: 1;
+        animation: none;
+    }
+
+    [data-reveal][data-reveal='left'],
+    [data-reveal][data-reveal='right'],
+    [data-reveal][data-reveal='zoom'] {
+        transform: none;
+    }
+}

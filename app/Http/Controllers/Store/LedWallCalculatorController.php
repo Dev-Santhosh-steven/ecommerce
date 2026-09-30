@@ -52,17 +52,10 @@ class LedWallCalculatorController extends Controller
             $request->lock_axis,
         );
 
-        $unitPrice = $module->product ? (float) ($module->product->sale_price ?: $module->product->price) : null;
-        $perSqFt = $module->product?->price_unit === 'sq ft';
-
+        // LED walls are quoted per project (like LCD walls): no price or budget is sent to the page.
         foreach ($result['suggestions'] as &$sc) {
             $sc = $this->calculationService->enrichWithCabinets($sc, $module);
             $sc = $this->calculationService->enrichWithEstimates($sc, $module);
-
-            // Indicative budget for the LED screen only, when the product is priced per sq ft.
-            $sc['estimate_inr'] = $unitPrice && $perSqFt && isset($sc['area_sqft'])
-                ? round($sc['area_sqft'] * $unitPrice, -2)
-                : null;
         }
         unset($sc);
 

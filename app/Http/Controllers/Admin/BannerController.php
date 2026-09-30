@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
 {
@@ -37,6 +38,7 @@ class BannerController extends Controller
             'title' => ['nullable', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'image' => ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
+            'video' => ['nullable', 'file', 'mimetypes:video/mp4,video/webm', 'max:20480'],
             'button_text' => ['nullable', 'string', 'max:255'],
             'button_link' => ['nullable', 'string', 'max:255'],
             'status' => ['nullable', 'boolean'],
@@ -45,10 +47,15 @@ class BannerController extends Controller
 
         $imagePath = $request->file('image')->store('banners', 'public');
 
+        $videoPath = $request->hasFile('video')
+            ? $request->file('video')->store('banners/videos', 'public')
+            : null;
+
         Banner::create([
             'title' => $validated['title'] ?? null,
             'subtitle' => $validated['subtitle'] ?? null,
             'image' => $imagePath,
+            'video' => $videoPath,
             'button_text' => $validated['button_text'] ?? null,
             'button_link' => $validated['button_link'] ?? null,
             'status' => $request->boolean('status'),
@@ -79,6 +86,7 @@ class BannerController extends Controller
             'title' => ['nullable', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096'],
+            'video' => ['nullable', 'file', 'mimetypes:video/mp4,video/webm', 'max:20480'],
             'button_text' => ['nullable', 'string', 'max:255'],
             'button_link' => ['nullable', 'string', 'max:255'],
             'status' => ['nullable', 'boolean'],
@@ -88,13 +96,27 @@ class BannerController extends Controller
         $imagePath = $banner->image;
 
         if ($request->hasFile('image')) {
+            Storage::disk('public')->delete($banner->image);
             $imagePath = $request->file('image')->store('banners', 'public');
+        }
+
+        $videoPath = $banner->video;
+
+        if ($request->hasFile('video') || $request->boolean('remove_video')) {
+            if ($banner->video) {
+                Storage::disk('public')->delete($banner->video);
+            }
+
+            $videoPath = $request->hasFile('video')
+                ? $request->file('video')->store('banners/videos', 'public')
+                : null;
         }
 
         $banner->update([
             'title' => $validated['title'] ?? null,
             'subtitle' => $validated['subtitle'] ?? null,
             'image' => $imagePath,
+            'video' => $videoPath,
             'button_text' => $validated['button_text'] ?? null,
             'button_link' => $validated['button_link'] ?? null,
             'status' => $request->boolean('status'),
@@ -112,6 +134,8 @@ class BannerController extends Controller
      */
     public function destroy(Banner $banner)
     {
+        Storage::disk('public')->delete(array_filter([$banner->image, $banner->video]));
+
         $banner->delete();
 
         return redirect()

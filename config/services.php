@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    // Website chatbot: number used for "talk to a person" (country code + number, digits only).
+    'chatbot' => [
+        'whatsapp' => env('CHATBOT_WHATSAPP', '919677712000'),
+    ],
+
 ];

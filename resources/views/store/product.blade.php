@@ -106,17 +106,7 @@
 
 
             {{-- Details --}}
-            <div
-                x-data="{
-                    saved: JSON.parse(localStorage.getItem('yara_wishlist') || '[]').includes({{ $product->id }}),
-                    toggle() {
-                        let list = JSON.parse(localStorage.getItem('yara_wishlist') || '[]');
-                        list = this.saved ? list.filter(id => id !== {{ $product->id }}) : [...list, {{ $product->id }}];
-                        localStorage.setItem('yara_wishlist', JSON.stringify(list));
-                        this.saved = !this.saved;
-                    },
-                }"
-            >
+            <div x-data="{ qty: 1 }">
 
                 <div class="flex items-start justify-between gap-4">
 
@@ -134,12 +124,12 @@
 
                     <button
                         type="button"
-                        @click="toggle()"
-                        :class="saved ? 'bg-brand-red text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'"
+                        @click="$store.shop.toggleWishlist({{ $product->id }})"
+                        :class="$store.shop.saved({{ $product->id }}) ? 'bg-brand-red text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'"
                         class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition"
                         title="Save to wishlist"
                     >
-                        <i data-lucide="heart" class="h-5 w-5" :class="saved ? 'fill-current' : ''"></i>
+                        <i data-lucide="heart" class="h-5 w-5" :class="$store.shop.saved({{ $product->id }}) ? 'fill-current' : ''"></i>
                     </button>
 
                 </div>
@@ -166,6 +156,15 @@
                 @endif
 
 
+                @if (! $product->hasPrice())
+
+                    <div class="mt-6">
+                        <span class="font-display text-3xl font-bold text-gray-900">Price on request</span>
+                        <p class="mt-1 text-sm text-gray-500">Contact our team for the best price and availability.</p>
+                    </div>
+
+                @else
+
                 <div class="mt-6 flex items-baseline gap-3">
 
                     <span class="text-3xl font-bold text-gray-900">
@@ -190,6 +189,7 @@
 
                 </div>
 
+                @endif
 
                 <div class="mt-4">
 
@@ -220,6 +220,35 @@
 
                 @endif
 
+
+                @if ($product->isPurchasable())
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <div class="inline-flex items-center rounded-full ring-1 ring-gray-300">
+                            <button type="button" @click="qty = Math.max(1, qty - 1)" class="flex h-12 w-12 items-center justify-center rounded-full text-lg text-gray-600 hover:bg-gray-100" aria-label="Decrease quantity">&minus;</button>
+                            <span class="w-8 text-center font-semibold" x-text="qty">1</span>
+                            <button type="button" @click="qty = Math.min({{ min(\App\Services\Cart::MAX_QTY, max(1, $product->stock_quantity)) }}, qty + 1)" class="flex h-12 w-12 items-center justify-center rounded-full text-lg text-gray-600 hover:bg-gray-100" aria-label="Increase quantity">+</button>
+                        </div>
+                        <button type="button" @click="$store.shop.addToCart({{ $product->id }}, qty)" :disabled="$store.shop.loading"
+                                class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gray-900 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:opacity-60 sm:flex-none">
+                            <i data-lucide="shopping-bag" class="h-4 w-4"></i>
+                            Add to cart
+                        </button>
+                        <form method="POST" action="{{ route('cart.add', $product) }}" class="flex-1 sm:flex-none">
+                            @csrf
+                            <input type="hidden" name="buy_now" value="1">
+                            <input type="hidden" name="quantity" :value="qty">
+                            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700">
+                                <i data-lucide="zap" class="h-4 w-4"></i>
+                                Buy now
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="mt-5 grid gap-2 text-sm text-gray-600 sm:grid-cols-3">
+                        <li class="flex items-center gap-2"><i data-lucide="truck" class="h-4 w-4 text-brand-600"></i>Free delivery</li>
+                        <li class="flex items-center gap-2"><i data-lucide="shield-check" class="h-4 w-4 text-brand-600"></i>Brand warranty</li>
+                        <li class="flex items-center gap-2"><i data-lucide="wrench" class="h-4 w-4 text-brand-600"></i>Service network</li>
+                    </ul>
+                @endif
 
                 <div class="mt-8 flex flex-wrap gap-3">
 
@@ -320,65 +349,7 @@
 @endif
 
 
-{{-- =========================================================
-     DESCRIPTION
-========================================================= --}}
-@if ($product->description)
-
-    <section class="bg-white py-14" data-reveal>
-
-        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-
-            <h2 class="mb-4 text-xl font-bold tracking-tight text-gray-900">
-                About This Product
-            </h2>
-
-            <div class="leading-7 text-gray-600">
-                {!! nl2br(e($product->description)) !!}
-            </div>
-
-        </div>
-
-    </section>
-
-@endif
-
-
-{{-- =========================================================
-     SPECIFICATIONS
-========================================================= --}}
-@if (!empty($product->specifications))
-
-    <section class="bg-gray-50 py-14" data-reveal>
-
-        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-
-            <h2 class="mb-6 text-xl font-bold tracking-tight text-gray-900">
-                Specifications
-            </h2>
-
-            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-
-                <dl class="divide-y divide-gray-200">
-
-                    @foreach ($product->specifications as $key => $value)
-
-                        <div class="flex items-center justify-between gap-4 px-5 py-3.5 text-sm">
-                            <dt class="text-gray-500">{{ $key }}</dt>
-                            <dd class="text-right font-medium text-gray-900">{{ $value }}</dd>
-                        </div>
-
-                    @endforeach
-
-                </dl>
-
-            </div>
-
-        </div>
-
-    </section>
-
-@endif
+@include('store.partials.product-story')
 
 
 {{-- =========================================================
@@ -386,15 +357,24 @@
 ========================================================= --}}
 @if ($related->isNotEmpty())
 
-    <section class="bg-white py-14" data-reveal>
+    <section class="bg-white py-20" data-reveal>
 
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
 
-            <h2 class="mb-8 text-xl font-bold tracking-tight text-gray-900">
-                You May Also Like
-            </h2>
+            <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+                <div>
+                    <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">More to explore</p>
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">You May <span class="text-brand-600">Also Like</span></h2>
+                </div>
+                @if ($product->category)
+                    <a href="{{ route('store.category', $product->category) }}" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                        View all {{ $product->category->name }}
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                @endif
+            </div>
 
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
                 @foreach ($related as $item)
 

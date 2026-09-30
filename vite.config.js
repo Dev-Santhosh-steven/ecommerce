@@ -9,8 +9,13 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
+                // Body text: clean, modern and very readable.
+                bunny('Plus Jakarta Sans', {
+                    weights: [400, 500, 600, 700],
+                }),
+                // Headings & numbers: geometric, matches the rounded "yara" logo.
+                bunny('Outfit', {
+                    weights: [500, 600, 700, 800],
                 }),
             ],
         }),

@@ -1,0 +1,204 @@
+/* ==========================================================================
+   Home Audio explore page (/home-audio) — black & gold, sound-reactive
+   --bass (0–1) is set by the beat engine while the demo plays; the idle
+   animations below keep things alive when it isn't.
+   ========================================================================== */
+
+.ha-page {
+    --gold: #f5b54a;
+    --gold-soft: #ffd88a;
+    --bass: 0;
+}
+
+.ha-gold-text {
+    background: linear-gradient(100deg, #b8862e 0%, #ffe3a3 35%, #f5b54a 55%, #fff1cc 70%, #c8922f 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: ha-sheen 7s linear infinite;
+}
+
+@keyframes ha-sheen {
+    to { background-position: -220% 0; }
+}
+
+/* Slow cinematic zoom on section backdrops */
+.ha-kenburns {
+    animation: ha-kenburns 24s ease-in-out infinite alternate;
+}
+
+@keyframes ha-kenburns {
+    from { transform: scale(1.04) translate3d(0, 0, 0); }
+    to { transform: scale(1.16) translate3d(-2%, -1.5%, 0); }
+}
+
+/* Floating gold dust */
+.ha-dust span {
+    position: absolute;
+    bottom: -10px;
+    width: var(--s, 3px);
+    height: var(--s, 3px);
+    border-radius: 9999px;
+    background: var(--gold-soft);
+    box-shadow: 0 0 8px 2px rgb(245 181 74 / 0.6);
+    opacity: 0;
+    animation: ha-rise var(--d, 12s) linear var(--delay, 0s) infinite;
+}
+
+@keyframes ha-rise {
+    0% { transform: translate3d(0, 0, 0); opacity: 0; }
+    10% { opacity: var(--o, 0.8); }
+    90% { opacity: var(--o, 0.8); }
+    100% { transform: translate3d(var(--x, 20px), -105vh, 0); opacity: 0; }
+}
+
+/* Bass rings radiating from woofers and ports */
+.ha-woofer {
+    position: absolute;
+    width: var(--w, 14%);
+    aspect-ratio: 1;
+    translate: -50% -50%;
+    pointer-events: none;
+}
+
+.ha-woofer::before,
+.ha-woofer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border: 2px solid rgb(245 181 74 / 0.7);
+    opacity: 0;
+    animation: ha-ring 2.4s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+}
+
+.ha-woofer::after {
+    animation-delay: 1.2s;
+}
+
+.ha-playing .ha-woofer::before,
+.ha-playing .ha-woofer::after {
+    animation-duration: 0.625s; /* one beat at 96 BPM */
+}
+
+.ha-playing .ha-woofer::after {
+    animation-delay: 0.31s;
+}
+
+@keyframes ha-ring {
+    0% { transform: scale(0.55); opacity: 0.9; }
+    100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* The product itself thumps with the bass */
+.ha-thump {
+    transform: scale(calc(1 + var(--bass) * 0.025));
+    filter: drop-shadow(0 0 calc(var(--bass) * 40px) rgb(245 181 74 / 0.55)) drop-shadow(0 40px 40px rgb(0 0 0 / 0.7));
+    transition: transform 0.08s linear, filter 0.08s linear;
+}
+
+.ha-glow {
+    opacity: calc(0.35 + var(--bass) * 0.65);
+    transform: scale(calc(1 + var(--bass) * 0.15));
+    transition: opacity 0.1s linear, transform 0.1s linear;
+}
+
+/* Equaliser */
+.ha-eq span {
+    flex: 1;
+    border-radius: 9999px 9999px 2px 2px;
+    background: linear-gradient(to top, #b8862e, var(--gold), #fff1cc);
+    height: var(--h, 12%);
+    transform-origin: bottom;
+    transition: height 0.07s linear;
+}
+
+.ha-eq.is-idle span {
+    animation: ha-eq 1.6s ease-in-out var(--delay, 0s) infinite alternate;
+}
+
+@keyframes ha-eq {
+    0% { height: 8%; }
+    35% { height: var(--peak, 60%); }
+    70% { height: 22%; }
+    100% { height: calc(var(--peak, 60%) * 0.7); }
+}
+
+/* Hotspots on product cut-outs */
+.ha-hotspot {
+    position: absolute;
+    translate: -50% -50%;
+}
+
+.ha-hotspot > button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 9999px;
+    background: var(--gold);
+    color: #111;
+    box-shadow: 0 0 0 4px rgb(245 181 74 / 0.25);
+}
+
+.ha-hotspot > button::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    border: 2px solid var(--gold);
+    animation: ha-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ha-ping {
+    75%, 100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Cards that tilt towards the pointer */
+.ha-tilt {
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+}
+
+.ha-tilt .ha-pop {
+    transform: translateZ(50px);
+}
+
+/* Flowing sound-wave divider */
+.ha-wave-flow {
+    animation: ha-flow 6s linear infinite;
+}
+
+@keyframes ha-flow {
+    to { transform: translateX(-50%); }
+}
+
+/* Spinning vinyl accent */
+.ha-spin {
+    animation: ha-spin 8s linear infinite;
+}
+
+.ha-playing .ha-spin {
+    animation-duration: 1.9s;
+}
+
+@keyframes ha-spin {
+    to { rotate: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ha-gold-text,
+    .ha-kenburns,
+    .ha-dust span,
+    .ha-woofer::before,
+    .ha-woofer::after,
+    .ha-eq.is-idle span,
+    .ha-hotspot > button::before,
+    .ha-wave-flow,
+    .ha-spin {
+        animation: none;
+    }
+}

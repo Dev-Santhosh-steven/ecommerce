@@ -1,0 +1,149 @@
+/* ==========================================================================
+   LED & LCD video wall explore pages (/led-video-walls, /lcd-video-walls)
+   ========================================================================== */
+
+/* A live screen pinned inside a photo (positioned / transformed by liveScreen) */
+.vw-screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+    /* transparent: the photo already shows Yara content until the first slide has loaded */
+}
+
+.vw-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.vw-slide.is-on {
+    opacity: 1;
+    animation: vw-drift 9s ease-out both;
+}
+
+/* Part of a wider image, for screens that wrap a corner (cube facades) */
+.vw-slide.is-part {
+    object-fit: fill;
+    width: var(--part-w, 100%);
+    left: var(--part-x, 0);
+}
+
+@keyframes vw-drift {
+    from { transform: scale(1.08); }
+    to { transform: scale(1); }
+}
+
+/* LED pixel structure + light sweep + Yara bug over every live screen */
+.vw-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle, transparent 55%, rgb(0 0 0 / 0.35) 75%) 0 0 / 5px 5px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.vw-screen::after {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    z-index: 3;
+    background: linear-gradient(115deg, transparent 40%, rgb(255 255 255 / 0.18) 50%, transparent 60%);
+    transform: translateX(-100%);
+    animation: vw-sweep 7s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+    pointer-events: none;
+}
+
+@keyframes vw-sweep {
+    0% { transform: translateX(-100%); }
+    30%, 100% { transform: translateX(100%); }
+}
+
+.vw-bug {
+    position: absolute;
+    right: 3%;
+    bottom: 4.5%;
+    z-index: 4;
+    width: 9%;
+    min-width: 18px;
+    opacity: 0.85;
+}
+
+/* Pixel dissolve tiles */
+.vw-tile {
+    opacity: 0;
+    transition: opacity 0.35s steps(3);
+}
+
+.vw-tile.is-on {
+    opacity: 1;
+}
+
+/* LCD wall builder: panels power on one by one */
+.vw-panel {
+    background-color: #050507;
+    animation: vw-power 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes vw-power {
+    0% { opacity: 0; filter: brightness(3) saturate(0); transform: scale(0.92); }
+    60% { opacity: 1; filter: brightness(1.4) saturate(0.8); }
+    100% { opacity: 1; filter: none; transform: none; }
+}
+
+/* Pixel-pitch preview: the image seen through round LED dots */
+.vw-dots {
+    -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 60%);
+    mask-image: radial-gradient(circle, #000 52%, transparent 60%);
+    -webkit-mask-size: var(--dot, 8px) var(--dot, 8px);
+    mask-size: var(--dot, 8px) var(--dot, 8px);
+    transition: -webkit-mask-size 0.6s ease, mask-size 0.6s ease;
+}
+
+/* Counting / scanning accents */
+.vw-scanline {
+    background: linear-gradient(to bottom, transparent, rgb(255 255 255 / 0.08) 50%, transparent);
+    background-size: 100% 12px;
+    animation: vw-scan 1.2s linear infinite;
+}
+
+@keyframes vw-scan {
+    to { background-position: 0 12px; }
+}
+
+.vw-twinkle {
+    animation: vw-twinkle var(--t, 3s) ease-in-out var(--d, 0s) infinite;
+}
+
+@keyframes vw-twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: var(--o, 0.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vw-slide.is-on,
+    .vw-screen::after,
+    .vw-panel,
+    .vw-scanline,
+    .vw-twinkle {
+        animation: none;
+    }
+}
+
+/* Plain screens (interactive panels): no LED pixel grid, no sweep, no zoom drift */
+.vw-screen.vw-plain::before,
+.vw-screen.vw-plain::after {
+    display: none;
+}
+
+.vw-plain .vw-slide.is-on {
+    animation: none;
+}

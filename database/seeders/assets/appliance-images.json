@@ -1,0 +1,119 @@
+{
+ "ac": {
+  "AS123BS24E": [
+   "ac-as123bs24e.jpg",
+   "ac-as123bs24e-indoor.jpg",
+   "ac-as123bs24e-outdoor.jpg"
+  ],
+  "AS123BS25E": [
+   "ac-as123bs25e.jpg",
+   "ac-as123bs25e-indoor.jpg",
+   "ac-as123bs25e-outdoor.jpg"
+  ],
+  "AS125PD25E": [
+   "ac-as125pd25e.jpg",
+   "ac-as125pd25e-indoor.jpg",
+   "ac-as125pd25e-outdoor.jpg"
+  ],
+  "AS183BS24E": [
+   "ac-as183bs24e.jpg",
+   "ac-as183bs24e-indoor.jpg",
+   "ac-as183bs24e-outdoor.jpg"
+  ],
+  "AS183BS25E": [
+   "ac-as183bs25e.jpg",
+   "ac-as183bs25e-indoor.jpg",
+   "ac-as183bs25e-outdoor.jpg"
+  ],
+  "AS185PD25E": [
+   "ac-as185pd25e.jpg",
+   "ac-as185pd25e-indoor.jpg",
+   "ac-as185pd25e-outdoor.jpg"
+  ],
+  "AS243BS25E": [
+   "ac-as243bs25e.jpg",
+   "ac-as243bs25e-indoor.jpg",
+   "ac-as243bs25e-outdoor.jpg"
+  ],
+  "AS225BS24E": [
+   "ac-as225bs24e.jpg",
+   "ac-as225bs24e-indoor.jpg",
+   "ac-as225bs24e-outdoor.jpg"
+  ],
+  "AS245PD25E": [
+   "ac-as245pd25e.jpg",
+   "ac-as245pd25e-indoor.jpg",
+   "ac-as245pd25e-outdoor.jpg"
+  ]
+ },
+ "wm": {
+  "WS65K1PF": [
+   "wm-ws65k1pf.jpg",
+   "wm-ws65k1pf-highlights.jpg"
+  ],
+  "WA65K1BR": [
+   "wm-wa65k1br.jpg",
+   "wm-wa65k1br-highlights.jpg"
+  ],
+  "WA65K1RR": [
+   "wm-wa65k1rr.jpg",
+   "wm-wa65k1rr-highlights.jpg"
+  ],
+  "WA65K1BS": [
+   "wm-wa65k1bs.jpg",
+   "wm-wa65k1bs-highlights.jpg"
+  ],
+  "WT70C1MT": [
+   "wm-wt70c1mt.jpg",
+   "wm-wt70c1mt-highlights.jpg"
+  ],
+  "WF70J1GB": [
+   "wm-wf70j1gb.jpg",
+   "wm-wf70j1gb-highlights.jpg"
+  ],
+  "WA75K1BS": [
+   "wm-wa75k1bs.jpg",
+   "wm-wa75k1bs-highlights.jpg"
+  ],
+  "WT80C1BT": [
+   "wm-wt80c1bt.jpg",
+   "wm-wt80c1bt-highlights.jpg"
+  ],
+  "WT80W1BT": [
+   "wm-wt80w1bt.jpg",
+   "wm-wt80w1bt-highlights.jpg"
+  ],
+  "WF80J1GB": [
+   "wm-wf80j1gb.jpg",
+   "wm-wf80j1gb-highlights.jpg"
+  ],
+  "WA85K1BS": [
+   "wm-wa85k1bs.jpg",
+   "wm-wa85k1bs-highlights.jpg"
+  ],
+  "WT90C1PF": [
+   "wm-wt90c1pf.jpg",
+   "wm-wt90c1pf-highlights.jpg"
+  ],
+  "WA10K1BS": [
+   "wm-wa10k1bs.jpg",
+   "wm-wa10k1bs-highlights.jpg"
+  ],
+  "WT10K1TF": [
+   "wm-wt10k1tf.jpg",
+   "wm-wt10k1tf-highlights.jpg"
+  ],
+  "WT10K1MF": [
+   "wm-wt10k1mf.jpg",
+   "wm-wt10k1mf-highlights.jpg"
+  ],
+  "WT11K1PF": [
+   "wm-wt11k1pf.jpg",
+   "wm-wt11k1pf-highlights.jpg"
+  ],
+  "WT11K1MT": [
+   "wm-wt11k1mt.jpg",
+   "wm-wt11k1mt-highlights.jpg"
+  ]
+ }
+}

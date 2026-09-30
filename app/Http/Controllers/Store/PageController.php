@@ -3,12 +3,248 @@
 namespace App\Http\Controllers\Store;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Product;
 
 class PageController extends Controller
 {
+    /**
+     * Yara Centum 100" showcase page.
+     */
+    public function centum()
+    {
+        $product = Product::where('sku', 'YE-CENTUM-100')
+            ->with(['images', 'features'])
+            ->firstOrFail();
+
+        return view('store.centum', compact('product'));
+    }
+
+    /**
+     * Yara Chillers (chiller-based AC) showcase page.
+     */
+    public function chillers()
+    {
+        $product = Product::where('sku', 'YE-CHILLER-AC')
+            ->with(['images', 'features', 'category'])
+            ->firstOrFail();
+
+        return view('store.chillers', compact('product'));
+    }
+
+    /**
+     * Yara T-Standees explore page (Commercial Display Solutions).
+     */
+    public function tStandees()
+    {
+        $products = Product::where('sku', 'like', 'YE-TST-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        $category = Category::where('slug', 't-standees')->first();
+
+        return view('store.t-standees', compact('products', 'category'));
+    }
+
+    /**
+     * Yara A-Standees explore page (Commercial Display Solutions).
+     */
+    public function aStandees()
+    {
+        $products = Product::where('sku', 'like', 'YE-AST-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.a-standees', compact('products'));
+    }
+
+    /**
+     * Yara Anti-Glare QLED TV explore page (65" – 100").
+     */
+    public function antiGlareTv()
+    {
+        $products = Product::whereIn('sku', Product::ANTI_GLARE_SKUS)
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->get()
+            ->sortBy(fn ($p) => (int) ($p->specifications['Screen Size'] ?? 0))
+            ->values();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.anti-glare-tv', compact('products'));
+    }
+
+    /**
+     * Yara LED Video Walls explore page (P1.25 – P10, indoor, outdoor and rental).
+     */
+    public function ledVideoWalls()
+    {
+        // LED walls are sold on quote (like LCD walls): the products stay disabled in the shop,
+        // and are used here only as the model range (pitch, brightness, photos). No prices or product links.
+        $products = Product::where('sku', 'like', 'YE-LED-%')
+            ->with(['primaryImage'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.led-video-walls', compact('products'));
+    }
+
+    /**
+     * Yara LCD Video Walls explore page with the wall builder.
+     */
+    public function lcdVideoWalls()
+    {
+        // No fixed models: panels from 32" to 100" are configured per project on the page itself.
+        return view('store.lcd-video-walls');
+    }
+
+    /**
+     * Yara Home Audio explore page (twin tower, single tower, soundbar with subwoofer).
+     */
+    public function homeAudio()
+    {
+        $products = Product::where('sku', 'like', 'YE-HA-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.home-audio', compact('products'));
+    }
+
+    /**
+     * Yara Commercial Displays explore page (32" – 86" digital signage).
+     */
+    public function commercialDisplays()
+    {
+        $products = Product::where('sku', 'like', 'YE-CD-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.commercial-displays', compact('products'));
+    }
+
+    /**
+     * Yara Interactive Flat Panels explore page (55" – 98" / 100", education first).
+     */
+    public function interactivePanels()
+    {
+        $products = Product::where('sku', 'like', 'YE-IFP-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.interactive-panels', compact('products'));
+    }
+
+    /**
+     * Yara Printing Kiosk explore page (Commercial Display Solutions).
+     */
+    public function printingKiosk()
+    {
+        $product = Product::where('sku', 'YE-KIOSK-215')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.printing-kiosk', compact('product'));
+    }
+
+    public function standAloneKiosk()
+    {
+        $products = Product::where('sku', 'like', 'YE-SAK-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.stand-alone-kiosk', compact('products'));
+    }
+
+    public function tableTopStandee()
+    {
+        $product = Product::where('sku', 'YE-TTS-10')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.table-top-standee', compact('product'));
+    }
+
+    /**
+     * Yara Glass Displays explore page (Commercial Display Solutions).
+     */
+    public function glassDisplays()
+    {
+        $product = Product::where('sku', 'YE-GD-01')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.glass-displays', compact('product'));
+    }
+
+    /**
+     * Yara Fully Automatic Commercial Washer explore page (SWQ-10 … SWQ-25).
+     */
+    public function commercialWashers()
+    {
+        $products = Product::where('sku', 'like', 'YE-CWM-%')
+            ->where('status', true)
+            ->with(['primaryImage', 'features'])
+            ->orderBy('sort_order')
+            ->get();
+
+        abort_if($products->isEmpty(), 404);
+
+        return view('store.commercial-washers', compact('products'));
+    }
+
+    /**
+     * Yara 27" Touchscreen Digital Podium explore page (Commercial Display Solutions).
+     */
+    public function digitalPodium()
+    {
+        $product = Product::where('sku', 'YE-POD-27')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.digital-podium', compact('product'));
+    }
+
     public function about()
     {
-        return view('store.about');
+        // Product range cards on the About page use the live categories and their images.
+        $categories = Category::active()
+            ->topLevel()
+            ->orderBy('sort_order')
+            ->orderBy('name')
+            ->get();
+
+        return view('store.about', compact('categories'));
     }
 
     public function eWaste()

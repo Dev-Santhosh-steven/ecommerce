@@ -28,6 +28,11 @@ class LedWallSeeder extends Seeder
     public function run(): void
     {
         DB::transaction(function () {
+            // Scenes and screen content for the /led-video-walls and /lcd-video-walls explore pages.
+            foreach (glob(__DIR__ . '/assets/video-walls/*.{png,jpg}', GLOB_BRACE) as $file) {
+                Storage::disk('public')->put('products/video-walls/' . basename($file), file_get_contents($file));
+            }
+
             $category = $this->seedCategory();
 
             $pitchAttr = $this->attribute('pixel-pitch', 'Pixel Pitch', 10);
@@ -88,8 +93,10 @@ class LedWallSeeder extends Seeder
                 'stock_quantity' => 500,
                 'warranty_months' => 24,
                 'specifications' => $this->specifications($m),
-                'status' => true,
-                'featured' => in_array($m['sku'], ['YE-LED-P25-IN', 'YE-LED-P391-OR', 'YE-LED-P5-OUT'], true),
+                // Sold on quote per project (measured like LCD walls): kept as data for /led-video-walls
+                // and the calculator, but not listed or sold in the shop.
+                'status' => false,
+                'featured' => false,
                 'sort_order' => $index,
                 'meta_title' => "Yara P{$pitch} {$kind} LED Video Wall | {$m['nits']} nits LED Display",
                 'meta_description' => "Buy the Yara P{$pitch} {$m['env']} LED video wall — {$m['module_w']}×{$m['module_h']} mm modules, "
@@ -164,14 +171,17 @@ class LedWallSeeder extends Seeder
 
     private function seedHomeBanner(): void
     {
+        $image = $this->publish('home-banner.jpg', 'banners/led-video-walls-hero.jpg');
+
         Banner::updateOrCreate(
-            ['image' => $this->publish('home-banner.jpg', 'banners/led-video-walls-hero.jpg')],
+            ['image' => $image],
             [
                 'title' => 'LED Video Walls',
                 'subtitle' => 'New · Indoor & Outdoor · P1.25 to P10',
-                'button_text' => 'Explore More',
-                'button_link' => '/led-wall-calculator',
-                'sort_order' => 0,
+                'button_text' => 'Explore LED Walls',
+                'button_link' => '/led-video-walls',
+                // keep the slide where an admin placed it; new installs put it first
+                'sort_order' => Banner::where('image', $image)->value('sort_order') ?? 0,
                 'status' => true,
             ],
         );

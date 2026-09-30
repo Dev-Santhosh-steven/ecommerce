@@ -13,6 +13,8 @@
         @yield('title', 'Admin Panel') | Yara Electronics
     </title>
 
+    @fonts
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('styles')
@@ -255,6 +257,57 @@
 
 
             <a
+                href="{{ route('admin.testimonials.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="message-square-quote" class="h-5 w-5"></i>
+
+                <span>
+                    Testimonials
+                </span>
+            </a>
+
+
+            <a
+                href="{{ route('admin.posts.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="newspaper" class="h-5 w-5"></i>
+
+                <span>
+                    Blog
+                </span>
+            </a>
+
+
+            <a
+                href="{{ route('admin.chatbot.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="bot" class="h-5 w-5"></i>
+
+                <span>
+                    Chatbot
+                </span>
+            </a>
+
+
+            <a
                 href="{{ route('admin.catalogues.index') }}"
                 class="
                     mb-1 flex items-center gap-3 rounded-xl
@@ -267,6 +320,23 @@
 
                 <span>
                     Catalogues
+                </span>
+            </a>
+
+
+            <a
+                href="{{ route('admin.certifications.index') }}"
+                class="
+                    mb-1 flex items-center gap-3 rounded-xl
+                    px-3 py-3 text-sm font-medium
+                    text-slate-300 transition
+                    hover:bg-white/10 hover:text-white
+                "
+            >
+                <i data-lucide="award" class="h-5 w-5"></i>
+
+                <span>
+                    Certifications
                 </span>
             </a>
 

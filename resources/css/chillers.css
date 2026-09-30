@@ -1,0 +1,88 @@
+/* ===============================================================
+ * Yara Chillers showcase (/chillers) — cool blue air on the red/black brand theme
+ * =============================================================== */
+
+/* Icy gradient headline that slowly shimmers */
+.chill-gradient-text {
+    background: linear-gradient(90deg, #7dd3fc, #e0f2fe, #38bdf8, #ffffff, #7dd3fc);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: about-shimmer 7s linear infinite;
+}
+
+/* Cool air streams flowing out over the chiller */
+.chill-air path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-dasharray: 120 520;
+    animation: chill-air 5.5s linear infinite;
+}
+
+.chill-air path:nth-child(2) { animation-delay: -1.2s; animation-duration: 6.5s; }
+.chill-air path:nth-child(3) { animation-delay: -2.6s; animation-duration: 5s; }
+.chill-air path:nth-child(4) { animation-delay: -3.4s; animation-duration: 7s; }
+.chill-air path:nth-child(5) { animation-delay: -4.1s; animation-duration: 6s; }
+.chill-air path:nth-child(6) { animation-delay: -0.6s; animation-duration: 7.5s; }
+
+@keyframes chill-air {
+    from { stroke-dashoffset: 640; }
+    to { stroke-dashoffset: 0; }
+}
+
+/* Chilled water (blue) and return water (red) moving through the pipes */
+.chill-flow {
+    stroke-dasharray: 10 14;
+    animation: chill-flow 1.2s linear infinite;
+}
+
+.chill-flow.is-return {
+    animation-direction: reverse;
+}
+
+@keyframes chill-flow {
+    to { stroke-dashoffset: -24; }
+}
+
+/* Drifting frost particles */
+.chill-flake {
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgb(224 242 254 / 0.9), rgb(125 211 252 / 0));
+    animation: chill-drift linear infinite;
+    pointer-events: none;
+}
+
+@keyframes chill-drift {
+    from { transform: translate3d(0, 0, 0); opacity: 0; }
+    15% { opacity: 1; }
+    to { transform: translate3d(var(--dx, 40px), -220px, 0); opacity: 0; }
+}
+
+/* Mirrored floor reflection */
+.chill-reflection {
+    transform: scaleY(-1);
+    opacity: 0.22;
+    -webkit-mask-image: linear-gradient(to top, black, transparent 45%);
+    mask-image: linear-gradient(to top, black, transparent 45%);
+}
+
+/* Hotspots on the studio shot */
+.chill-hotspot .dot {
+    animation: about-pulse 2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chill-gradient-text,
+    .chill-air path,
+    .chill-flow,
+    .chill-flake,
+    .chill-hotspot .dot {
+        animation: none;
+    }
+
+    .chill-flake {
+        display: none;
+    }
+}

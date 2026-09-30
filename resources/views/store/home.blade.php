@@ -17,24 +17,43 @@
 
                 <div class="swiper-slide relative h-full w-full">
 
-                    <img
-                        src="{{ asset('storage/' . $banner->image) }}"
-                        alt="{{ $banner->title ?? 'Banner' }}"
-                        class="absolute inset-0 h-full w-full object-cover"
-                    >
+                    @if ($banner->video)
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-gray-950/10"></div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-gray-950/60 via-transparent to-transparent"></div>
+                        <video
+                            class="hero-video absolute inset-0 h-full w-full object-cover"
+                            poster="{{ asset('storage/' . $banner->image) }}"
+                            muted
+                            playsinline
+                            preload="metadata"
+                            @if ($banners->count() === 1) loop autoplay @endif
+                            aria-label="{{ $banner->title ?? 'Banner video' }}"
+                        >
+                            <source src="{{ asset('storage/' . $banner->video) }}" type="{{ str_ends_with($banner->video, '.webm') ? 'video/webm' : 'video/mp4' }}">
+                        </video>
+
+                    @else
+
+                        <img
+                            src="{{ asset('storage/' . $banner->image) }}"
+                            alt="{{ $banner->title ?? 'Banner' }}"
+                            class="absolute inset-0 h-full w-full object-cover"
+                        >
+
+                    @endif
+
+                    {{-- No dark overlay: the banner image/video shows at its true brightness.
+                         Text stays readable with a soft shadow on the text itself. --}}
 
                     <div class="relative flex h-full items-end">
 
+
                         <div class="mx-auto w-full max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
 
-                            <div class="max-w-2xl">
+                            <div class="hero-copy max-w-2xl">
 
                                 @if ($banner->subtitle)
 
-                                    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 backdrop-blur">
+                                    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-sm text-white backdrop-blur">
                                         <span class="h-2 w-2 rounded-full bg-brand-red"></span>
                                         {{ $banner->subtitle }}
                                     </div>
@@ -43,7 +62,7 @@
 
                                 @if ($banner->title)
 
-                                    <h1 class="text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                                    <h1 class="text-4xl font-bold leading-[1.05] tracking-tight [text-shadow:0_2px_4px_rgb(0_0_0/0.35),0_4px_24px_rgb(0_0_0/0.45)] sm:text-6xl lg:text-7xl">
                                         {{ $banner->title }}
                                     </h1>
 
@@ -88,7 +107,7 @@
 
                         <div class="mx-auto w-full max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
 
-                            <div class="max-w-2xl">
+                            <div class="hero-copy max-w-2xl">
 
                                 <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
                                     <span class="h-2 w-2 rounded-full bg-brand-red"></span>
@@ -176,107 +195,54 @@
 
 
 {{-- =========================================================
-     CATEGORY SECTION
+     STATS COUNTERS (edit in Admin → Settings)
 ========================================================= --}}
-<section id="categories" class="bg-white py-20">
+@if (! empty($stats))
+
+<section class="bg-white pt-14">
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div class="grid grid-cols-2 overflow-hidden rounded-3xl bg-white shadow-xl shadow-gray-900/10 ring-1 ring-gray-200 {{ [1 => 'lg:grid-cols-1', 2 => 'lg:grid-cols-2', 3 => 'lg:grid-cols-3', 4 => 'lg:grid-cols-4'][count($stats)] }}">
 
-            <div>
+            @foreach ($stats as $i => $stat)
 
-                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
-                    Explore
-                </p>
+                <div class="group relative flex flex-col items-center px-4 py-8 text-center sm:px-6 sm:py-10
+                            {{ $i % 2 === 1 ? 'border-l border-gray-100' : '' }}
+                            {{ $i >= 2 ? 'border-t border-gray-100 lg:border-t-0' : '' }}
+                            {{ $i > 0 ? 'lg:border-l lg:border-gray-100' : '' }}">
 
-                <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                    Shop by <span class="text-brand-600">Category</span>
-                </h2>
+                    <span class="absolute inset-x-8 top-0 h-1 origin-center scale-x-0 rounded-b-full bg-gradient-to-r from-brand-600 to-brand-red transition duration-500 group-hover:scale-x-100"></span>
 
-                <p class="mt-3 max-w-xl text-gray-500">
-                    Discover technology for your home, office, business and
-                    commercial spaces.
-                </p>
+                    <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 transition duration-300 group-hover:-translate-y-1 group-hover:bg-brand-600 group-hover:text-white">
+                        <i data-lucide="{{ $stat['icon'] }}" class="h-6 w-6"></i>
+                    </span>
 
-            </div>
+                    <p class="mt-4 font-display text-3xl font-extrabold tabular-nums tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                        <span data-count-to="{{ (int) $stat['value'] }}">{{ number_format((int) $stat['value']) }}</span><span class="text-brand-600">{{ $stat['suffix'] }}</span>
+                    </p>
 
-            <a href="#products"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
+                    <p class="mt-2 text-sm font-medium text-gray-500 sm:text-base">
+                        {{ $stat['label'] }}
+                    </p>
 
-                View all products
-
-                <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-            </a>
-
-        </div>
-
-
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-
-            @forelse ($categories as $category)
-
-                <a href="{{ route('store.category', $category) }}"
-                   class="group relative overflow-hidden rounded-2xl bg-gray-100">
-
-                    <div class="aspect-[4/3]">
-
-                        @if ($category->image)
-
-                            <img
-                                src="{{ asset('storage/' . $category->image) }}"
-                                alt="{{ $category->name }}"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                            >
-
-                        @else
-
-                            <div class="flex h-full w-full items-center justify-center bg-gray-200 text-gray-400">
-                                <i data-lucide="layers" class="h-10 w-10"></i>
-                            </div>
-
-                        @endif
-
-                    </div>
-
-                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 pt-12">
-
-                        <h3 class="font-semibold text-white">
-                            {{ $category->name }}
-                        </h3>
-
-                        @if ($category->children_count > 0)
-
-                            <p class="mt-1 text-sm text-gray-300">
-                                {{ $category->children_count }} {{ \Illuminate\Support\Str::plural('subcategory', $category->children_count) }}
-                            </p>
-
-                        @elseif ($category->description)
-
-                            <p class="mt-1 text-sm text-gray-300">
-                                {{ $category->description }}
-                            </p>
-
-                        @endif
-
-                    </div>
-
-                </a>
-
-            @empty
-
-                <div class="col-span-full rounded-2xl border border-dashed border-gray-300 py-16 text-center text-gray-500">
-                    No categories yet. Add some from the admin panel.
                 </div>
 
-            @endforelse
+            @endforeach
 
         </div>
 
     </div>
 
 </section>
+
+@endif
+
+
+{{-- =========================================================
+     CATEGORY SECTION — expanding panels
+========================================================= --}}
+@include('store.home.categories')
 
 
 {{-- =========================================================
@@ -389,127 +355,15 @@
 
 
 {{-- =========================================================
-     FEATURED PRODUCTS
+     POPULAR PRODUCTS — spotlight
 ========================================================= --}}
-<section id="products" class="bg-gray-50 py-20" data-reveal>
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-
-            <div>
-
-                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
-                    Featured
-                </p>
-
-                <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                    Popular <span class="text-brand-600">Products</span>
-                </h2>
-
-                <p class="mt-3 text-gray-500">
-                    Explore some of our featured electronics.
-                </p>
-
-            </div>
-
-            <a href="{{ route('store.search') }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
-
-                View all
-
-                <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-            </a>
-
-        </div>
-
-
-        @if ($featuredProducts->isEmpty())
-
-            <div class="rounded-2xl border border-dashed border-gray-300 bg-white py-16 text-center text-gray-500">
-                No featured products yet. Mark products as &ldquo;Featured&rdquo; from the admin panel to show them here.
-            </div>
-
-        @else
-
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-                @foreach ($featuredProducts as $product)
-
-                    @include('store.partials.product-card', ['product' => $product])
-
-                @endforeach
-
-            </div>
-
-        @endif
-
-    </div>
-
-</section>
+@include('store.home.popular')
 
 
 {{-- =========================================================
-     NEW ARRIVALS
+     NEW ARRIVALS — carousel
 ========================================================= --}}
-<section id="new-arrivals" class="bg-white py-20" data-reveal>
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-
-            <div>
-
-                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
-                    Just In
-                </p>
-
-                <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                    New <span class="text-brand-600">Arrivals</span>
-                </h2>
-
-                <p class="mt-3 text-gray-500">
-                    The latest additions to our electronics range.
-                </p>
-
-            </div>
-
-            <a href="{{ route('store.search') }}"
-               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
-
-                View all
-
-                <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-            </a>
-
-        </div>
-
-
-        @if ($newArrivals->isEmpty())
-
-            <div class="rounded-2xl border border-dashed border-gray-300 py-16 text-center text-gray-500">
-                No products yet. Add some from the admin panel.
-            </div>
-
-        @else
-
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-                @foreach ($newArrivals as $product)
-
-                    @include('store.partials.product-card', ['product' => $product])
-
-                @endforeach
-
-            </div>
-
-        @endif
-
-    </div>
-
-</section>
+@include('store.home.new-arrivals')
 
 
 {{-- =========================================================
@@ -555,267 +409,7 @@
 </section>
 
 
-{{-- =========================================================
-     COMMERCIAL SOLUTIONS
-========================================================= --}}
-<section id="commercial" class="brand-dots overflow-hidden bg-gray-950 py-20 text-white">
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-        <div class="grid items-center gap-12 lg:grid-cols-2">
-
-            <div>
-
-                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em] !text-brand-400">
-                    Business Solutions
-                </p>
-
-                <h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-                    Technology that
-                    <span class="text-brand-400">works for your business.</span>
-                </h2>
-
-                <p class="mt-6 max-w-xl leading-7 text-gray-400">
-                    From interactive classrooms to retail signage and
-                    corporate meeting spaces, our professional display
-                    solutions help businesses communicate, collaborate
-                    and connect.
-                </p>
-
-
-                <div class="mt-8 grid gap-4 sm:grid-cols-2">
-
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-
-                        <i data-lucide="monitor-smartphone" class="h-6 w-6 text-brand-400"></i>
-
-                        <h3 class="mt-4 font-semibold">
-                            Interactive Panels
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-gray-400">
-                            Modern collaboration and presentation solutions.
-                        </p>
-
-                    </div>
-
-
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-
-                        <i data-lucide="monitor" class="h-6 w-6 text-brand-400"></i>
-
-                        <h3 class="mt-4 font-semibold">
-                            Commercial Displays
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-gray-400">
-                            Professional displays for business environments.
-                        </p>
-
-                    </div>
-
-
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-
-                        <i data-lucide="megaphone" class="h-6 w-6 text-brand-400"></i>
-
-                        <h3 class="mt-4 font-semibold">
-                            T-Standees
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-gray-400">
-                            Dynamic digital advertising and signage.
-                        </p>
-
-                    </div>
-
-
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-
-                        <i data-lucide="presentation" class="h-6 w-6 text-brand-400"></i>
-
-                        <h3 class="mt-4 font-semibold">
-                            A-Standees
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-gray-400">
-                            Flexible solutions for retail and events.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <a href="#"
-                   class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-950/30 transition hover:bg-brand-500">
-
-                    Explore Commercial Solutions
-
-                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-                </a>
-
-            </div>
-
-
-            <div class="relative">
-
-                <div class="absolute -inset-10 rounded-full bg-brand-600/10 blur-3xl"></div>
-
-                <div class="relative overflow-hidden rounded-3xl border border-white/10">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
-                        alt="Business technology"
-                        class="aspect-[4/3] w-full object-cover"
-                    >
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-{{-- =========================================================
-     HOME APPLIANCES
-========================================================= --}}
-<section class="bg-white py-20">
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-        <div class="mb-12">
-
-            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
-                Smart Living
-            </p>
-
-            <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-                Upgrade Your <span class="text-brand-600">Home</span>
-            </h2>
-
-            <p class="mt-3 max-w-xl text-gray-500">
-                Modern appliances designed to make everyday life more comfortable.
-            </p>
-
-        </div>
-
-
-        <div class="grid gap-6 md:grid-cols-3">
-
-            {{-- AC --}}
-            <div class="group relative overflow-hidden rounded-3xl bg-gray-100">
-
-                <img
-                    src="{{ asset('storage/categories/air-conditioners.jpg') }}"
-                    alt="Yara air conditioners"
-                    class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                >
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
-
-                <div class="absolute bottom-0 p-7">
-
-                    <p class="text-sm text-gray-300">
-                        Climate Control
-                    </p>
-
-                    <h3 class="mt-1 text-2xl font-bold text-white">
-                        Air Conditioners
-                    </h3>
-
-                    <a href="{{ url('/category/air-conditioners') }}"
-                       class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
-
-                        Shop now
-
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            {{-- Washing Machine --}}
-            <div class="group relative overflow-hidden rounded-3xl bg-gray-100">
-
-                <img
-                    src="{{ asset('storage/categories/washing-machines.jpg') }}"
-                    alt="Yara washing machines"
-                    class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                >
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
-
-                <div class="absolute bottom-0 p-7">
-
-                    <p class="text-sm text-gray-300">
-                        Home Appliances
-                    </p>
-
-                    <h3 class="mt-1 text-2xl font-bold text-white">
-                        Washing Machines
-                    </h3>
-
-                    <a href="{{ url('/category/washing-machine') }}"
-                       class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
-
-                        Shop now
-
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            {{-- Audio --}}
-            <div class="group relative overflow-hidden rounded-3xl bg-gray-100">
-
-                <img
-                    src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=1000&q=80"
-                    alt="Speaker system"
-                    class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                >
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
-
-                <div class="absolute bottom-0 p-7">
-
-                    <p class="text-sm text-gray-300">
-                        Audio
-                    </p>
-
-                    <h3 class="mt-1 text-2xl font-bold text-white">
-                        Speakers & Audio
-                    </h3>
-
-                    <a href="#products"
-                       class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
-
-                        Shop now
-
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+@include('store.home.solutions')
 
 
 {{-- =========================================================
@@ -928,6 +522,69 @@
 
 
 {{-- =========================================================
+     TESTIMONIALS (managed from Admin → Testimonials)
+========================================================= --}}
+@if ($testimonials->isNotEmpty())
+    @include('store.partials.testimonials')
+@endif
+
+
+{{-- =========================================================
+     LATEST BLOG POSTS (managed from Admin → Blog)
+========================================================= --}}
+@if ($latestPosts->isNotEmpty())
+
+<section id="blog" class="bg-gray-50 py-20" data-reveal>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
+            <div>
+
+                <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">
+                    From the Blog
+                </p>
+
+                <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+                    News &amp; <span class="text-brand-600">Insights</span>
+                </h2>
+
+                <p class="mt-3 text-gray-500">
+                    Guides and stories on display technology.
+                </p>
+
+            </div>
+
+            <a href="{{ route('store.blog.index') }}"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
+
+                View all articles
+
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+
+            </a>
+
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+            @foreach ($latestPosts as $post)
+
+                @include('store.partials.post-card', ['post' => $post])
+
+            @endforeach
+
+        </div>
+
+    </div>
+
+</section>
+
+@endif
+
+
+{{-- =========================================================
      NEWSLETTER / CTA
 ========================================================= --}}
 <section class="bg-white py-20">
@@ -978,38 +635,65 @@
 </section>
 
 
-{{-- WhatsApp Chat Button --}}
-<a href="https://wa.me/919677712000?text={{ rawurlencode('Hi Yara Electronics, I would like to know more about your products.') }}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat with us on WhatsApp"
-   class="group fixed bottom-6 right-6 z-50 flex items-center">
-
-    {{-- Hover popup --}}
-    <span class="pointer-events-none mr-3 translate-x-2 whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-800 opacity-0 shadow-lg ring-1 ring-gray-200 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
-        Chat with us
-    </span>
-
-    {{-- Icon --}}
-    <span class="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition duration-200 group-hover:scale-110 group-hover:bg-[#1ebe5b]">
-
-        <span class="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-30"></span>
-
-        <svg class="relative h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-
-    </span>
-
-</a>
-
-
 @push('scripts')
 
 <script>
+    // New Arrivals: free-drag carousel with momentum, arrows and a draggable progress bar.
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!document.querySelector('.arrivals-swiper')) return;
+
+        new Swiper('.arrivals-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            freeMode: { enabled: true, momentum: true, momentumRatio: 0.6, sticky: false },
+            mousewheel: { forceToAxis: true },
+            navigation: { nextEl: '.arrivals-next', prevEl: '.arrivals-prev' },
+            scrollbar: { el: '.arrivals-scrollbar', draggable: true },
+            breakpoints: { 1024: { spaceBetween: 24 } },
+        });
+    });
+
+    // Count each stat up from 0 when the counters scroll into view (runs once).
+    document.addEventListener('DOMContentLoaded', function () {
+        const counters = document.querySelectorAll('[data-count-to]');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!counters.length || reduceMotion) return;
+
+        const format = (n) => n.toLocaleString('en-IN');
+        const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
+        counters.forEach((el) => (el.textContent = '0'));
+
+        const run = (el) => {
+            const target = parseInt(el.dataset.countTo, 10);
+            const duration = 2200;
+            const start = performance.now();
+
+            const tick = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                el.textContent = format(Math.round(target * easeOutExpo(progress)));
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+
+            requestAnimationFrame(tick);
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                run(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.4 });
+
+        counters.forEach((el) => observer.observe(el));
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
 
-        new Swiper('.hero-swiper', {
+        const heroSwiper = new Swiper('.hero-swiper', {
 
             loop: true,
 
@@ -1032,7 +716,43 @@
 
             speed: 700,
 
+            on: {
+                slideChangeTransitionStart: syncHeroVideo,
+            },
+
         });
+
+        syncHeroVideo(heroSwiper);
+
+        // Pause off-screen videos; on a video slide, hold autoplay until the
+        // video finishes, then move on. Falls back to the normal timer if the
+        // browser blocks playback (e.g. low-power mode on phones).
+        function syncHeroVideo(swiper) {
+            swiper.el.querySelectorAll('.hero-video').forEach((video) => {
+                video.onended = null;
+                video.pause();
+            });
+
+            const video = swiper.slides[swiper.activeIndex]?.querySelector('.hero-video');
+
+            if (!video) {
+                swiper.autoplay?.start();
+                return;
+            }
+
+            if (swiper.slides.length <= 1) {
+                video.play().catch(() => {});
+                return;
+            }
+
+            swiper.autoplay.stop();
+            video.currentTime = 0;
+            video.onended = () => {
+                swiper.slideNext();
+                swiper.autoplay.start();
+            };
+            video.play().catch(() => swiper.autoplay.start());
+        }
 
     });
 </script>

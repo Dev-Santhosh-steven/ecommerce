@@ -13,6 +13,7 @@ class Banner extends Model
         'title',
         'subtitle',
         'image',
+        'video',
         'button_text',
         'button_link',
         'sort_order',

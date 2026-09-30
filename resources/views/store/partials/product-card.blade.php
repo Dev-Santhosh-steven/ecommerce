@@ -3,11 +3,11 @@
 @endphp
 
 <a
-    href="{{ route('store.product', $product) }}"
+    href="{{ $product->url() }}"
     class="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
 >
 
-    <div class="relative aspect-square overflow-hidden bg-gray-100">
+    <div class="relative aspect-square overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
 
         @if ($onSale)
 
@@ -19,18 +19,15 @@
 
         <button
             type="button"
-            x-data="{ saved: JSON.parse(localStorage.getItem('yara_wishlist') || '[]').includes({{ $product->id }}) }"
-            @click.stop.prevent="
-                let list = JSON.parse(localStorage.getItem('yara_wishlist') || '[]');
-                list = saved ? list.filter(id => id !== {{ $product->id }}) : [...list, {{ $product->id }}];
-                localStorage.setItem('yara_wishlist', JSON.stringify(list));
-                saved = !saved;
-            "
-            :class="saved ? 'bg-brand-red text-white' : 'bg-white text-gray-700 hover:bg-brand-600 hover:text-white'"
+            x-data
+            @click.stop.prevent="$store.shop.toggleWishlist({{ $product->id }})"
+            :class="$store.shop.saved({{ $product->id }}) ? 'bg-brand-red text-white' : 'bg-white text-gray-700 hover:bg-brand-600 hover:text-white'"
             class="absolute right-4 top-4 z-10 rounded-full p-2 shadow-sm transition"
+            :aria-pressed="$store.shop.saved({{ $product->id }})"
+            aria-label="Save to wishlist"
             title="Save to wishlist"
         >
-            <i data-lucide="heart" class="h-4 w-4" :class="saved ? 'fill-current' : ''"></i>
+            <i data-lucide="heart" class="h-4 w-4" :class="$store.shop.saved({{ $product->id }}) ? 'fill-current' : ''"></i>
         </button>
 
         @if ($product->primaryImage)
@@ -38,7 +35,7 @@
             <img
                 src="{{ asset('storage/' . $product->primaryImage->image) }}"
                 alt="{{ $product->name }}"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
             >
 
         @else
@@ -75,6 +72,12 @@
 
         <div class="mt-5 flex items-center justify-between">
 
+            @if (! $product->hasPrice())
+
+            <span class="text-base font-bold text-gray-900">Price on request</span>
+
+            @else
+
             <span class="flex items-baseline gap-2">
 
                 <span class="text-lg font-bold text-gray-900">
@@ -95,9 +98,20 @@
 
             </span>
 
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white transition group-hover:bg-brand-700">
-                <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </span>
+            @endif
+
+            @if ($product->isPurchasable())
+                <button type="button" x-data @click.stop.prevent="$store.shop.addToCart({{ $product->id }})"
+                        class="flex h-10 items-center gap-1.5 rounded-full bg-brand-600 px-4 text-sm font-semibold text-white transition hover:bg-brand-700"
+                        aria-label="Add {{ $product->name }} to cart">
+                    <i data-lucide="shopping-bag" class="h-4 w-4"></i>
+                    Add
+                </button>
+            @else
+                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white transition group-hover:bg-brand-700">
+                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </span>
+            @endif
 
         </div>
 

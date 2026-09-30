@@ -36,6 +36,18 @@
                 @enderror
             </div>
 
+            <div>
+                <label class="mb-1 block text-sm font-medium text-slate-700">Background Video <span class="font-normal text-slate-400">(optional)</span></label>
+                <input type="file" name="video" accept="video/mp4,video/webm" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+                <p class="mt-1 text-xs text-slate-500">
+                    Plays silently in the background instead of the image; the image above is shown while the video loads.
+                    Recommended: MP4 (H.264), 1920&times;1080px, 10–20 seconds, no sound, under 10&nbsp;MB (max 20&nbsp;MB).
+                </p>
+                @error('video')
+                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+
             <div class="grid gap-5 md:grid-cols-2">
                 <div>
                     <label class="mb-1 block text-sm font-medium text-slate-700">Button Text</label>

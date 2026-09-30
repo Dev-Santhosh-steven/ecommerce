@@ -15,7 +15,7 @@
             <a href="{{ route('store.home') }}" class="hover:text-white">Home</a>
             <span class="mx-2">/</span>
             @if ($category)
-                <a href="{{ route('store.category', $category) }}" class="hover:text-white">{{ $category->name }}</a>
+                <a href="{{ route('store.ledwalls') }}" class="hover:text-white">{{ $category->name }}</a>
                 <span class="mx-2">/</span>
             @endif
             <span class="text-white">LED Wall Calculator</span>
@@ -382,29 +382,14 @@
                 <div class="grid gap-5 md:grid-cols-2">
 
                     <div class="rounded-3xl border border-gray-200 bg-white p-6">
-                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Indicative screen budget</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">Pricing</p>
 
-                        <template x-if="sc && sc.estimate_inr">
-                            <div>
-                                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900" x-text="'₹' + Number(sc.estimate_inr).toLocaleString('en-IN')"></p>
-                                <p class="mt-1 text-xs text-gray-500" x-text="sc.area_sqft + ' sq ft × list price per sq ft'"></p>
-                            </div>
-                        </template>
-
-                        <template x-if="!(sc && sc.estimate_inr)">
-                            <p class="mt-2 text-lg font-semibold text-gray-900">Price on request</p>
-                        </template>
+                        <p class="mt-2 text-lg font-semibold text-gray-900">Quoted for your wall</p>
 
                         <p class="mt-4 text-xs leading-5 text-gray-500">
-                            LED panels only. Controller, mounting structure, installation, taxes and freight are quoted
-                            separately after a site survey.
+                            Every LED wall is measured and priced for your space. Share this layout and our team will send
+                            a complete quote covering the screen, controller, mounting structure, installation and support.
                         </p>
-
-                        <a x-show="result?.module?.product_url" :href="result?.module?.product_url"
-                           class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700 hover:underline">
-                            View module details
-                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
-                        </a>
                     </div>
 
                     <div class="brand-dots relative overflow-hidden rounded-3xl bg-gray-950 p-6 text-white">
@@ -471,7 +456,7 @@
 
         @if ($category)
             <div class="mt-10 text-center">
-                <a href="{{ route('store.category', $category) }}"
+                <a href="{{ route('store.ledwalls') }}"
                    class="inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-800 transition hover:border-brand-600 hover:text-brand-700">
                     Browse all LED video walls
                     <i data-lucide="arrow-right" class="h-4 w-4"></i>
