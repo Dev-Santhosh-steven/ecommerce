@@ -2423,5 +2423,43 @@
    "Outdoor Net Weight": "31.5",
    "Outdoor Gross Weight": "35.5"
   }
+ },
+ "43DD23H": {
+  "sheet": "43\" Ceiling Hanging Double Sided Screen Specification Sheet (Commercial Displays)",
+  "page": 15,
+  "specs": {
+   "Screen Size": "43 inch",
+   "Display": "Android double side display",
+   "Colour": "White",
+   "Panel Maker": "Various",
+   "Backlight": "LED",
+   "Contrast Ratio": "1400:1",
+   "Resolution": "1920 X 1080",
+   "Backlight time": "50000 hours",
+   "Response Time": "<8ms",
+   "Display Colors": "16.7M",
+   "Maximum Audio Output": "6W",
+   "WIFI": "YES",
+   "Bluetooth": "YES",
+   "LAN": "1",
+   "Wifi Antenna": "1 (Optional)",
+   "HD Ready": "YES",
+   "PC Resolution": "480p, 720p, 1080p",
+   "HDMI Resolution": "480p, 720p, 1080p",
+   "CPU": "RK3288 Cortex-A9 Quad-Core, up to 1.6GHz",
+   "Android System": "5.1.1",
+   "RAM": "2 GB (upto 4GB)",
+   "ROM": "8 GB (upto 32GB)",
+   "Hanging Rod": "2",
+   "Hanging Hooks": "2",
+   "Adjustment Knob": "2",
+   "User Manual": "YES",
+   "Power consumption (Operation)": "150W",
+   "Power consumption (Standby)": "≦1W",
+   "Power Requirement": "AC 100-240V 50/60Hz",
+   "Box Dimension (mm)": "1375 x 175 x 700",
+   "Product Dimension (mm)": "1640 x 700 x 27",
+   "Gross Weight (kg)": "30"
+  }
  }
 }

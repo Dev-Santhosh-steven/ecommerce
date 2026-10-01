@@ -48,8 +48,13 @@ class CategoryArtSeeder extends Seeder
         }
 
         // Renamed from "Industrial Displays": move the existing rows so links, carts and orders keep working.
+        // Only the old category that held this product: "industrial-displays" is now a separate category.
         if (! Category::where('slug', 'glass-displays')->exists()) {
-            Category::where('slug', 'industrial-displays')->update(['slug' => 'glass-displays']);
+            $old = Category::where('slug', 'industrial-displays')->first();
+
+            if ($old && Product::where('sku', 'YE-IND-01')->where('category_id', $old->id)->exists()) {
+                $old->update(['slug' => 'glass-displays']);
+            }
         }
         if (! Product::where('sku', 'YE-GD-01')->exists()) {
             Product::where('sku', 'YE-IND-01')->update(['sku' => 'YE-GD-01']);

@@ -719,6 +719,136 @@
 @endif
 
 {{-- =========================================================
+     DOUBLE SIDE VERTICAL DISPLAY PROMO — links to the /double-side-vertical-display explore page
+========================================================= --}}
+@if (in_array($category->slug, ['double-side-vertical-display', 'commercial-display-solutions'], true))
+
+    <section class="bg-white pt-8 first:pt-14">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <a href="{{ route('store.doublesidedisplay') }}" data-reveal
+               class="group relative grid items-center gap-6 overflow-hidden rounded-[2rem] bg-[#0b0b10] text-white lg:grid-cols-2">
+
+                <div class="absolute -right-24 top-0 h-full w-2/3 bg-[radial-gradient(closest-side,rgba(165,29,53,0.45),transparent)]"></div>
+
+                <div class="relative p-8 sm:p-12">
+                    <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-400">
+                        <span class="about-pulse h-2 w-2 rounded-full bg-brand-red"></span>
+                        Explore
+                    </p>
+                    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">Double Side <span class="about-gradient-text">Vertical Display</span></h2>
+                    <p class="mt-4 max-w-md text-gray-300">One display, two audiences: a 43" Full HD screen on each face, sunlight-readable for shop windows and built for 24/7.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        @foreach (['43"', 'Double-sided', 'Sunlight-readable', '24/7'] as $pill)
+                            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-gray-200">{{ $pill }}</span>
+                        @endforeach
+                    </div>
+                    <span class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold transition group-hover:bg-brand-500">
+                        Explore the Display
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </span>
+                </div>
+
+                <div class="relative flex h-full items-end justify-center gap-6 px-8 pt-10 sm:gap-10 lg:pt-0">
+                    <img src="{{ asset('storage/products/double-side-vertical-display/dsvd-front.png') }}" alt="Yara 43 inch Double Side Vertical Display" loading="lazy"
+                         class="w-[38%] max-w-[13rem] drop-shadow-[0_30px_40px_rgba(0,0,0,0.6)] transition duration-700 group-hover:-translate-y-2">
+                    <img src="{{ asset('storage/products/double-side-vertical-display/dsvd-angle.png') }}" alt="" aria-hidden="true" loading="lazy"
+                         class="w-[30%] max-w-[10rem] drop-shadow-[0_30px_40px_rgba(0,0,0,0.6)] transition delay-100 duration-700 group-hover:-translate-y-2">
+                </div>
+
+            </a>
+
+        </div>
+    </section>
+
+@endif
+
+{{-- =========================================================
+     ROTATABLE DISPLAY PROMO — links to the /rotatable-display explore page
+========================================================= --}}
+@if (in_array($category->slug, ['rotatable-display', 'commercial-display-solutions'], true))
+
+    <section class="bg-white pt-8 first:pt-14">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <a href="{{ route('store.rotatabledisplay') }}" data-reveal
+               class="group relative grid items-center gap-6 overflow-hidden rounded-[2rem] bg-[#09090c] text-white lg:grid-cols-2"
+               x-data="{ p: false, tilt: 0, init() { setInterval(() => this.p = ! this.p, 3200) } }">
+
+                <div class="absolute -right-24 top-0 h-full w-2/3 bg-[radial-gradient(closest-side,rgba(165,29,53,0.45),transparent)]"></div>
+
+                <div class="relative p-8 sm:p-12">
+                    <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-400">
+                        <span class="about-pulse h-2 w-2 rounded-full bg-brand-red"></span>
+                        Explore
+                    </p>
+                    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">Rotatable <span class="about-gradient-text">Display</span></h2>
+                    <p class="mt-4 max-w-md text-gray-300">Turn it, tilt it, take it anywhere: a 27" Full HD screen on a wheeled stand with its own battery.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        @foreach (['27"', 'Rotates 90°', 'On wheels', '9600 mAh'] as $pill)
+                            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-gray-200">{{ $pill }}</span>
+                        @endforeach
+                    </div>
+                    <span class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold transition group-hover:bg-brand-500">
+                        Explore the Display
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </span>
+                </div>
+
+                <div class="relative mx-auto w-[11rem] py-8 sm:w-[13rem]">
+                    @include('store.partials.rd-unit', ['rotate' => true])
+                </div>
+
+            </a>
+
+        </div>
+    </section>
+
+@endif
+
+{{-- =========================================================
+     INDUSTRIAL DISPLAYS PROMO — links to the /industrial-displays explore page
+========================================================= --}}
+@if (in_array($category->slug, ['industrial-displays', 'commercial-display-solutions'], true))
+
+    <section class="bg-white pt-8 first:pt-14">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <a href="{{ route('store.industrialdisplays') }}" data-reveal
+               class="group relative grid items-center gap-8 overflow-hidden rounded-[2rem] bg-[#0b0c10] p-8 text-white sm:p-12 lg:grid-cols-2">
+
+                <div class="about-grid absolute inset-0 opacity-40"></div>
+                <div class="absolute -right-24 top-0 h-full w-2/3 bg-[radial-gradient(closest-side,rgba(165,29,53,0.4),transparent)]"></div>
+
+                <div class="relative">
+                    <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-400">
+                        <span class="about-pulse h-2 w-2 rounded-full bg-brand-red"></span>
+                        Explore
+                    </p>
+                    <h2 class="mt-4 text-4xl font-bold sm:text-5xl">Industrial <span class="about-gradient-text">Displays</span></h2>
+                    <p class="mt-4 max-w-md text-gray-300">An 8" Android touch display in a frameless metal body, with USB, LAN and Phoenix connectors for machines and factory floors.</p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        @foreach (['8" Touch', 'Android 11', 'Metal body', 'Phoenix I/O'] as $pill)
+                            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-gray-200">{{ $pill }}</span>
+                        @endforeach
+                    </div>
+                    <span class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold transition group-hover:bg-brand-500">
+                        Explore Industrial Displays
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </span>
+                </div>
+
+                <img src="{{ asset('storage/products/industrial-displays/ind-front.png') }}" alt="Yara 8 inch Industrial Display" loading="lazy"
+                     class="relative mx-auto w-full max-w-md drop-shadow-[0_30px_40px_rgba(0,0,0,0.6)] transition duration-700 group-hover:-translate-y-2 group-hover:scale-[1.02]">
+
+            </a>
+
+        </div>
+    </section>
+
+@endif
+
+{{-- =========================================================
      COMMERCIAL WASHER PROMO — links to the /commercial-washing-machines explore page
 ========================================================= --}}
 @if (in_array($category->slug, ['commercial-washing-machine', 'washing-machine'], true))

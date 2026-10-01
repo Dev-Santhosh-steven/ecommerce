@@ -79,6 +79,9 @@ class Product extends Model
         'YE-GD-' => 'store.glassdisplays',
         'YE-CWM-' => 'store.commercialwashers',
         'YE-POD-' => 'store.digitalpodium',
+        'YE-HD-' => 'store.doublesidedisplay',
+        'YE-IND-' => 'store.industrialdisplays',
+        'YE-RD-' => 'store.rotatabledisplay',
     ];
 
     /**

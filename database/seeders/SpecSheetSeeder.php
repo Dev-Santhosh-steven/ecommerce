@@ -10,6 +10,7 @@ use Illuminate\Database\Seeder;
  *
  *  - Specification Sheet (TVs, ACs, washing machines, home theatre), one page per model
  *  - Air Conditioners Catalogue (the BS25E / PD25E models)
+ *  - Commercial Displays Specification Sheet (the 43" double side vertical display)
  *
  * Data: database/seeders/data/spec-sheets.json ({model: {sheet, page, specs}}), read from those PDFs.
  * Products are matched by model number; products with no sheet keep their specifications.
@@ -24,6 +25,7 @@ class SpecSheetSeeder extends Seeder
     private const ALIASES = [
         'YE-HA-TT01' => 'T21SUPER-KING', // Twin Tower Multimedia Speaker
         'YE-HA-ST01' => 'T23-KING',      // Single Tower Speaker
+        'YE-HD-43' => '43DD23H',         // Double Side Vertical Display (model number kept off the site)
     ];
 
     public function run(): void

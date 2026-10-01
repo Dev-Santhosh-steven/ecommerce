@@ -7,7 +7,6 @@
 @endpush
 
 @php
-    $wa = fn ($title) => 'https://wa.me/' . config('services.chatbot.whatsapp') . '?text=' . rawurlencode("Hi Yara, please share a copy of your {$title}.");
     $downloadable = $certifications->filter->hasFile()->count();
 @endphp
 
@@ -20,7 +19,7 @@
 
     <div class="about-grid absolute inset-0 opacity-40"></div>
 
-    <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.3fr_1fr] lg:px-8">
+    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 
         <div class="about-intro">
             <nav class="mb-3 text-sm text-gray-300">
@@ -33,28 +32,14 @@
                 Quality, safety and compliance are built into how we design, manufacture and deliver every Yara product.
                 View and download our certificates below.
             </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-                <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
-                    <i data-lucide="award" class="h-4 w-4 text-brand-300"></i>
-                    {{ $certifications->count() }} certifications &amp; registrations
-                </span>
-                @if ($downloadable)
+            @if ($downloadable)
+                <div class="mt-8 flex flex-wrap gap-3">
                     <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold backdrop-blur">
                         <i data-lucide="download" class="h-4 w-4 text-brand-300"></i>
                         {{ $downloadable }} ready to download
                     </span>
-                @endif
-            </div>
-        </div>
-
-        {{-- Floating stack of marks --}}
-        <div class="relative mx-auto hidden h-72 w-full max-w-sm lg:block" aria-hidden="true">
-            @foreach ($certifications->filter->logoUrl()->take(5)->values() as $i => $c)
-                <span class="cert-float absolute flex h-24 w-24 items-center justify-center rounded-3xl bg-white p-3 shadow-2xl shadow-black/40"
-                      style="left: {{ [8, 58, 30, 70, 0][$i] }}%; top: {{ [6, 0, 38, 52, 62][$i] }}%; --float-delay: -{{ $i * 1.3 }}s; --float-tilt: {{ [-6, 5, -3, 7, 4][$i] }}deg">
-                    <img src="{{ $c->logoUrl() }}" alt="" class="max-h-full max-w-full object-contain">
-                </span>
-            @endforeach
+                </div>
+            @endif
         </div>
 
     </div>
@@ -107,8 +92,8 @@
                             <p class="mt-3 text-sm leading-6 text-gray-600">{{ $c->description }}</p>
                         @endif
 
-                        <div class="mt-auto flex flex-wrap items-center gap-2 pt-6">
-                            @if ($c->hasFile())
+                        @if ($c->hasFile())
+                            <div class="mt-auto flex flex-wrap items-center gap-2 pt-6">
                                 <a href="{{ route('store.certifications.download', $c) }}"
                                    class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700">
                                     <i data-lucide="download" class="h-4 w-4"></i>
@@ -120,14 +105,8 @@
                                     View
                                 </button>
                                 <span class="text-xs text-gray-400">{{ $c->fileLabel() }}</span>
-                            @else
-                                <a href="{{ $wa($c->title) }}" target="_blank" rel="noopener noreferrer"
-                                   class="inline-flex items-center gap-2 rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:border-brand-200 hover:text-brand-700">
-                                    <i data-lucide="message-circle" class="h-4 w-4"></i>
-                                    Request a copy
-                                </a>
-                            @endif
-                        </div>
+                            </div>
+                        @endif
                     </div>
 
                 </article>

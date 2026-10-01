@@ -233,7 +233,7 @@ class ChatbotFaqSeeder extends Seeder
             ],
             [
                 'question' => 'Do you have glass displays?',
-                'keywords' => 'glass display, glass displays, rugged display, industrial display, scanner display, canteen display, touch display with scanner',
+                'keywords' => 'glass display, glass displays, rugged display, scanner display, canteen display, touch display with scanner',
                 'answer' => 'Yes! The Yara Glass Display is a rugged touch display with a sleek glass front and built-in scanner, designed for 24/7 use in offices, canteens, retail and commercial spaces. Size, glass, branding and housing can be customised. Price on request.',
                 'button_text' => 'Explore Glass Displays',
                 'button_url' => '/glass-displays',
@@ -244,6 +244,27 @@ class ChatbotFaqSeeder extends Seeder
                 'answer' => "Yes! The Yara 27\" Touchscreen Digital Podium is an all-in-one podium for auditoriums, classrooms, boardrooms and events:\n\n• 27\" touchscreen (Android or Windows i5)\n• Two wireless gooseneck microphones\n• Electric height adjustment\n• 360° casters for easy moving\n\nPrice on request.",
                 'button_text' => 'Explore the Podium',
                 'button_url' => '/digital-podium',
+            ],
+            [
+                'question' => 'Do you have a rotatable display?',
+                'keywords' => 'rotatable display, rotating display, rotating screen, portable display, movable display, display on wheels, stand by me, standbyme, portrait landscape screen, battery display',
+                'answer' => "Yes! The Yara 27\" Rotatable Display is a Full HD screen on a wheeled stand:\n\n• Rotates 90° either way, landscape to portrait\n• Tilts 20° front and back\n• Rolls anywhere on its wheeled base\n• 9600 mAh battery with Type-C charging\n• Google EDLA certified, 6GB + 128GB, 16MP camera\n\nAvailable in 27\" only. Price on request.",
+                'button_text' => 'Explore the Display',
+                'button_url' => '/rotatable-display',
+            ],
+            [
+                'question' => 'Do you have industrial displays?',
+                'keywords' => 'industrial display, industrial displays, panel pc, touch panel pc, hmi, industrial touch screen, machine display, factory display, automation display',
+                'answer' => "Yes! The Yara 8\" Industrial Display is a compact, frameless metal-body Android touch panel for machines, factories and control points:\n\n• 8\" touch screen, Android 11\n• 4 × USB, HDMI, LAN and 4 Phoenix terminal connectors\n• 12V DC power, wall mount included\n\nAvailable in 8\" only. Price on request.",
+                'button_text' => 'Explore Industrial Displays',
+                'button_url' => '/industrial-displays',
+            ],
+            [
+                'question' => 'Do you have a double side display?',
+                'keywords' => 'double side display, double sided display, dual side display, two sided display, window display, shop window display, hanging display, ceiling display, vertical display',
+                'answer' => "Yes! The Yara 43\" Double Side Vertical Display has a Full HD screen on each face, so people inside and outside your store both see your message:\n\n• Ultra-bright, sunlight-readable panel\n• Built for reliable 24/7 operation\n• Android with Wi-Fi, ready for remote content management\n• Hangs in a window or from the ceiling (rods and hooks included)\n\nAvailable in 43\" only. Price on request.",
+                'button_text' => 'Explore the Display',
+                'button_url' => '/double-side-vertical-display',
             ],
             [
                 'question' => 'Do you sell speakers or soundbars?',

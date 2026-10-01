@@ -43,9 +43,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('store.home');
 
-// Glass Displays were called Industrial Displays: keep old links working.
-Route::permanentRedirect('/industrial-displays', '/glass-displays');
-Route::permanentRedirect('/category/industrial-displays', '/category/glass-displays');
+// Glass Displays were called Industrial Displays: keep the old product link working.
+// (/industrial-displays and /category/industrial-displays now belong to the new Industrial Displays category.)
 Route::permanentRedirect('/product/yara-industrial-display', '/product/yara-glass-display');
 
 // Renamed / retired product links (one route, since Laravel keeps only one route per URI):
@@ -102,6 +101,12 @@ Route::get('/glass-displays', [PageController::class, 'glassDisplays'])->name('s
 Route::get('/commercial-washing-machines', [PageController::class, 'commercialWashers'])->name('store.commercialwashers');
 
 Route::get('/digital-podium', [PageController::class, 'digitalPodium'])->name('store.digitalpodium');
+
+Route::get('/double-side-vertical-display', [PageController::class, 'doubleSideVerticalDisplay'])->name('store.doublesidedisplay');
+
+Route::get('/industrial-displays', [PageController::class, 'industrialDisplays'])->name('store.industrialdisplays');
+
+Route::get('/rotatable-display', [PageController::class, 'rotatableDisplay'])->name('store.rotatabledisplay');
 
 Route::get('/e-waste-management', [PageController::class, 'eWaste'])->name('store.e-waste');
 

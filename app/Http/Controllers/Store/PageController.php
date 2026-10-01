@@ -235,6 +235,45 @@ class PageController extends Controller
         return view('store.digital-podium', compact('product'));
     }
 
+    /**
+     * Yara 43" Double Side Vertical Display explore page (Commercial Display Solutions).
+     */
+    public function doubleSideVerticalDisplay()
+    {
+        $product = Product::where('sku', 'YE-HD-43')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.double-side-vertical-display', compact('product'));
+    }
+
+    /**
+     * Yara 8" Industrial Display explore page (Commercial Display Solutions).
+     */
+    public function industrialDisplays()
+    {
+        $product = Product::where('sku', 'YE-IND-08')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.industrial-displays', compact('product'));
+    }
+
+    /**
+     * Yara 27" Rotatable Display explore page (Commercial Display Solutions).
+     */
+    public function rotatableDisplay()
+    {
+        $product = Product::where('sku', 'YE-RD-27')
+            ->where('status', true)
+            ->with(['features'])
+            ->firstOrFail();
+
+        return view('store.rotatable-display', compact('product'));
+    }
+
     public function about()
     {
         // Product range cards on the About page use the live categories and their images.

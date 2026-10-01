@@ -75,28 +75,89 @@
  * Header navigation (dark header)
  * ------------------------------------------------------------- */
 
+/* Generous side padding separates the items, so multi-word labels ("Washing Machines",
+   "LED Walls") read as separate links instead of one running sentence. */
 .site-header .nav-link {
     position: relative;
-    padding-block: 0.4rem;
-    font-size: 14px;
-    font-weight: 500;
+    padding: 0.45rem 0.4rem;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.1;
     white-space: nowrap;
-    color: rgb(255 255 255 / 0.8);
+    color: rgb(255 255 255 / 0.78);
     transition: color 0.2s ease;
 }
 
 @media (min-width: 1536px) {
     .site-header .nav-link {
-        font-size: 15px;
+        padding-inline: 0.7rem;
+        font-size: 14.5px;
     }
 }
 
-/* Hover and the current page turn the link text red (no underline). */
+/* Hover and the current page turn the link text red. */
 .site-header .nav-link:hover,
 .site-header .nav-link.is-active,
 .site-header .group:hover > .nav-link,
 .site-header .group:focus-within > .nav-link {
     color: #ff3b47;
+}
+
+/* Sub-menus: the panel drops in, then its links slide in one after another. */
+.site-header .nav-dropdown {
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.site-header .nav-dropdown > div {
+    transform: translateY(10px) scale(0.97);
+    transform-origin: top center;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-header .group:hover .nav-dropdown > div,
+.site-header .group:focus-within .nav-dropdown > div {
+    transform: none;
+}
+
+.site-header .nav-dropdown-item {
+    position: relative;
+    opacity: 0;
+    translate: -8px 0;
+    transition: opacity 0.25s ease, translate 0.25s ease, background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.site-header .group:hover .nav-dropdown-item,
+.site-header .group:focus-within .nav-dropdown-item {
+    opacity: 1;
+    translate: 0 0;
+    transition-delay: calc(60ms + var(--i, 0) * 35ms), calc(60ms + var(--i, 0) * 35ms), 0s, 0s, 0s;
+}
+
+/* A short red bar grows in at the left of the hovered link. */
+.site-header .nav-dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    top: 50%;
+    height: 1.1rem;
+    width: 3px;
+    border-radius: 9999px;
+    background: #e50914;
+    transform: translateY(-50%) scaleY(0);
+    transition: transform 0.2s ease;
+}
+
+.site-header .nav-dropdown-item:hover {
+    padding-left: 1.15rem;
+}
+
+.site-header .nav-dropdown-item:hover::before {
+    transform: translateY(-50%) scaleY(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .nav-dropdown > div { transform: none; transition: none; }
+    .site-header .nav-dropdown-item { opacity: 1; translate: none; transition: none; }
 }
 
 /* Thin crimson line under the header, echoing the banners' accent. */
@@ -662,25 +723,13 @@
     .pillar-icon { scale: 1; rotate: 0deg; transition: none; }
 }
 
-/* Certifications hero: logos drift gently */
-.cert-float {
-    rotate: var(--float-tilt, 0deg);
-    animation: cert-float 7s ease-in-out infinite;
-    animation-delay: var(--float-delay, 0s);
-}
-
-@keyframes cert-float {
-    0%, 100% { translate: 0 0; }
-    50% { translate: 0 -14px; }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .journey-line, .journey-arc, .journey-node, .journey-copy { transition: none; }
     .journey-line { transform: none; }
     .journey-arc { clip-path: none; }
     .journey-node { scale: 1; }
     .journey-copy { opacity: 1; translate: none; }
-    .journey-ring, .cert-float { animation: none; }
+    .journey-ring { animation: none; }
 }
 
 /* Scrolling product ticker */
@@ -819,4 +868,50 @@
 
 @media (prefers-reduced-motion: reduce) {
     .pd-pulse, .pd-led, .pd-ink, .pd-caster { animation: none; }
+}
+
+/* Double side vertical display: the hanging display sways a little, the news ticker scrolls,
+   the two-sided demo flips in 3D and the "live" dot blinks */
+.dsvd-sway { transform-origin: 50% 0; animation: dsvd-sway 9s ease-in-out infinite; }
+.dsvd-ticker { animation: dsvd-ticker 14s linear infinite; }
+.dsvd-flip { transform-style: preserve-3d; transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1); }
+.dsvd-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.dsvd-blink { animation: dsvd-blink 1.2s steps(2, start) infinite; }
+
+@keyframes dsvd-sway { 0%, 100% { rotate: -0.7deg; } 50% { rotate: 0.7deg; } }
+@keyframes dsvd-ticker { from { translate: 0 0; } to { translate: -50% 0; } }
+@keyframes dsvd-blink { to { visibility: hidden; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .dsvd-sway, .dsvd-ticker, .dsvd-blink { animation: none; }
+    .dsvd-flip { transition: none; }
+}
+
+/* Rotatable display: the real stand (rd-stand.png) with an HTML screen that rotates on the pole's pivot.
+   Positions are percentages of the 800 x 1440 stand image. */
+.rd-unit { position: relative; aspect-ratio: 800 / 1440; }
+.rd-panel {
+    position: absolute; left: 48.31%; top: 26.39%; width: 87.88%; aspect-ratio: 625 / 363.5;
+    transform: translate(-50%, -50%) perspective(1400px) rotateX(var(--rd-tilt, 0deg)) rotate(var(--rd-rot, 0deg));
+    transition: transform 1.15s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.rd-layer { transition: opacity 0.45s ease 0.55s; }
+.rd-portrait { position: absolute; left: 50%; top: 50%; width: 58.16%; height: 171.94%; transform: translate(-50%, -50%) rotate(90deg); }
+.rd-caster { position: absolute; top: 97.6%; width: 4.2%; aspect-ratio: 1; translate: -50% 0; border-radius: 9999px;
+    background: radial-gradient(circle at 50% 50%, #9aa0a8 0 22%, #2a2b30 24% 100%); box-shadow: 0 2px 4px rgba(0,0,0,.4); }
+.rd-caster::after { content: ''; position: absolute; inset: 46% 8%; background: #555960; border-radius: 2px; }
+
+/* "On wheels" scroll scene: scrolling sets --pos (0..1) on the .rd-scrub section, and the stand rolls
+   left to right while the screen turns from landscape to portrait (--turn) and the content swaps (--swap).
+   The variables are set by the page script; the stand leans a touch with the scroll speed (--lean). */
+.rd-move { left: calc(14% + var(--pos, 0) * 72%); }
+.rd-lean { transform-origin: 50% 100%; rotate: var(--lean, 0deg); transition: rotate 0.35s ease-out; }
+.rd-panel-scrub { transition: none; }
+.rd-arrow { animation: rd-arrow 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+@keyframes rd-arrow { 0%, 100% { rotate: 0deg; opacity: .55; } 50% { rotate: -14deg; opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .rd-panel, .rd-layer, .rd-lean { transition: none; }
+    .rd-arrow { animation: none; }
 }

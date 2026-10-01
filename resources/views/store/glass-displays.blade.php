@@ -83,9 +83,10 @@
             </div>
         </div>
 
-        <div class="relative mx-auto w-full max-w-xl">
+        {{-- Bottom padding leaves room for the float animation so the panel's lower edge is never clipped --}}
+        <div class="relative mx-auto w-full max-w-xl pb-10 pt-4">
             <div class="absolute inset-x-[8%] bottom-[8%] top-[20%] rounded-full bg-blue-600/30 blur-3xl"></div>
-            <img src="{{ $base('glass-display-cutout.png') }}" alt="Yara Glass Display" class="centum-hero-tv relative mx-auto w-[70%]">
+            <img src="{{ $base('glass-display-cutout.png') }}" alt="Yara Glass Display" class="centum-hero-tv relative mx-auto w-[64%] drop-shadow-[0_30px_40px_rgba(0,0,0,0.55)]">
         </div>
 
     </div>

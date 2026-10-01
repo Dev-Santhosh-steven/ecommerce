@@ -22,8 +22,8 @@ class CertificationSeeder extends Seeder
         $items = [
             ['BIS', 'Bureau of Indian Standards (BIS)', 'Bureau of Indian Standards', 'Products tested and certified to Indian safety standards.', 'shield-check', $logo('bis.png')],
             ['ISO 9001', 'ISO 9001:2015 Quality Management', 'International Organization for Standardization', 'Certified quality management processes.', 'badge-check', $logo('iso-9001.png')],
-            ['ISO 14001', 'ISO 14001 Environmental Management', 'International Organization for Standardization', 'Responsible, environment-conscious manufacturing.', 'leaf', $logo('iso-14001.png')],
-            ['ISO 27001', 'ISO 27001 Information Security', 'International Organization for Standardization', 'Secure handling of customer and business data.', 'lock', $logo('iso-27001.png')],
+            ['ISO 14001', 'ISO 14001:2015 Environmental Management', 'International Organization for Standardization', 'Responsible, environment-conscious manufacturing.', 'leaf', $logo('iso-14001.png')],
+            ['ISO 27001', 'ISO/IEC 27001:2022 Information Security', 'International Organization for Standardization', 'Secure handling of customer and business data.', 'lock', $logo('iso-27001.png')],
             ['BEE', 'BEE Model Approval', 'Bureau of Energy Efficiency, Ministry of Power', 'Energy-efficiency rated appliances.', 'zap', $logo('bee.png')],
             ['CE', 'CE Conformity', 'Conformité Européenne', 'Meets European health, safety and environmental norms.', 'badge-check', $logo('ce.png')],
             ['RoHS', 'RoHS Certificate of Compliance', 'RoHS Directive 2011/65/EU', 'Free from restricted hazardous substances.', 'leaf', $logo('rohs.png')],
@@ -35,6 +35,10 @@ class CertificationSeeder extends Seeder
             ['Factory', 'Licence to Work a Factory', 'Directorate of Industrial Safety & Health, Govt. of Tamil Nadu', 'Our Coimbatore factory is licensed to operate.', 'factory', null],
             ['MCA', 'Certificate of Incorporation', 'Ministry of Corporate Affairs, Govt. of India', 'Registered company under the Companies Act.', 'landmark', null],
             ['LEI', 'LEI Certificate', 'Legal Entity Identifier · 894500BQCFJ437NZAR23', 'Globally recognised legal entity identifier.', 'globe', null],
+            ['INS', 'INS Membership', 'Indian Newspaper Society', 'Member of the Indian Newspaper Society.', 'newspaper', null],
+            ['M2MSP', 'M2M Service Provider Registration', 'Department of Telecommunications, Govt. of India', 'Registered Machine-to-Machine (M2M) service provider.', 'radio-tower', null],
+            ['GeM', 'GeM Seller Registration', 'Government e-Marketplace (GeM Portal)', 'Registered seller for government procurement.', 'shopping-cart', null],
+            ['StartupTN', 'TN Startup Registration', 'StartupTN, Govt. of Tamil Nadu', 'Registered startup with the Tamil Nadu Startup and Innovation Mission.', 'lightbulb', null],
         ];
 
         foreach ($items as $i => [$code, $title, $issuer, $description, $icon, $logoPath]) {

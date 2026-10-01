@@ -69,7 +69,7 @@
                     ];
                 @endphp
 
-                <nav class="hidden items-center gap-2.5 xl:flex 2xl:gap-4 min-[1700px]:gap-5">
+                <nav class="hidden items-center gap-0.5 xl:flex 2xl:gap-1 min-[1700px]:gap-1.5">
 
                     <a href="{{ url('/') }}" aria-label="Home"
                        class="nav-link flex items-center gap-1.5 {{ request()->routeIs('store.home') ? 'is-active' : '' }}">
@@ -93,14 +93,14 @@
 
                             @if ($navCategory->children->isNotEmpty())
 
-                                <div class="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
+                                <div class="nav-dropdown invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
 
                                     <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 shadow-xl">
 
                                         @foreach ($navCategory->children as $child)
 
-                                            <a href="{{ route('store.category', $child) }}"
-                                               class="block rounded-lg px-3 py-2 text-[15px] text-gray-700 transition hover:bg-brand-50 hover:text-brand-700">
+                                            <a href="{{ route('store.category', $child) }}" style="--i: {{ $loop->index }}"
+                                               class="nav-dropdown-item block rounded-lg px-3 py-2 text-[15px] text-gray-700 hover:bg-brand-50 hover:text-brand-700">
                                                 {{ $child->name }}
                                             </a>
 
@@ -124,11 +124,11 @@
                             <i data-lucide="chevron-down" class="h-3.5 w-3.5 opacity-60 transition group-hover:rotate-180"></i>
                         </button>
 
-                        <div class="invisible absolute right-0 top-full z-50 w-60 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                        <div class="nav-dropdown invisible absolute right-0 top-full z-50 w-60 pt-3 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                             <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 shadow-xl">
                                 @foreach ($pageLinks as $link)
-                                    <a href="{{ $link['url'] }}"
-                                       class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-[15px] transition hover:bg-brand-50 hover:text-brand-700 {{ $link['active'] ? 'bg-brand-50 font-semibold text-brand-700' : 'text-gray-700' }}">
+                                    <a href="{{ $link['url'] }}" style="--i: {{ $loop->index }}"
+                                       class="nav-dropdown-item flex items-center gap-3 rounded-lg px-3 py-2.5 text-[15px] hover:bg-brand-50 hover:text-brand-700 {{ $link['active'] ? 'bg-brand-50 font-semibold text-brand-700' : 'text-gray-700' }}">
                                         <i data-lucide="{{ $link['icon'] }}" class="h-4 w-4 opacity-70"></i>
                                         {{ $link['label'] }}
                                     </a>

@@ -24,10 +24,8 @@ class GlassDisplaySeeder extends Seeder
 
     public function run(): void
     {
-        // Renamed from "Industrial Displays": drop the old published files.
-        $disk = Storage::disk('public');
-        $disk->deleteDirectory('products/industrial-displays');
-        $disk->delete(['categories/industrial-displays.jpg', 'categories/banners/industrial-displays-banner.jpg', 'banners/industrial-displays-hero.jpg']);
+        // Renamed from "Industrial Displays": point the old hero slide at the new image. (The old files are
+        // not deleted any more: "industrial-displays" is now a separate category, see IndustrialDisplaySeeder.)
         Banner::where('image', 'banners/industrial-displays-hero.jpg')->update(['image' => 'banners/glass-displays-hero.jpg']);
 
         // Images used directly by the /glass-displays explore page.
