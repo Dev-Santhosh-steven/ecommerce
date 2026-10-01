@@ -44,7 +44,7 @@ class CentumSeeder extends Seeder
                 'slug' => 'yara-centum-100-4k-uhd-smart-led-tv',
                 'model_number' => 'YE-CENTUM-100',
                 'brand' => 'Yara',
-                'short_description' => '100" 4K UHD Smart LED TV with an A+ grade panel, Android 12, 30W sound and OTT apps onboard.',
+                'short_description' => '100" 4K UHD Smart LED TV with an A+ grade panel, 30W sound and OTT apps onboard.',
                 'description' => 'Experience stunning picture quality and lifelike colors with Yara Centum, the 100" 4K LED TV. '
                     . 'It offers a premium viewing experience, while built-in smart features make it easy to stream your favorite shows and movies. '
                     . "With multiple HDMI and USB ports, you can easily connect all your devices. Plus, its energy-efficient operation helps reduce your electricity bill.\n\n"

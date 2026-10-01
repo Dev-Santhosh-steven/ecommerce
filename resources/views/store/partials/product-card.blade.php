@@ -70,7 +70,7 @@
 
         @endif
 
-        <div class="mt-5 flex items-center justify-between">
+        <div class="mt-5 flex items-end justify-between gap-3">
 
             @if (! $product->hasPrice())
 
@@ -78,20 +78,24 @@
 
             @else
 
-            <span class="flex items-baseline gap-2">
+            {{-- Sale price on top, the old price and the saving underneath, so the button always has room --}}
+            <span class="flex min-w-0 flex-col">
 
-                <span class="text-lg font-bold text-gray-900">
-                    &#8377;{{ number_format($onSale ? $product->sale_price : $product->price, 2) }}
+                <span class="flex flex-wrap items-baseline gap-x-1.5">
+                    <span class="text-lg font-bold text-gray-900">
+                        &#8377;{{ number_format($onSale ? $product->sale_price : $product->price, 2) }}
+                    </span>
+
+                    @if ($product->price_unit)
+                        <span class="text-xs font-medium text-gray-500">/ {{ $product->price_unit }}</span>
+                    @endif
                 </span>
-
-                @if ($product->price_unit)
-                    <span class="text-xs font-medium text-gray-500">/ {{ $product->price_unit }}</span>
-                @endif
 
                 @if ($onSale)
 
-                    <span class="text-xs text-gray-400 line-through">
-                        &#8377;{{ number_format($product->price, 2) }}
+                    <span class="mt-0.5 flex flex-wrap items-baseline gap-x-2 text-xs">
+                        <span class="text-gray-400 line-through">&#8377;{{ number_format($product->price, 2) }}</span>
+                        <span class="font-semibold text-emerald-600">{{ round((1 - $product->sale_price / $product->price) * 100) }}% off</span>
                     </span>
 
                 @endif
@@ -102,13 +106,13 @@
 
             @if ($product->isPurchasable())
                 <button type="button" x-data @click.stop.prevent="$store.shop.addToCart({{ $product->id }})"
-                        class="flex h-10 items-center gap-1.5 rounded-full bg-brand-600 px-4 text-sm font-semibold text-white transition hover:bg-brand-700"
+                        class="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-brand-600 px-4 text-sm font-semibold text-white transition hover:bg-brand-700"
                         aria-label="Add {{ $product->name }} to cart">
                     <i data-lucide="shopping-bag" class="h-4 w-4"></i>
                     Add
                 </button>
             @else
-                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white transition group-hover:bg-brand-700">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white transition group-hover:bg-brand-700">
                     <i data-lucide="arrow-right" class="h-4 w-4"></i>
                 </span>
             @endif

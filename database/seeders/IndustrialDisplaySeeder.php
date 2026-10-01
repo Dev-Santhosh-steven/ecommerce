@@ -59,7 +59,7 @@ class IndustrialDisplaySeeder extends Seeder
                 'slug' => 'yara-8-inch-industrial-display',
                 'model_number' => null,
                 'brand' => 'Yara',
-                'short_description' => '8" frameless metal-body Android touch display with USB, HDMI, LAN and Phoenix terminal connectors for machines, factories and control points.',
+                'short_description' => '8" frameless metal-body touch display with USB, HDMI, LAN and Phoenix terminal connectors for machines, factories and control points.',
                 'description' => 'The Yara 8" Industrial Display is a compact Android 11 touch panel built into a frameless metal body. '
                     . 'Mount it on a wall, a machine or a control cabinet and use it to run an app, show live status or take operator input right where the work happens.'
                     . "\n\n"

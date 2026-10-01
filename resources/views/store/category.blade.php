@@ -910,16 +910,18 @@
 
                 @foreach ($category->children as $child)
 
+                    {{-- Category art is 4:3 (1200 × 900), so the card is too: nothing gets cropped --}}
                     <a href="{{ route('store.category', $child) }}"
-                       class="group relative overflow-hidden rounded-2xl bg-gray-100">
+                       class="group relative overflow-hidden rounded-2xl bg-gray-950 shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-                        <div class="aspect-square">
+                        <div class="aspect-[4/3] overflow-hidden">
 
                             @if ($child->image)
 
                                 <img
                                     src="{{ asset('storage/' . $child->image) }}"
                                     alt="{{ $child->name }}"
+                                    loading="lazy"
                                     class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                                 >
 
@@ -933,11 +935,14 @@
 
                         </div>
 
-                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
+                        {{-- Name below the picture, so it never covers the product --}}
+                        <div class="flex items-center justify-between gap-2 px-4 py-3">
 
                             <h3 class="text-sm font-semibold text-white">
                                 {{ $child->name }}
                             </h3>
+
+                            <i data-lucide="arrow-right" class="h-4 w-4 shrink-0 text-white/60 transition group-hover:translate-x-1 group-hover:text-brand-400"></i>
 
                         </div>
 

@@ -75,7 +75,7 @@ class InteractivePanelSeeder extends Seeder
                 'slug' => "yara-{$inch}-inch-4k-interactive-flat-panel",
                 'model_number' => "YE-IFP{$inch}-A14",
                 'brand' => 'Yara',
-                'short_description' => "{$inch}\" 4K UHD interactive display with 20-point touch, Android 14 and wireless screen sharing — {$model['ideal']}.",
+                'short_description' => "{$inch}\" 4K UHD interactive display with 20-point touch and wireless screen sharing — {$model['ideal']}.",
                 'description' => $this->description($inch, $model['ideal']),
                 'price' => $model['price'],
                 'sale_price' => $model['sale_price'],

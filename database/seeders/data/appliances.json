@@ -75,7 +75,8 @@
     ]
    ],
    "page": 1,
-   "short": "24\" HD LED TV with 20W stereo sound."
+   "short": "24\" HD LED TV with 20W stereo sound.",
+   "slug": "yara-24-inch-hd-led-tv"
   },
   {
    "type": "tv",
@@ -152,14 +153,15 @@
     ]
    ],
    "page": 2,
-   "short": "32\" HD LED TV with 24W stereo sound."
+   "short": "32\" HD LED TV with 24W stereo sound.",
+   "slug": "yara-32-inch-hd-led-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH21B",
    "model": "32SH21B",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Cloud OS",
+   "name": "Yara 32\" HD Basic Smart TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -233,14 +235,15 @@
     ]
    ],
    "page": 3,
-   "short": "32\" HD Basic Smart TV with 24W stereo sound."
+   "short": "32\" HD Basic Smart TV with 24W stereo sound.",
+   "slug": "yara-32-inch-hd-basic-smart-tv-android-9-cloud-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH22B",
    "model": "32SH22B",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Prism OS",
+   "name": "Yara 32\" HD Basic Smart TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -314,14 +317,15 @@
     ]
    ],
    "page": 4,
-   "short": "32\" HD Basic Smart TV with 24W stereo sound."
+   "short": "32\" HD Basic Smart TV with 24W stereo sound.",
+   "slug": "yara-32-inch-hd-basic-smart-tv-android-9-prism-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH24B",
    "model": "32SH24B",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Basic Smart TV · Android 9 · Prism OS (Edition 2)",
+   "name": "Yara 32\" HD Basic Smart TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -401,14 +405,15 @@
     ]
    ],
    "page": 5,
-   "short": "32\" HD Basic Smart TV with 24W stereo sound, 512 MB RAM."
+   "short": "32\" HD Basic Smart TV with 24W stereo sound, 512 MB RAM.",
+   "slug": "yara-32-inch-hd-basic-smart-tv-android-9-prism-os-edition-2"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH21M",
    "model": "32SH21M",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Smart LED TV · Android 9 · Cloud OS",
+   "name": "Yara 32\" HD Smart LED TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -488,14 +493,15 @@
     ]
    ],
    "page": 6,
-   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-smart-led-tv-android-9-cloud-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH22M",
    "model": "32SH22M",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Smart LED TV · Android 9 · Cloud OS (Edition 2)",
+   "name": "Yara 32\" HD Smart LED TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -575,14 +581,15 @@
     ]
    ],
    "page": 7,
-   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-smart-led-tv-android-9-cloud-os-edition-2"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH23M",
    "model": "32SH23M",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Smart LED TV · Android 11 · GAIA OS",
+   "name": "Yara 32\" HD Smart LED TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -662,14 +669,15 @@
     ]
    ],
    "page": 8,
-   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-smart-led-tv-android-11-gaia-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH24M",
    "model": "32SH24M",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Smart LED TV · Android 12 · Prism OS",
+   "name": "Yara 32\" HD Smart LED TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -749,14 +757,15 @@
     ]
    ],
    "page": 9,
-   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-smart-led-tv-android-12-prism-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-32SH24N",
    "model": "32SH24N",
    "category": "smart-tv",
-   "name": "Yara 32\" HD Smart LED TV · Android 14 · Prism OS",
+   "name": "Yara 32\" HD Smart LED TV",
    "mrp": 23900,
    "inch": 32,
    "resolution": "HD",
@@ -836,7 +845,8 @@
     ]
    ],
    "page": 10,
-   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD Smart LED TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-smart-led-tv-android-14-prism-os"
   },
   {
    "type": "tv",
@@ -923,7 +933,8 @@
     ]
    ],
    "page": 11,
-   "short": "32\" HD QLED Smart TV with 24W stereo sound, 1 GB RAM."
+   "short": "32\" HD QLED Smart TV with 24W stereo sound, 1 GB RAM.",
+   "slug": "yara-32-inch-hd-qled-smart-tv"
   },
   {
    "type": "tv",
@@ -1016,7 +1027,8 @@
     ]
    ],
    "page": 12,
-   "short": "32\" HD Google TV with 24W stereo sound, 1.5 GB RAM, voice control."
+   "short": "32\" HD Google TV with 24W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-32-inch-hd-google-tv"
   },
   {
    "type": "tv",
@@ -1109,7 +1121,8 @@
     ]
    ],
    "page": 13,
-   "short": "32\" HD Smart Voice TV with 20W stereo sound, 1 GB RAM, voice control."
+   "short": "32\" HD Smart Voice TV with 20W stereo sound, 1 GB RAM, voice control.",
+   "slug": "yara-32-inch-hd-smart-voice-tv"
   },
   {
    "type": "tv",
@@ -1196,14 +1209,15 @@
     ]
    ],
    "page": 14,
-   "short": "40\" HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+   "short": "40\" HD Smart LED TV with 20W stereo sound, 1 GB RAM.",
+   "slug": "yara-40-inch-hd-smart-led-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SF22B",
    "model": "43SF22B",
    "category": "smart-tv",
-   "name": "Yara 43\" Full HD Basic Smart TV · Android 9 · Cloud OS",
+   "name": "Yara 43\" Full HD Basic Smart TV",
    "mrp": 34900,
    "inch": 43,
    "resolution": "Full HD",
@@ -1283,14 +1297,15 @@
     ]
    ],
    "page": 15,
-   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM."
+   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM.",
+   "slug": "yara-43-inch-full-hd-basic-smart-tv-android-9-cloud-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SF24B",
    "model": "43SF24B",
    "category": "smart-tv",
-   "name": "Yara 43\" Full HD Basic Smart TV · Android 12 · Prism OS",
+   "name": "Yara 43\" Full HD Basic Smart TV",
    "mrp": 34900,
    "inch": 43,
    "resolution": "Full HD",
@@ -1370,14 +1385,15 @@
     ]
    ],
    "page": 16,
-   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM."
+   "short": "43\" Full HD Basic Smart TV with 20W stereo sound, 512 MB RAM.",
+   "slug": "yara-43-inch-full-hd-basic-smart-tv-android-12-prism-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SF22M",
    "model": "43SF22M",
    "category": "smart-tv",
-   "name": "Yara 43\" Full HD Smart LED TV · Android 9 · Cloud OS",
+   "name": "Yara 43\" Full HD Smart LED TV",
    "mrp": 38900,
    "inch": 43,
    "resolution": "Full HD",
@@ -1457,14 +1473,15 @@
     ]
    ],
    "page": 17,
-   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM.",
+   "slug": "yara-43-inch-full-hd-smart-led-tv-android-9-cloud-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SF24M",
    "model": "43SF24M",
    "category": "smart-tv",
-   "name": "Yara 43\" Full HD Smart LED TV · Android 12 · Prism OS",
+   "name": "Yara 43\" Full HD Smart LED TV",
    "mrp": 38900,
    "inch": 43,
    "resolution": "Full HD",
@@ -1544,14 +1561,15 @@
     ]
    ],
    "page": 18,
-   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM.",
+   "slug": "yara-43-inch-full-hd-smart-led-tv-android-12-prism-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SF24N",
    "model": "43SF24N",
    "category": "smart-tv",
-   "name": "Yara 43\" Full HD Smart LED TV · Android 14 · Prism OS",
+   "name": "Yara 43\" Full HD Smart LED TV",
    "mrp": 38900,
    "inch": 43,
    "resolution": "Full HD",
@@ -1631,7 +1649,8 @@
     ]
    ],
    "page": 19,
-   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM."
+   "short": "43\" Full HD Smart LED TV with 20W stereo sound, 1 GB RAM.",
+   "slug": "yara-43-inch-full-hd-smart-led-tv-android-14-prism-os"
   },
   {
    "type": "tv",
@@ -1718,7 +1737,8 @@
     ]
    ],
    "page": 20,
-   "short": "43\" Full HD QLED Smart TV with 20W stereo sound, 1 GB RAM."
+   "short": "43\" Full HD QLED Smart TV with 20W stereo sound, 1 GB RAM.",
+   "slug": "yara-43-inch-full-hd-qled-smart-tv"
   },
   {
    "type": "tv",
@@ -1811,14 +1831,15 @@
     ]
    ],
    "page": 21,
-   "short": "43\" Full HD Google TV with 20W stereo sound, 1.5 GB RAM, voice control."
+   "short": "43\" Full HD Google TV with 20W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-43-inch-full-hd-google-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SU21MV",
    "model": "43SU21MV",
    "category": "smart-tv",
-   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 9 · Cloud OS",
+   "name": "Yara 43\" 4K UHD Smart Voice TV",
    "mrp": 51900,
    "inch": 43,
    "resolution": "4K UHD",
@@ -1905,14 +1926,15 @@
     ]
    ],
    "page": 22,
-   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-43-inch-4k-uhd-smart-voice-tv-android-9-cloud-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SU22MV",
    "model": "43SU22MV",
    "category": "smart-tv",
-   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 9 · Cloud OS (Edition 2)",
+   "name": "Yara 43\" 4K UHD Smart Voice TV",
    "mrp": 51900,
    "inch": 43,
    "resolution": "4K UHD",
@@ -1999,14 +2021,15 @@
     ]
    ],
    "page": 23,
-   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-43-inch-4k-uhd-smart-voice-tv-android-9-cloud-os-edition-2"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SU24MV",
    "model": "43SU24MV",
    "category": "smart-tv",
-   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 12 · Prism OS",
+   "name": "Yara 43\" 4K UHD Smart Voice TV",
    "mrp": 51900,
    "inch": 43,
    "resolution": "4K UHD",
@@ -2092,14 +2115,15 @@
     ]
    ],
    "page": 24,
-   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-43-inch-4k-uhd-smart-voice-tv-android-12-prism-os"
   },
   {
    "type": "tv",
    "sku": "YE-TV-43SU24N",
    "model": "43SU24N",
    "category": "smart-tv",
-   "name": "Yara 43\" 4K UHD Smart Voice TV · Android 14 · Prism OS",
+   "name": "Yara 43\" 4K UHD Smart Voice TV",
    "mrp": 51900,
    "inch": 43,
    "resolution": "4K UHD",
@@ -2185,7 +2209,8 @@
     ]
    ],
    "page": 25,
-   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control."
+   "short": "43\" 4K UHD Smart Voice TV with 20W stereo sound, 1.5 GB RAM, voice control.",
+   "slug": "yara-43-inch-4k-uhd-smart-voice-tv-android-14-prism-os"
   },
   {
    "type": "tv",
@@ -2267,7 +2292,8 @@
     ]
    ],
    "page": 27,
-   "short": "50\" 4K UHD Smart LED TV with 20W Dolby Audio."
+   "short": "50\" 4K UHD Smart LED TV with 20W Dolby Audio.",
+   "slug": "yara-50-inch-4k-uhd-smart-led-tv"
   },
   {
    "type": "tv",
@@ -2361,7 +2387,8 @@
     ]
    ],
    "page": 28,
-   "short": "50\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+   "short": "50\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control.",
+   "slug": "yara-50-inch-4k-uhd-smart-voice-tv"
   },
   {
    "type": "tv",
@@ -2454,7 +2481,8 @@
     ]
    ],
    "page": 29,
-   "short": "50\" 4K UHD QLED Smart TV with 20W Dolby Audio, 1 GB RAM, voice control."
+   "short": "50\" 4K UHD QLED Smart TV with 20W Dolby Audio, 1 GB RAM, voice control.",
+   "slug": "yara-50-inch-4k-uhd-qled-smart-tv"
   },
   {
    "type": "tv",
@@ -2547,14 +2575,15 @@
     ]
    ],
    "page": 30,
-   "short": "55\" 4K UHD Smart LED TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+   "short": "55\" 4K UHD Smart LED TV with 20W Dolby Audio, 1.5 GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-smart-led-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-55SU22MV",
    "model": "55SU22MV",
    "category": "smart-tv",
-   "name": "Yara 55\" 4K UHD Smart Voice TV · Android 9 · Chita",
+   "name": "Yara 55\" 4K UHD Smart Voice TV",
    "mrp": 64900,
    "inch": 55,
    "resolution": "4K UHD",
@@ -2641,14 +2670,15 @@
     ]
    ],
    "page": 31,
-   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control."
+   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 1.5 GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-smart-voice-tv-android-9-chita"
   },
   {
    "type": "tv",
    "sku": "YE-TV-55SU24BV",
    "model": "55SU24BV",
    "category": "smart-tv",
-   "name": "Yara 55\" 4K UHD Smart Voice TV · Android 12",
+   "name": "Yara 55\" 4K UHD Smart Voice TV",
    "mrp": 69900,
    "inch": 55,
    "resolution": "4K UHD",
@@ -2735,7 +2765,8 @@
     ]
    ],
    "page": 32,
-   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 2 GB RAM, voice control."
+   "short": "55\" 4K UHD Smart Voice TV with 20W Dolby Audio, 2 GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-smart-voice-tv-android-12"
   },
   {
    "type": "tv",
@@ -2831,14 +2862,15 @@
     ]
    ],
    "page": 33,
-   "short": "55\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+   "short": "55\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-google-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-55SQ25B",
    "model": "55SQ25B",
    "category": "qled-tv",
-   "name": "Yara 55\" 4K UHD QLED Google TV · Android 11",
+   "name": "Yara 55\" 4K UHD QLED Google TV",
    "mrp": 79900,
    "inch": 55,
    "resolution": "4K UHD",
@@ -2932,14 +2964,15 @@
     ]
    ],
    "page": 34,
-   "short": "55\" 4K UHD QLED Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+   "short": "55\" 4K UHD QLED Google TV with 30W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-qled-google-tv-android-11"
   },
   {
    "type": "tv",
    "sku": "YE-TV-55SQ24G",
    "model": "55SQ24G",
    "category": "qled-tv",
-   "name": "Yara 55\" 4K UHD QLED Google TV · Android 11 · Google TV 3.0",
+   "name": "Yara 55\" 4K UHD QLED Google TV",
    "mrp": 79900,
    "inch": 55,
    "resolution": "4K UHD",
@@ -3034,7 +3067,8 @@
     ]
    ],
    "page": 35,
-   "short": "55\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+   "short": "55\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-55-inch-4k-uhd-qled-google-tv-android-11-google-tv-3-0"
   },
   {
    "type": "tv",
@@ -3128,7 +3162,8 @@
     ]
    ],
    "page": 36,
-   "short": "65\" 4K UHD Smart Voice TV with 24W Dolby Audio, 1.5 GB RAM, voice control."
+   "short": "65\" 4K UHD Smart Voice TV with 24W Dolby Audio, 1.5 GB RAM, voice control.",
+   "slug": "yara-65-inch-4k-uhd-smart-voice-tv"
   },
   {
    "type": "tv",
@@ -3230,14 +3265,15 @@
     ]
    ],
    "page": 37,
-   "short": "65\" 4K UHD Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+   "short": "65\" 4K UHD Google TV with 20W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-65-inch-4k-uhd-google-tv"
   },
   {
    "type": "tv",
    "sku": "YE-TV-65SQ25B",
    "model": "65SQ25B",
    "category": "qled-tv",
-   "name": "Yara 65\" 4K UHD QLED Google TV · Android 11",
+   "name": "Yara 65\" 4K UHD QLED Google TV",
    "mrp": 109900,
    "inch": 65,
    "resolution": "4K UHD",
@@ -3331,14 +3367,15 @@
     ]
    ],
    "page": 38,
-   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control."
+   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-65-inch-4k-uhd-qled-google-tv-android-11"
   },
   {
    "type": "tv",
    "sku": "YE-TV-65SQ24G",
    "model": "65SQ24G",
    "category": "qled-tv",
-   "name": "Yara 65\" 4K UHD QLED Google TV · Android 11 · Google TV 3.0",
+   "name": "Yara 65\" 4K UHD QLED Google TV",
    "mrp": 109900,
    "inch": 65,
    "resolution": "4K UHD",
@@ -3433,7 +3470,8 @@
     ]
    ],
    "page": 39,
-   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control."
+   "short": "65\" 4K UHD QLED Google TV with 24W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-65-inch-4k-uhd-qled-google-tv-android-11-google-tv-3-0"
   },
   {
    "type": "tv",
@@ -3535,7 +3573,8 @@
     ]
    ],
    "page": 40,
-   "short": "65\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen."
+   "short": "65\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen.",
+   "slug": "yara-65-inch-4k-uhd-anti-glare-qled-smart-tv"
   },
   {
    "type": "tv",
@@ -3637,7 +3676,8 @@
     ]
    ],
    "page": 41,
-   "short": "75\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control."
+   "short": "75\" 4K UHD Google TV with 30W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-75-inch-4k-uhd-google-tv"
   },
   {
    "type": "tv",
@@ -3739,7 +3779,8 @@
     ]
    ],
    "page": 42,
-   "short": "75\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen."
+   "short": "75\" 4K UHD Anti-Glare QLED Smart TV with 24W Dolby Audio, 2GB RAM, anti-glare matte screen.",
+   "slug": "yara-75-inch-4k-uhd-anti-glare-qled-smart-tv"
   },
   {
    "type": "tv",
@@ -3832,7 +3873,8 @@
     ]
    ],
    "page": 43,
-   "short": "75\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM."
+   "short": "75\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM.",
+   "slug": "yara-75-inch-4k-uhd-mini-qled-google-tv"
   },
   {
    "type": "tv",
@@ -3934,7 +3976,8 @@
     ]
    ],
    "page": 44,
-   "short": "85\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control."
+   "short": "85\" 4K UHD QLED Google TV with 20W Dolby Audio, 2GB RAM, voice control.",
+   "slug": "yara-85-inch-4k-uhd-qled-google-tv"
   },
   {
    "type": "tv",
@@ -4029,7 +4072,8 @@
     ]
    ],
    "page": 45,
-   "short": "86\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM."
+   "short": "86\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM.",
+   "slug": "yara-86-inch-4k-uhd-smart-led-tv"
   },
   {
    "type": "tv",
@@ -4137,7 +4181,8 @@
     ]
    ],
    "page": 46,
-   "short": "86\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen."
+   "short": "86\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen.",
+   "slug": "yara-86-inch-4k-uhd-anti-glare-qled-google-tv"
   },
   {
    "type": "tv",
@@ -4233,7 +4278,8 @@
     ]
    ],
    "page": 47,
-   "short": "86\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM."
+   "short": "86\" 4K UHD Mini QLED Google TV with 44W Dolby Audio, 2GB RAM.",
+   "slug": "yara-86-inch-4k-uhd-mini-qled-google-tv"
   },
   {
    "type": "tv",
@@ -4329,7 +4375,8 @@
     ]
    ],
    "page": 48,
-   "short": "98\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM."
+   "short": "98\" 4K UHD Smart LED TV with 20W Dolby Audio, 2GB RAM.",
+   "slug": "yara-centum-98-inch-4k-uhd-smart-led-tv"
   },
   {
    "type": "tv",
@@ -4437,7 +4484,8 @@
     ]
    ],
    "page": 49,
-   "short": "100\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen."
+   "short": "100\" 4K UHD Anti-Glare QLED Google TV with 20W Dolby Audio, 2GB RAM, anti-glare matte screen.",
+   "slug": "yara-100-inch-4k-uhd-anti-glare-qled-google-tv"
   },
   {
    "type": "tv",
@@ -4533,7 +4581,8 @@
     ]
    ],
    "page": 50,
-   "short": "100\" 4K UHD Mini QLED Google TV with 52W Dolby Audio, 3GB RAM."
+   "short": "100\" 4K UHD Mini QLED Google TV with 52W Dolby Audio, 3GB RAM.",
+   "slug": "yara-100-inch-4k-uhd-mini-qled-google-tv"
   }
  ],
  "ac": [

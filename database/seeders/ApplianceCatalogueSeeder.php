@@ -130,7 +130,9 @@ class ApplianceCatalogueSeeder extends Seeder
             [
                 'category_id' => $category->id,
                 'name' => $name,
-                'slug' => Str::slug(str_replace(['"', '.', '·'], [' inch', '-', ' '], $name)),
+                // Pinned in the JSON: names no longer include the OS, so several models share one and the
+                // name can't produce a unique slug (and existing product URLs must not change).
+                'slug' => $p['slug'] ?? Str::slug(str_replace(['"', '.', '·'], [' inch', '-', ' '], $name)),
                 'model_number' => $p['model'],
                 'brand' => 'Yara',
                 'short_description' => $p['short'],

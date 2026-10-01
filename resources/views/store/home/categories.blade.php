@@ -128,25 +128,23 @@
             </div>
 
 
-            {{-- Mobile / tablet: image cards, first one wide --}}
+            {{-- Mobile / tablet: 4:3 picture (the category art's own shape) with the name underneath --}}
             <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
 
-                @foreach ($categories as $i => $category)
+                @foreach ($categories as $category)
 
                     <a href="{{ route('store.category', $category) }}"
-                       class="group relative overflow-hidden rounded-2xl bg-gray-900 {{ $i === 0 ? 'col-span-2 aspect-[16/10] sm:col-span-3 sm:aspect-[21/9]' : 'aspect-[4/5]' }}">
+                       class="group block overflow-hidden rounded-2xl bg-gray-950">
 
-                        @if ($category->image)
-                            <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110">
-                        @endif
+                        <span class="block aspect-[4/3] overflow-hidden">
+                            @if ($category->image)
+                                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
+                            @endif
+                        </span>
 
-                        <span class="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/20 to-transparent"></span>
-
-                        <span class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                            <span class="block font-display text-lg font-bold text-white {{ $i === 0 ? 'sm:text-2xl' : '' }}">{{ $category->name }}</span>
-                            <span class="mt-1 inline-flex items-center gap-1 text-xs font-medium text-white/80">
-                                Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
-                            </span>
+                        <span class="flex items-center justify-between gap-2 px-3 py-2.5 sm:px-4 sm:py-3">
+                            <span class="font-display text-sm font-bold text-white sm:text-base">{{ $category->name }}</span>
+                            <i data-lucide="arrow-right" class="h-4 w-4 shrink-0 text-white/60"></i>
                         </span>
 
                     </a>

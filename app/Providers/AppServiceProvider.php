@@ -38,6 +38,13 @@ class AppServiceProvider extends ServiceProvider
             $logo = Setting::current()->logo;
             $lightLogo = $logo ? SettingController::lightVariantPath($logo) : null;
 
+            // The white version is made when the logo is uploaded in Settings. If it's missing (logo uploaded
+            // before that existed, or storage copied without it), make it now, once, instead of showing the
+            // dark-on-white logo in the dark header.
+            if ($lightLogo && ! Storage::disk('public')->exists($lightLogo) && Storage::disk('public')->exists($logo)) {
+                SettingController::makeLightVariant($logo);
+            }
+
             $view->with('siteLogo', $logo);
 
             // White version for the dark header/footer; falls back to the normal logo.

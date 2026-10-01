@@ -676,14 +676,16 @@
                 <div class="mt-8 grid gap-5 sm:grid-cols-2 {{ match (true) { $categories->count() >= 5 => 'lg:grid-cols-5', $categories->count() === 4 => 'lg:grid-cols-4', default => 'lg:grid-cols-3' } }}">
                     @foreach ($categories as $i => $category)
                         <a href="{{ route('store.category', $category) }}" data-reveal style="--reveal-delay: {{ $i * 100 }}ms"
-                           class="group relative block aspect-[4/5] overflow-hidden rounded-3xl bg-gray-900">
-                            @if ($category->image)
-                                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110">
-                            @endif
-                            <span class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/30 to-transparent"></span>
-                            <span class="absolute inset-x-0 bottom-0 p-6 text-white">
-                                <span class="block text-lg font-bold">{{ $category->name }}</span>
-                                <span class="mt-2 inline-flex items-center gap-1.5 text-sm text-white/80 transition group-hover:gap-3 group-hover:text-white">
+                           class="group block overflow-hidden rounded-3xl bg-gray-950 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            {{-- 4:3 like the category art, name underneath so nothing covers the product --}}
+                            <span class="block aspect-[4/3] overflow-hidden">
+                                @if ($category->image)
+                                    <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
+                                @endif
+                            </span>
+                            <span class="flex items-center justify-between gap-2 px-5 py-4 text-white">
+                                <span class="text-base font-bold">{{ $category->name }}</span>
+                                <span class="inline-flex items-center gap-1.5 text-sm text-white/70 transition group-hover:gap-3 group-hover:text-white">
                                     Explore <i data-lucide="arrow-right" class="h-4 w-4"></i>
                                 </span>
                             </span>
