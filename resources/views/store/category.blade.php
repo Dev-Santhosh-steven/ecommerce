@@ -23,6 +23,8 @@
 
         <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/70 via-35% to-transparent to-60%"></div>
         <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0a0f]/80 to-transparent"></div>
+        {{-- On phones only the right of the banner (the product) fits, behind the title: darken under the text. --}}
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/75 via-45% to-transparent sm:hidden"></div>
 
         <div class="absolute inset-0 flex items-end">
 
@@ -1146,7 +1148,7 @@
             {{-- Product grid --}}
             <div>
 
-                <div class="mb-4 flex items-center justify-between gap-3">
+                <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
 
                     <div>
 
