@@ -13,7 +13,7 @@ use Illuminate\Database\Seeder;
  * 1. Product seeders (they create categories, products, explore-page art and reset specifications)
  * 2. Category art (runs after the products; Glass Displays after CategoryArtSeeder)
  * 3. Specs from the B2B catalogue and the specification sheets (after the product seeders)
- * 4. Catalogues, certifications, blog and chatbot answers (product FAQs last, they read the specs)
+ * 4. Catalogues, certifications, blog, testimonials and chatbot answers (product FAQs last, they read the specs)
  *
  * Every seeder here is idempotent, so this is safe to re-run.
  */
@@ -54,6 +54,7 @@ class SiteUpdateSeeder extends Seeder
             CatalogueSeeder::class,
             CertificationSeeder::class,
             BlogSeeder::class,
+            TestimonialSeeder::class,
             ChatbotFaqSeeder::class,
             ProductChatbotFaqSeeder::class,
         ]);

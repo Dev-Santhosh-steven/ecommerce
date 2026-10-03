@@ -30,6 +30,7 @@ use App\Http\Controllers\Store\HomeController;
 use App\Http\Controllers\Store\LedWallCalculatorController;
 use App\Http\Controllers\Store\LegacyRedirectController;
 use App\Http\Controllers\Store\PageController;
+use App\Http\Controllers\Store\SitemapController;
 use App\Http\Controllers\Store\ProductController as StoreProductController;
 use App\Http\Controllers\Store\SearchController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('store.home');
+
+// For search engines: every current page, category, product and blog post, and where to find that list.
+Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
+Route::get('/robots.txt', fn () => response("User-agent: *
+Disallow: /admin
+Disallow: /account
+Disallow: /cart
+
+Sitemap: " . route('sitemap') . "
+")
+    ->header('Content-Type', 'text/plain'));
 
 // Glass Displays were called Industrial Displays: keep the old product link working.
 // (/industrial-displays and /category/industrial-displays now belong to the new Industrial Displays category.)

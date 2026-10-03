@@ -15,7 +15,8 @@
 |   route:name       a named page, e.g. route:store.interactivepanels
 |   url:/path        any path on this site
 |
-| Collected from the old store's product API and menus on 30 Sep 2026.
+| Collected from the old store's product API and menus on 30 Sep 2026. Rotatable and double side
+| displays point to their own pages since those were added (3 Oct 2026).
 */
 
 return [
@@ -35,7 +36,7 @@ return [
         'new-100-qled-google-tv'                                            => 'sku:98SQ25S',
         'new-86-qled-google-tv'                                             => 'sku:85SQ25S',
         'new-55-interactive-panel'                                          => 'route:store.interactivepanels',
-        '43-double-side-display'                                            => 'category:commercial-display-solutions',
+        '43-double-side-display'                                            => 'route:store.doublesidedisplay',
         '85-interactive-flat-panel'                                         => 'route:store.interactivepanels',
         'new-75-qled-google-tv-frameless'                                   => 'sku:75SQ25S',
         '65-t-standee-display'                                              => 'route:store.tstandees',
@@ -55,7 +56,7 @@ return [
         'new-55-qled-google-tv'                                             => 'sku:55SQ25B',
         '2-ton-5-star-inverter-ac'                                          => 'sku:AS245PD25E',
         '2-ton-3-star-inverter-split-ac-24k'                                => 'sku:AS225BS24E',
-        'rotatable-display-with-battries'                                   => 'category:commercial-display-solutions',
+        'rotatable-display-with-battries'                                   => 'route:store.rotatabledisplay',
         '32-t-standee'                                                      => 'route:store.tstandees',
         '2-ton-3-star-inverter-split-ac-22k'                                => 'sku:AS243BS25E',
         '55-wallmount-display'                                              => 'route:store.commercialdisplays',
@@ -135,8 +136,8 @@ return [
         'b2b'                                    => 'category:commercial-display-solutions',
         'commercial-display-solutions-'          => 'category:commercial-display-solutions',
         'customisable-displays'                  => 'category:commercial-display-solutions',
-        'double-side-vertical-displays'          => 'category:commercial-display-solutions',
-        'rotatable-display-with-battery'         => 'category:commercial-display-solutions',
+        'double-side-vertical-displays'          => 'route:store.doublesidedisplay',
+        'rotatable-display-with-battery'         => 'route:store.rotatabledisplay',
         'other-products'                         => 'category:commercial-display-solutions',
         '24-all-in-one-pc'                       => 'category:commercial-display-solutions',
         'commerical-display-verticalhorizontal-' => 'route:store.commercialdisplays',
