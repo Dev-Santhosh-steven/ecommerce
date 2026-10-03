@@ -1,2 +1,1 @@
-*
-!.gitignore
+# Site images are committed so a deploy (git pull) ships every picture the pages and database use.
