@@ -407,7 +407,7 @@ class BlogSeeder extends Seeder
     private function washingMachineGuide(): void
     {
         $slug = 'washing-machine-guide-semi-automatic-top-front-load';
-        $cover = $this->publish('washing-machines/home-banner.jpg', 'blog/washing-machine-guide-cover.jpg');
+        $cover = $this->publish('washing-machines/blog-guide-cover.jpg', 'blog/washing-machine-guide-cover.jpg');
         $semi = $this->publish('washing-machines/banner-semi-automatic.jpg', 'blog/content/wm-semi-automatic.jpg');
         $fully = $this->publish('washing-machines/fully-automatic-banner.jpg', 'blog/content/wm-fully-automatic.jpg');
         $highlights = $this->publish('washing-machines/products/wm-wt70c1mt-highlights.jpg', 'blog/content/wm-7kg-semi-highlights.jpg');
