@@ -564,7 +564,9 @@
                 </ul>
                 <p class="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-200">Custom made for each site</p>
             </div>
-            <img src="{{ $chillerImg('ahu') }}" alt="Air handling unit fed by a Yara chiller" loading="lazy" class="h-full min-h-64 w-full object-cover">
+            <div class="flex items-center bg-gradient-to-br from-sky-50 to-white p-6 sm:p-10">
+                <x-chiller-unit type="ahu" class="w-full drop-shadow-sm" />
+            </div>
         </article>
 
         {{-- FCUs --}}
@@ -572,14 +574,14 @@
             <h3 class="text-2xl font-bold sm:text-3xl">Fan Coil Units (FCU)</h3>
             <p class="mx-auto mt-3 max-w-2xl text-gray-600">Localised cooling with chilled water from the chiller: compact, efficient and suited to individual rooms or smaller zones.</p>
         </div>
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div id="fcu-units" class="mt-8 grid gap-6 md:grid-cols-3">
             @foreach ([
-                ['img' => 'fcu-split', 'title' => 'Split type indoor FCU', 'points' => ['Installed inside rooms', 'Ideal for classrooms, hospital rooms and offices'], 'cap' => 'Up to 2 TR per unit'],
-                ['img' => 'fcu-cassette', 'title' => 'Cassette type FCU', 'points' => ['Ceiling-mounted design', 'Uniform air distribution'], 'cap' => 'Up to 4 TR per unit'],
-                ['img' => 'fcu-horizontal', 'title' => 'Horizontal cassette FCU', 'points' => ['Lower installation cost', 'One-way air flow, suited to small offices'], 'cap' => 'Up to 4 TR per unit'],
+                ['img' => 'split', 'title' => 'Split type indoor FCU', 'points' => ['Installed inside rooms', 'Ideal for classrooms, hospital rooms and offices'], 'cap' => 'Up to 2 TR per unit'],
+                ['img' => 'cassette', 'title' => 'Cassette type FCU', 'points' => ['Ceiling-mounted design', 'Uniform air distribution'], 'cap' => 'Up to 4 TR per unit'],
+                ['img' => 'horizontal', 'title' => 'Horizontal cassette FCU', 'points' => ['Lower installation cost', 'One-way air flow, suited to small offices'], 'cap' => 'Up to 4 TR per unit'],
             ] as $n => $fcu)
                 <article class="flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-200" data-reveal style="--reveal-delay: {{ $n * 110 }}ms">
-                    <img src="{{ $chillerImg($fcu['img']) }}" alt="{{ $fcu['title'] }}" loading="lazy" class="aspect-[2/1] w-full object-cover">
+                    <x-chiller-unit :type="$fcu['img']" class="w-full border-b border-gray-100" />
                     <div class="flex flex-1 flex-col p-6">
                         <h4 class="text-lg font-bold"><span class="mr-2 text-brand-600">{{ $n + 1 }}</span>{{ $fcu['title'] }}</h4>
                         <ul class="mt-3 space-y-2 text-sm text-gray-600">

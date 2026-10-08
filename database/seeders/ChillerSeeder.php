@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
  *
  * Content and specifications follow the Yara Chiller Catalogue (ECGC, ECHC and ECAS series, AHU/FCU air
  * distribution). Images are copied from database/seeders/assets/chillers (Yara-branded studio shot, cut-out,
- * posters, and the series / air-distribution photos from the catalogue).
+ * posters, and the series photos from the catalogue). The AHU / FCU units are drawn in code (<x-chiller-unit>).
  * Idempotent: re-running updates the same records.
  *
  * php artisan db:seed --class=ChillerSeeder
@@ -28,7 +28,6 @@ class ChillerSeeder extends Seeder
         foreach ([
             'chiller-cutout.png', 'chiller-studio.jpg',
             'series-ecgc.jpg', 'series-echc-wc.jpg', 'series-echc-ac.jpg',
-            'ahu.jpg', 'fcu-split.jpg', 'fcu-cassette.jpg', 'fcu-horizontal.jpg',
         ] as $file) {
             $this->publish($file, "products/chillers/{$file}");
         }
@@ -100,7 +99,6 @@ class ChillerSeeder extends Seeder
             'series-echc-ac.jpg' => 'Yara ECHC-AC air-cooled chillers, 2 TR to 200 TR',
             'series-ecgc.jpg' => 'Yara ECGC series chillers, 12.5 TR to 45 TR',
             'series-echc-wc.jpg' => 'Yara ECHC-WC water-cooled chillers, 10 TR to 500 TR',
-            'ahu.jpg' => 'Air handling unit fed by a Yara chiller, custom made for the site',
             'poster-workspace-less-power.jpg' => '50% less power, 100% cooling power: Yara chillers in an office',
             'poster-mall-quick-chill.jpg' => 'Quick chill, built tough: Yara chillers in a shopping mall',
             'poster-office-smart-cooling.jpg' => 'Smart cooling, steady temperature: Yara chillers in a corporate office',
