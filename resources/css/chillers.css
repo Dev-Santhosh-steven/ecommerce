@@ -82,7 +82,8 @@
         animation: none;
     }
 
-    .chill-flake {
+    .chill-flake,
+    .chill-drop {
         display: none;
     }
 }

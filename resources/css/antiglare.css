@@ -23,23 +23,38 @@
 .ag-tv {
     position: relative;
     padding: 0.55% 0.55% 2.1%;
-    border-radius: 6px;
-    background: linear-gradient(#141518, #0b0b0d 85%, #6e7076 86%, #8a8c92);
-    box-shadow: 0 50px 80px -30px rgb(0 0 0 / 0.75);
+    border-radius: 8px;
+    background: linear-gradient(180deg, #1b1c20, #0c0c0e);
+    box-shadow:
+        inset 0 0 0 1px rgb(255 255 255 / 0.06),
+        0 1px 0 #4a4d54,
+        0 50px 80px -30px rgb(0 0 0 / 0.75);
 }
 
-.ag-tv::after {
-    content: '';
+/* Centre pedestal: a tapered brushed-metal neck on a slim rounded base, casting a soft shadow */
+.ag-stand {
     position: absolute;
     left: 50%;
     top: 100%;
-    width: 33%;
-    height: 9%;
+    width: 30%;
     translate: -50% 0;
-    border: 9px solid #3a3c42;
-    border-top: 0;
-    clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
-    border-radius: 0 0 4px 4px;
+}
+
+.ag-stand-neck {
+    width: 16%;
+    aspect-ratio: 3 / 2.4;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #1f2125, #4d5057 45%, #5d6067 55%, #1f2125);
+    clip-path: polygon(24% 0, 76% 0, 100% 100%, 0 100%);
+}
+
+.ag-stand-base {
+    aspect-ratio: 100 / 4.2;
+    border-radius: 999px / 100% 100% 60% 60%;
+    background: linear-gradient(180deg, #6a6d74, #34363c 45%, #1c1d21);
+    box-shadow:
+        inset 0 1px 0 rgb(255 255 255 / 0.18),
+        0 16px 22px -12px rgb(0 0 0 / 0.55);
 }
 
 /* Reflections drawn in SVG; the matte half blurs and fades the same shapes */

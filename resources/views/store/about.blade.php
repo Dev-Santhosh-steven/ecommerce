@@ -9,9 +9,9 @@
      */
 
     $stats = [
-        ['value' => 10, 'suffix' => '+', 'label' => 'Product categories', 'icon' => 'layout-grid'],
+        ['value' => 10, 'suffix' => '+', 'label' => 'Product categories', 'icon' => 'layers'],
         ['value' => 100, 'suffix' => '"', 'label' => 'Largest TV we make', 'icon' => 'tv'],
-        ['value' => 98, 'suffix' => '"', 'label' => 'Largest interactive panel', 'icon' => 'presentation'],
+        ['value' => 500, 'suffix' => '"', 'label' => 'Largest LED wall', 'icon' => 'layout-grid'],
         ['value' => 13, 'suffix' => '+', 'label' => 'Certifications & registrations', 'icon' => 'badge-check'],
     ];
 

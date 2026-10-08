@@ -173,34 +173,89 @@
             <p class="mt-5 text-lg text-gray-300">Instead of dozens of separate ACs, a single Yara chiller chills water and sends it to ceiling cassettes throughout your building.</p>
         </div>
 
-        <div class="relative mx-auto mt-16 max-w-6xl" data-reveal="zoom">
+        @php
+            $loopNodes = [
+                'chiller' => ['icon' => 'factory', 'title' => 'Yara Chiller', 'text' => 'Removes the heat and chills the water'],
+                'cassette' => ['icon' => 'wind', 'title' => 'Cassette Units', 'text' => 'Blow cool air into every room'],
+            ];
+        @endphp
 
-            <svg viewBox="0 0 1100 300" class="w-full" aria-hidden="true">
-                {{-- Supply (chilled, blue) and return (warm, red) pipes --}}
-                <path d="M210 130 H 890" stroke="#0c4a6e" stroke-width="14" fill="none" stroke-linecap="round"/>
-                <path class="chill-flow" d="M210 130 H 890" stroke="#38bdf8" stroke-width="5" fill="none" stroke-linecap="round"/>
-                <path d="M210 190 H 890" stroke="#4c0519" stroke-width="14" fill="none" stroke-linecap="round"/>
-                <path class="chill-flow is-return" d="M210 190 H 890" stroke="#f43f5e" stroke-width="5" fill="none" stroke-linecap="round"/>
-                <text x="550" y="112" text-anchor="middle" fill="#7dd3fc" font-size="15" font-family="inherit">Chilled water supply</text>
-                <text x="550" y="222" text-anchor="middle" fill="#fda4af" font-size="15" font-family="inherit">Warm water return</text>
+        {{-- Desktop: one closed loop. Chilled water flows out along the top pipe, warm water returns along the bottom. --}}
+        <div class="relative mx-auto mt-16 hidden aspect-[1100/340] max-w-6xl md:block" data-reveal="zoom">
+
+            <svg viewBox="0 0 1100 340" class="absolute inset-0 h-full w-full" aria-hidden="true">
+                <defs>
+                    <filter id="chill-glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+
+                {{-- Supply: chiller -> cassettes --}}
+                <path id="chill-supply" d="M 214 118 H 886" stroke="#0c4a6e" stroke-width="16" fill="none" stroke-linecap="round"/>
+                <path class="chill-flow" d="M 214 118 H 886" stroke="#38bdf8" stroke-width="5" fill="none" stroke-linecap="round"/>
+                {{-- Return: cassettes -> chiller (drawn right to left, so the dashes run that way) --}}
+                <path id="chill-return" d="M 886 222 H 214" stroke="#4c0519" stroke-width="16" fill="none" stroke-linecap="round"/>
+                <path class="chill-flow" d="M 886 222 H 214" stroke="#f43f5e" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+                {{-- Water droplets travelling with the flow --}}
+                @foreach ([0, 1.4, 2.8] as $delay)
+                    <circle r="6" fill="#e0f2fe" filter="url(#chill-glow)" class="chill-drop">
+                        <animateMotion dur="4.2s" begin="-{{ $delay }}s" repeatCount="indefinite"><mpath href="#chill-supply"/></animateMotion>
+                    </circle>
+                    <circle r="6" fill="#ffe4e6" filter="url(#chill-glow)" class="chill-drop">
+                        <animateMotion dur="4.2s" begin="-{{ $delay }}s" repeatCount="indefinite"><mpath href="#chill-return"/></animateMotion>
+                    </circle>
+                @endforeach
+
+                <text x="550" y="94" text-anchor="middle" fill="#7dd3fc" font-size="15" font-weight="600" font-family="inherit">Chilled water out · about 7 °C →</text>
+                <text x="550" y="258" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="600" font-family="inherit">← Warm water back · about 12 °C</text>
             </svg>
 
-            <div class="absolute inset-0 flex items-center justify-between">
-                @foreach ([
-                    ['icon' => 'factory', 'title' => 'Yara Chiller', 'text' => 'Removes heat and chills water'],
-                    ['icon' => 'droplets', 'title' => 'Water Loop', 'text' => 'Carries cooling to every floor'],
-                    ['icon' => 'wind', 'title' => 'Cassette Units', 'text' => 'Blow cool air into each room'],
-                ] as $i => $node)
-                    <div class="flex w-40 flex-col items-center text-center sm:w-52 {{ $i === 1 ? 'mt-40 sm:mt-56' : '' }}">
-                        <span class="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/15 bg-[#0d1117] text-sky-300 shadow-[0_0_40px_rgba(56,189,248,0.25)] sm:h-24 sm:w-24">
-                            <i data-lucide="{{ $node['icon'] }}" class="h-9 w-9 sm:h-10 sm:w-10"></i>
-                        </span>
-                        <p class="mt-4 font-display text-lg font-bold">{{ $node['title'] }}</p>
-                        <p class="mt-1 text-xs text-gray-400 sm:text-sm">{{ $node['text'] }}</p>
-                    </div>
-                @endforeach
-            </div>
+            {{-- The loop itself, in the gap between the pipes --}}
+            <span class="absolute left-1/2 top-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/10 bg-[#0d1117] px-4 py-2 text-xs font-semibold text-gray-300">
+                <i data-lucide="droplets" class="h-4 w-4 text-sky-300"></i>
+                Closed water loop to every floor
+            </span>
 
+            {{-- The pipes run into the two ends --}}
+            @foreach ($loopNodes as $side => $node)
+                <div class="absolute top-1/2 flex w-[19.5%] -translate-y-1/2 flex-col items-center rounded-3xl border border-white/10 bg-[#0d1117] px-4 py-6 text-center shadow-[0_0_50px_rgba(56,189,248,0.15)] {{ $side === 'chiller' ? 'left-0' : 'right-0' }}">
+                    <span class="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-300/20">
+                        <i data-lucide="{{ $node['icon'] }}" class="h-8 w-8"></i>
+                    </span>
+                    <p class="mt-4 font-display text-lg font-bold">{{ $node['title'] }}</p>
+                    <p class="mt-1 text-sm text-gray-400">{{ $node['text'] }}</p>
+                </div>
+            @endforeach
+
+        </div>
+
+        {{-- Phones: the same loop, top to bottom --}}
+        <div class="mx-auto mt-12 max-w-sm md:hidden" data-reveal>
+            @foreach ($loopNodes as $side => $node)
+                <div class="flex items-center gap-4 rounded-3xl border border-white/10 bg-[#0d1117] p-5">
+                    <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-300/20">
+                        <i data-lucide="{{ $node['icon'] }}" class="h-7 w-7"></i>
+                    </span>
+                    <span>
+                        <span class="block font-display text-lg font-bold">{{ $node['title'] }}</span>
+                        <span class="block text-sm text-gray-400">{{ $node['text'] }}</span>
+                    </span>
+                </div>
+                @if ($side === 'chiller')
+                    <div class="flex items-stretch justify-center gap-6 py-2">
+                        <svg viewBox="0 0 120 130" class="h-32 w-28" aria-hidden="true">
+                            <path d="M 38 0 V 130" stroke="#0c4a6e" stroke-width="12" stroke-linecap="round"/>
+                            <path class="chill-flow" d="M 38 0 V 130" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M 82 130 V 0" stroke="#4c0519" stroke-width="12" stroke-linecap="round"/>
+                            <path class="chill-flow" d="M 82 130 V 0" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="flex flex-col justify-center gap-3 text-xs font-semibold">
+                            <span class="text-sky-300">↓ Chilled water out · about 7 °C</span>
+                            <span class="text-rose-300">↑ Warm water back · about 12 °C</span>
+                            <span class="text-gray-400">A closed loop to every floor</span>
+                        </span>
+                    </div>
+                @endif
+            @endforeach
         </div>
 
     </div>

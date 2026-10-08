@@ -187,6 +187,10 @@
                     <span class="pointer-events-none absolute bottom-4 right-4 rounded-full bg-orange-500/90 px-4 py-2 text-xs font-bold backdrop-blur" :class="pos > 88 && 'opacity-0'">Yara Anti-Glare</span>
                     <img src="{{ asset('storage/products/centum/yara-logo-light.png') }}" alt="" class="absolute bottom-[-4.8%] left-1/2 w-[5%] -translate-x-1/2 opacity-80">
                 </div>
+                <div class="ag-stand" aria-hidden="true">
+                    <div class="ag-stand-neck"></div>
+                    <div class="ag-stand-base"></div>
+                </div>
             </div>
             <input type="range" min="2" max="98" x-model.number="pos" class="mt-20 w-full accent-orange-500 sm:hidden" aria-label="Compare glossy and anti-glare">
         </div>
