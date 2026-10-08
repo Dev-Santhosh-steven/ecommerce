@@ -78,6 +78,9 @@ class ApplianceCatalogueSeeder extends Seeder
             $tv->update(['description' => 'Yara TVs from 24" to 100": Anti-Glare QLED, Google TV, QLED, Mini QLED, Smart and Non-Smart LED TVs.']);
         }
         $wm = Category::firstOrCreate(['slug' => 'washing-machine'], ['name' => 'Washing Machine', 'status' => true, 'sort_order' => 1]);
+        if (blank($wm->description) || $wm->description === 'Washing Machines') {
+            $wm->update(['description' => 'Yara washing machines from 6.5 kg to 11 kg: fully automatic front load and top load, semi automatic twin tubs and compact wash-only models.']);
+        }
         $ac = Category::firstOrCreate(['slug' => 'air-conditioners'], ['name' => 'Air Conditioners', 'status' => true, 'sort_order' => 1]);
 
         $defs = [

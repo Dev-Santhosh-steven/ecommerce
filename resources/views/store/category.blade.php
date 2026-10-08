@@ -13,7 +13,9 @@
 
         {{-- Banners are 3:1 artwork with the product on the right: show them whole, anchored right,
              so the product is never cropped; the dark left side melts into the page for the title. --}}
-        @if ($category->banner || $category->image)
+        @if (in_array($category->slug, ['washing-machine', 'fully_automatic', 'semi-automatic', 'only-washer'], true))
+            <x-wash-banner :category="$category" />
+        @elseif ($category->banner || $category->image)
             <img
                 src="{{ asset('storage/' . ($category->banner ?: $category->image)) }}"
                 alt="{{ $category->name }}"
@@ -44,13 +46,15 @@
 
                 </nav>
 
+                @stack('wash-banner-text')
+
                 <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">
                     {{ $category->name }}
                 </h1>
 
                 @if ($category->description)
 
-                    <p class="mt-3 max-w-2xl text-gray-300">
+                    <p class="mt-3 text-gray-300 {{ in_array($category->slug, ['washing-machine', 'fully_automatic', 'semi-automatic', 'only-washer'], true) ? 'max-w-2xl lg:max-w-lg xl:max-w-2xl' : 'max-w-2xl' }}">
                         {{ $category->description }}
                     </p>
 
