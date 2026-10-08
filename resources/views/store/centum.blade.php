@@ -58,9 +58,9 @@
             <div class="centum-ambient !inset-[8%_6%_12%]"></div>
 
             <x-tv-room src="{{ asset('storage/products/centum/room-theatre.jpg') }}"
-                       alt="Yara Centum 100 inch 4K UHD Smart LED TV on the wall of a bright home cinema room"
+                       alt="Yara Centum 100 inch 4K UHD Smart LED TV with red backlight in a dark home cinema room"
                        :screen="[[20.53, 27.92], [51.78, 34.35], [51.82, 57.79], [20.53, 63.38]]"
-                       glow="rgba(255, 40, 80, 0.12)"
+                       glow="rgba(255, 40, 80, 0.18)"
                        class="tv-room-rise rounded-[1.5rem] shadow-[0_50px_100px_-30px_rgba(220,30,70,0.45)] ring-1 ring-white/10 sm:rounded-[2rem]">
                 <x-neon-scene class="absolute inset-0" />
             </x-tv-room>
