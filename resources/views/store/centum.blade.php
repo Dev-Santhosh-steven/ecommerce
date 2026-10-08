@@ -52,18 +52,18 @@
             </p>
         </div>
 
-        {{-- TV stage: the Centum with the royal leopard on screen --}}
-        <div class="relative mx-auto mt-12 max-w-5xl">
+        {{-- TV stage: the Centum on a living-room feature wall, the neon frame flickering on over deep red leaves --}}
+        <div class="relative mx-auto mt-12 max-w-6xl">
 
-            {{-- Giant outlined "100" behind the TV --}}
-            <p class="centum-outline pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 select-none font-display text-[38vw] font-extrabold lg:text-[26rem]" aria-hidden="true">100</p>
+            <div class="centum-ambient !inset-[8%_6%_12%]"></div>
 
-            <div class="centum-ambient !inset-[5%_10%_25%]"></div>
-
-            {{-- A neon frame flickers on over deep red leaves, its glow spilling across the screen --}}
-            <x-centum-tv class="centum-hero-tv relative w-full drop-shadow-[0_50px_60px_rgba(220,30,70,0.35)]">
+            <x-tv-room src="{{ asset('storage/products/centum/room-living.jpg') }}"
+                       alt="Yara Centum 100 inch 4K UHD Smart LED TV on a wood-slat feature wall in a living room"
+                       :screen="[[29.57, 32.20], [63.48, 32.20], [63.48, 69.41], [29.57, 69.41]]"
+                       glow="rgba(255, 40, 80, 0.16)"
+                       class="tv-room-rise rounded-[1.5rem] shadow-[0_50px_100px_-30px_rgba(220,30,70,0.45)] ring-1 ring-white/10 sm:rounded-[2rem]">
                 <x-neon-scene class="absolute inset-0" />
-            </x-centum-tv>
+            </x-tv-room>
 
         </div>
 

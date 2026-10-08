@@ -69,13 +69,14 @@
 
         <div class="relative">
             <div class="absolute inset-[10%] rounded-full bg-orange-500/20 blur-[90px]"></div>
-            {{-- a sun drifting over the screen: no hard glare, only a faint warm haze --}}
-            <div class="centum-hero-tv relative">
-                <img src="{{ $ag('ag-hero.png') }}" alt="Yara Anti-Glare QLED TV" class="relative w-full">
-                <div class="pointer-events-none absolute left-[3.6%] right-[2.6%] top-[4.5%] h-[79%] overflow-hidden">
-                    <div class="ag-sun absolute left-1/3 top-[5%] h-[70%] w-[45%] rounded-full bg-amber-100/15 blur-[60px]"></div>
-                </div>
-            </div>
+            {{-- On the wall of a sunlit room; a sun drifting over the screen leaves only a faint warm haze, no hard glare --}}
+            <x-tv-room src="{{ $ag('room-daylight.jpg') }}"
+                       alt="Yara Anti-Glare QLED TV on the wall of a bright, sunlit living room"
+                       :screen="[[30.44, 20.32], [69.61, 20.32], [69.61, 52.00], [30.44, 52.00]]"
+                       class="tv-room-rise rounded-[1.5rem] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10 sm:rounded-[2rem]">
+                <img src="{{ $ag('screen-coast.jpg') }}" alt="" class="absolute inset-0 h-full w-full object-cover" draggable="false">
+                <div class="ag-sun absolute left-1/3 top-[5%] h-[70%] w-[45%] rounded-full bg-amber-100/15 blur-[60px]"></div>
+            </x-tv-room>
             @foreach ([
                 ['sun', 'Anti-reflective matte', 'left-0 top-[6%]', '0s'],
                 ['palette', '1.07 billion colours', 'right-0 top-0', '-2s'],

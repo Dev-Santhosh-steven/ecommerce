@@ -22,6 +22,11 @@
         about-float 7s ease-in-out 1.7s infinite;
 }
 
+/* A TV shown in a room photo (<x-tv-room>): rises in once, no float (a room shouldn't bob) */
+.tv-room-rise {
+    animation: centum-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
 @keyframes centum-rise {
     from {
         opacity: 0;
@@ -192,6 +197,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .centum-hero-tv,
+    .tv-room-rise,
     .centum-thumb-progress {
         animation: none;
     }
