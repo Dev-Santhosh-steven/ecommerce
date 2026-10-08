@@ -58,8 +58,15 @@
                 Yara <span class="chill-gradient-text">Chillers</span>
             </h1>
             <p class="mx-auto mt-5 max-w-2xl text-lg text-gray-300 sm:text-xl">
-                50% Less Power. 100% Cooling Power. Chiller-based AC for malls, offices and every big space.
+                50% Less Energy. 100% Cooling Performance. Centralised chiller cooling for every large building.
             </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                @foreach ([['hospital', 'Hospitals'], ['school', 'Schools'], ['graduation-cap', 'Colleges'], ['store', 'Retail Stores'], ['shopping-bag', 'Malls']] as [$icon, $place])
+                    <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-gray-200 backdrop-blur">
+                        <i data-lucide="{{ $icon }}" class="h-4 w-4 text-sky-300"></i>{{ $place }}
+                    </span>
+                @endforeach
+            </div>
         </div>
 
         {{-- Stage --}}
@@ -119,13 +126,13 @@
     <div class="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10">
         <div class="min-w-0">
             <p class="truncate font-display text-base font-bold sm:text-lg">Yara Chillers</p>
-            <p class="hidden truncate text-xs text-gray-400 sm:block">Chiller-Based AC System · Price on request</p>
+            <p class="hidden truncate text-xs text-gray-400 sm:block">Chiller Cooling Systems · 2 TR to 500 TR · Price on request</p>
         </div>
         <nav class="hidden items-center gap-6 text-sm text-gray-300 md:flex">
             <a href="#how" class="transition hover:text-white">How it works</a>
-            <a href="#inside" class="transition hover:text-white">Inside</a>
-            <a href="#spaces" class="transition hover:text-white">Spaces</a>
             <a href="#compare" class="transition hover:text-white">Why chillers</a>
+            <a href="#range" class="transition hover:text-white">Product line</a>
+            <a href="#distribution" class="transition hover:text-white">Air distribution</a>
             <a href="#specs" class="transition hover:text-white">Specs</a>
         </nav>
         <a href="{{ $whatsapp }}" target="_blank" rel="noopener noreferrer" class="shrink-0 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-500">Enquire</a>
@@ -140,10 +147,10 @@
     <div class="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
         <div class="grid grid-cols-2 gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 lg:grid-cols-4">
             @foreach ([
-                ['value' => 50, 'suffix' => '%', 'label' => 'Less power*', 'count' => true],
-                ['value' => 100, 'suffix' => '%', 'label' => 'Cooling power', 'count' => true],
-                ['value' => '24/7', 'suffix' => '', 'label' => 'Continuous duty', 'count' => false],
-                ['value' => 4, 'suffix' => '-way', 'label' => 'Cassette air flow', 'count' => true],
+                ['value' => 50, 'suffix' => '%', 'label' => 'Less energy*', 'count' => true],
+                ['value' => 100, 'suffix' => '%', 'label' => 'Cooling performance', 'count' => true],
+                ['value' => 500, 'suffix' => ' TR', 'label' => 'Capacity, from 2 TR', 'count' => true],
+                ['value' => 7, 'suffix' => '°C', 'label' => 'Chilled water', 'count' => true],
             ] as $i => $stat)
                 <div class="group bg-[#0d0f13] p-8 text-center transition duration-500 hover:bg-[#12161c] sm:p-12" data-reveal style="--reveal-delay: {{ $i * 110 }}ms">
                     <p class="font-display text-6xl font-extrabold tabular-nums sm:text-7xl">
@@ -153,7 +160,7 @@
                 </div>
             @endforeach
         </div>
-        <p class="mt-4 text-center text-xs text-gray-500">*Compared with conventional systems. Actual savings depend on the building, usage and system design.</p>
+        <p class="mt-4 text-center text-xs text-gray-500">*Up to 40–50% lower energy use than conventional split ACs. Actual savings depend on the building, usage and system design.</p>
     </div>
 </section>
 
@@ -170,13 +177,13 @@
         <div class="mx-auto max-w-2xl text-center" data-reveal>
             <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-300">How it works</p>
             <h2 class="mt-3 text-4xl font-bold sm:text-5xl">One plant. <span class="chill-gradient-text">Every room cool.</span></h2>
-            <p class="mt-5 text-lg text-gray-300">Instead of dozens of separate ACs, a single Yara chiller chills water and sends it to ceiling cassettes throughout your building.</p>
+            <p class="mt-5 text-lg text-gray-300">Instead of multiple individual air conditioners, a Yara chiller produces chilled water that is circulated through Air Handling Units (AHUs) or Fan Coil Units (FCUs) to cool the whole building evenly.</p>
         </div>
 
         @php
             $loopNodes = [
                 'chiller' => ['icon' => 'factory', 'title' => 'Yara Chiller', 'text' => 'Removes the heat and chills the water'],
-                'cassette' => ['icon' => 'wind', 'title' => 'Cassette Units', 'text' => 'Blow cool air into every room'],
+                'cassette' => ['icon' => 'wind', 'title' => 'AHUs & FCUs', 'text' => 'Cool the air and spread it evenly'],
             ];
         @endphp
 
@@ -205,14 +212,14 @@
                     </circle>
                 @endforeach
 
-                <text x="550" y="94" text-anchor="middle" fill="#7dd3fc" font-size="15" font-weight="600" font-family="inherit">Chilled water out · about 7 °C →</text>
-                <text x="550" y="258" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="600" font-family="inherit">← Warm water back · about 12 °C</text>
+                <text x="550" y="94" text-anchor="middle" fill="#7dd3fc" font-size="15" font-weight="600" font-family="inherit">Chilled water out · 7 °C →</text>
+                <text x="550" y="258" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="600" font-family="inherit">← Warm water back to be cooled again</text>
             </svg>
 
             {{-- The loop itself, in the gap between the pipes --}}
             <span class="absolute left-1/2 top-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/10 bg-[#0d1117] px-4 py-2 text-xs font-semibold text-gray-300">
                 <i data-lucide="droplets" class="h-4 w-4 text-sky-300"></i>
-                Closed water loop to every floor
+                Insulated pipes across the building
             </span>
 
             {{-- The pipes run into the two ends --}}
@@ -249,14 +256,31 @@
                             <path class="chill-flow" d="M 82 130 V 0" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
                         </svg>
                         <span class="flex flex-col justify-center gap-3 text-xs font-semibold">
-                            <span class="text-sky-300">↓ Chilled water out · about 7 °C</span>
-                            <span class="text-rose-300">↑ Warm water back · about 12 °C</span>
-                            <span class="text-gray-400">A closed loop to every floor</span>
+                            <span class="text-sky-300">↓ Chilled water out · 7 °C</span>
+                            <span class="text-rose-300">↑ Warm water back to be cooled again</span>
+                            <span class="text-gray-400">Insulated pipes across the building</span>
                         </span>
                     </div>
                 @endif
             @endforeach
         </div>
+
+
+        {{-- The cycle in four steps --}}
+        <ol class="mx-auto mt-14 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4" data-reveal>
+            @foreach ([
+                ['The chiller', 'removes heat from water using a refrigeration cycle.'],
+                ['The chilled water', 'is pumped through insulated pipes across the building.'],
+                ['AHUs or FCUs', 'use the chilled water to cool the air and distribute it evenly.'],
+                ['Warm water', 'returns to the chiller to be cooled again.'],
+            ] as $n => [$lead, $rest])
+                <li class="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 font-display text-sm font-bold">{{ $n + 1 }}</span>
+                    <p class="mt-4 text-sm leading-6 text-gray-300"><span class="font-semibold text-white">{{ $lead }}</span> {{ $rest }}</p>
+                </li>
+            @endforeach
+        </ol>
+        <p class="mx-auto mt-8 max-w-2xl text-center text-gray-400">This centralised approach ensures stable temperature control, higher efficiency and better reliability for large facilities.</p>
 
     </div>
 
@@ -345,8 +369,9 @@
     <div class="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
 
         <div class="mx-auto max-w-2xl text-center" data-reveal>
-            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">Features</p>
-            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">Efficient. Reliable. <span class="text-brand-600">Future-ready.</span></h2>
+            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">Why choose Yara chillers</p>
+            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">Efficient. Reliable. <span class="text-brand-600">Modular.</span></h2>
+            <p class="mt-5 text-lg text-gray-600">Engineered for efficient, reliable and scalable cooling in schools, hospitals, malls, retail outlets and large facilities, with consistent performance and long-term reliability.</p>
         </div>
 
         <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -373,24 +398,26 @@
 
         <div class="text-center" data-reveal>
             <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">Why chillers</p>
-            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">Smarter than a wall of ACs.</h2>
+            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">Better than conventional ACs.</h2>
+            <p class="mt-4 text-gray-500">Built for efficiency, reliability and longevity.</p>
         </div>
 
         <div class="mt-12 overflow-hidden rounded-3xl ring-1 ring-gray-200" data-reveal>
-            <div class="grid grid-cols-3 bg-gray-950 text-sm font-semibold text-white">
+            <div class="grid grid-cols-[0.8fr_1fr_1fr] bg-gray-950 text-sm font-semibold text-white">
                 <div class="p-4 sm:p-5"></div>
-                <div class="p-4 text-center text-gray-400 sm:p-5">Many split ACs</div>
-                <div class="bg-brand-600 p-4 text-center sm:p-5">Yara Chiller System</div>
+                <div class="p-4 text-center text-gray-400 sm:p-5">Conventional split AC</div>
+                <div class="bg-brand-600 p-4 text-center sm:p-5">Yara chiller cooling system</div>
             </div>
             @foreach ([
-                ['Energy use', 'Higher for large spaces', 'Up to 50% less power*'],
-                ['Cooling large areas', 'Many outdoor units', 'One central plant'],
-                ['Temperature', 'Uneven, room to room', 'Steady everywhere'],
-                ['Interiors', 'Units on every wall', 'Discreet ceiling cassettes'],
-                ['Maintenance', 'Dozens of machines', 'Centralised & simpler'],
-                ['Duty cycle', 'Domestic-grade', 'Built for 24/7 commercial use'],
+                ['Units', 'Multiple AC units required', 'Single centralised cooling plant'],
+                ['Energy', 'Higher electricity consumption', 'Up to 40–50% lower energy usage'],
+                ['Maintenance', 'Difficult across many units', 'Centralised maintenance'],
+                ['Cooling', 'Uneven in large spaces', 'Uniform temperature distribution'],
+                ['Duty', 'Shorter lifespan under heavy load', 'Designed for continuous operation'],
+                ['Noise', 'High noise levels', 'Quieter indoor operation'],
+                ['Leaks', 'Complex leakage diagnosis', 'Easy leak detection: water is circulated'],
             ] as $row)
-                <div class="grid grid-cols-3 border-t border-gray-100 text-sm">
+                <div class="grid grid-cols-[0.8fr_1fr_1fr] border-t border-gray-100 text-sm">
                     <div class="p-4 font-semibold sm:p-5">{{ $row[0] }}</div>
                     <div class="p-4 text-center text-gray-500 sm:p-5">{{ $row[1] }}</div>
                     <div class="flex items-center justify-center gap-2 bg-brand-50/60 p-4 text-center font-semibold text-gray-900 sm:p-5">
@@ -398,6 +425,171 @@
                         {{ $row[2] }}
                     </div>
                 </div>
+            @endforeach
+        </div>
+
+    </div>
+</section>
+
+
+{{-- =========================================================
+     PRODUCT LINE — ECGC, ECHC and ECAS series (Yara Chiller Catalogue)
+========================================================= --}}
+@php
+    $chillerImg = fn ($name) => asset("storage/products/chillers/{$name}.jpg");
+    $ecgc = [
+        // capacity, compressors, tank, max power
+        ['12.5 TR', '44 kW', '1 or 2', '750 L', '12'],
+        ['15 TR', '53 kW', '1 or 2', '750 L', '14.5'],
+        ['20 TR', '70 kW', '1 or 2', '1250 L', '22'],
+        ['25 TR', '88 kW', '1 or 2', '1250 L', '24.5'],
+        ['30 TR', '105 kW', '2', '1250 L', '32'],
+        ['45 TR', '158 kW', '2', '1250 L', '42'],
+    ];
+@endphp
+<section id="range" class="scroll-mt-32 bg-[#f4f6f8] py-24 text-gray-900">
+    <div class="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10">
+
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">Product line</p>
+            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">From 2 TR <span class="text-brand-600">to 500 TR.</span></h2>
+            <p class="mt-5 text-lg text-gray-600">Three series, air-cooled or water-cooled, for air conditioning and process cooling.</p>
+        </div>
+
+        {{-- ECGC --}}
+        <article class="mt-14 overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-gray-200" data-reveal>
+            <div class="grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1fr_1.1fr]">
+                <div>
+                    <span class="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-sky-700">ECGC Series</span>
+                    <h3 class="mt-4 text-3xl font-bold">General chillers, 12.5 TR to 45 TR</h3>
+                    <p class="mt-4 leading-7 text-gray-600">Small to medium capacity chillers used across industries for process cooling down to 7 °C, and for air-conditioning applications.</p>
+                    <div class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-gray-700">
+                        @foreach (['Scroll compressor', 'BTHE heat exchanger', 'Air-cooled condenser', 'DTC / PLC controls', 'R407C refrigerant', '7 °C nominal', 'Adjustable −7 °C to 20 °C'] as $chip)
+                            <span class="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5">{{ $chip }}</span>
+                        @endforeach
+                    </div>
+                </div>
+                <img src="{{ $chillerImg('series-ecgc') }}" alt="Yara ECGC series chillers" loading="lazy" class="w-full rounded-2xl">
+            </div>
+
+            <div class="overflow-x-auto border-t border-gray-100">
+                <table class="w-full min-w-[720px] text-sm">
+                    <thead>
+                        <tr class="bg-gray-950 text-white">
+                            <th class="p-4 text-left font-semibold">Nominal cooling capacity</th>
+                            @foreach ($ecgc as [$tr, $kw])
+                                <th class="p-4 text-center font-semibold">{{ $tr }}<span class="block text-xs font-medium text-gray-400">{{ $kw }}</span></th>
+                            @endforeach
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ([2 => 'No. of compressors', 3 => 'Tank capacity', 4 => 'Power max (kW)*'] as $col => $label)
+                            <tr class="border-t border-gray-100 {{ $loop->even ? 'bg-gray-50/70' : '' }}">
+                                <th class="p-4 text-left font-medium text-gray-500">{{ $label }}</th>
+                                @foreach ($ecgc as $row)
+                                    <td class="p-4 text-center font-semibold">{{ $row[$col] }}</td>
+                                @endforeach
+                            </tr>
+                        @endforeach
+                        <tr class="border-t border-gray-100">
+                            <th class="p-4 text-left font-medium text-gray-500">All models</th>
+                            <td colspan="6" class="p-4 text-center text-gray-700">Scroll compressor · BTHE · Air-cooled · DTC / PLC · R407C · 7 °C nominal, adjustable −7 °C to 20 °C · Pump to suit the process</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="px-6 pb-6 pt-3 text-xs text-gray-500 sm:px-10">*Power may vary with the number of compressors, pump capacity and agitators. DTC = digital temperature controller; BTHE = brazed plate heat exchanger.</p>
+        </article>
+
+        {{-- ECHC and ECAS --}}
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            @foreach ([
+                ['img' => 'series-echc-ac', 'tag' => 'ECHC-AC · ECAS-AC', 'title' => 'Air-cooled, 2 TR to 200 TR', 'range' => '2 TR (7 kW) → 40 TR (140 kW) → 200 TR (700 kW)', 'text' => 'Higher-capacity air-cooled chillers that need no cooling tower, for buildings and plants of every size.'],
+                ['img' => 'series-echc-wc', 'tag' => 'ECHC-WC · ECAS-WC', 'title' => 'Water-cooled, up to 500 TR', 'range' => '10 TR (35 kW) → 40 TR (140 kW) → 500 TR (1750 kW)', 'text' => 'Water-cooled chillers for the largest loads, from 10 TR all the way to 500 TR (1750 kW).'],
+            ] as $series)
+                <article class="flex flex-col overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-gray-200" data-reveal>
+                    <img src="{{ $chillerImg($series['img']) }}" alt="Yara {{ $series['tag'] }} series chillers" loading="lazy" class="aspect-[4/1] w-full object-cover">
+                    <div class="flex flex-1 flex-col p-6 sm:p-8">
+                        <span class="self-start rounded-full bg-sky-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-sky-700">{{ $series['tag'] }}</span>
+                        <h3 class="mt-4 text-2xl font-bold">{{ $series['title'] }}</h3>
+                        <p class="mt-3 leading-7 text-gray-600">{{ $series['text'] }}</p>
+                        <p class="mt-auto pt-5 text-sm font-semibold text-sky-700">{{ $series['range'] }}</p>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+
+        <article class="mt-6 grid gap-6 rounded-[2rem] bg-gray-950 p-6 text-white sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center" data-reveal>
+            <span class="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-300/20">
+                <i data-lucide="drafting-compass" class="h-8 w-8"></i>
+            </span>
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-300">ECAS Series · Application-specific</span>
+                <h3 class="mt-2 text-2xl font-bold">Custom-made chillers, −50 °C to +20 °C</h3>
+                <p class="mt-3 leading-7 text-gray-300">Built for a specific application in ranges such as 11, 32, 43 and 54 TR: chemical chillers and water chillers (11 °C to 20 °C), from 2 TR (7 kW) up to 500 TR (1750 kW), air-cooled or water-cooled.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+{{-- =========================================================
+     AIR DISTRIBUTION — AHUs and FCUs (Yara Chiller Catalogue)
+========================================================= --}}
+<section id="distribution" class="scroll-mt-32 bg-white py-24 text-gray-900">
+    <div class="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-10">
+
+        <div class="mx-auto max-w-3xl text-center" data-reveal>
+            <p class="brand-eyebrow text-sm font-semibold uppercase tracking-[0.2em]">Air distribution</p>
+            <h2 class="mt-3 text-4xl font-bold sm:text-5xl">Flexible cooling <span class="text-brand-600">for every space.</span></h2>
+            <p class="mt-5 text-lg text-gray-600">Chiller systems deliver cooling through Air Handling Units (AHUs) or Fan Coil Units (FCUs), depending on the building layout and cooling requirement.</p>
+        </div>
+
+        {{-- AHU --}}
+        <article class="mt-14 grid overflow-hidden rounded-[2rem] bg-[#f4f6f8] ring-1 ring-gray-200 lg:grid-cols-2" data-reveal>
+            <div class="p-6 sm:p-10">
+                <span class="inline-flex rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Air Handling Units (AHU)</span>
+                <h3 class="mt-4 text-3xl font-bold">Ideal for large halls</h3>
+                <ul class="mt-6 space-y-3 text-gray-700">
+                    @foreach ([
+                        'Custom-engineered air distribution for centralised cooling in large spaces',
+                        'Suited to large halls, auditoriums, malls, hospitals and institutional buildings',
+                        'High airflow capacity for centralised cooling',
+                        'Works seamlessly with the chiller through chilled-water coils',
+                        'Energy-efficient cooling for large-scale applications',
+                    ] as $point)
+                        <li class="flex gap-3"><i data-lucide="circle-check" class="mt-0.5 h-5 w-5 shrink-0 text-brand-600"></i>{{ $point }}</li>
+                    @endforeach
+                </ul>
+                <p class="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-200">Custom made for each site</p>
+            </div>
+            <img src="{{ $chillerImg('ahu') }}" alt="Air handling unit fed by a Yara chiller" loading="lazy" class="h-full min-h-64 w-full object-cover">
+        </article>
+
+        {{-- FCUs --}}
+        <div class="mt-14 text-center" data-reveal>
+            <h3 class="text-2xl font-bold sm:text-3xl">Fan Coil Units (FCU)</h3>
+            <p class="mx-auto mt-3 max-w-2xl text-gray-600">Localised cooling with chilled water from the chiller: compact, efficient and suited to individual rooms or smaller zones.</p>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+            @foreach ([
+                ['img' => 'fcu-split', 'title' => 'Split type indoor FCU', 'points' => ['Installed inside rooms', 'Ideal for classrooms, hospital rooms and offices'], 'cap' => 'Up to 2 TR per unit'],
+                ['img' => 'fcu-cassette', 'title' => 'Cassette type FCU', 'points' => ['Ceiling-mounted design', 'Uniform air distribution'], 'cap' => 'Up to 4 TR per unit'],
+                ['img' => 'fcu-horizontal', 'title' => 'Horizontal cassette FCU', 'points' => ['Lower installation cost', 'One-way air flow, suited to small offices'], 'cap' => 'Up to 4 TR per unit'],
+            ] as $n => $fcu)
+                <article class="flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-200" data-reveal style="--reveal-delay: {{ $n * 110 }}ms">
+                    <img src="{{ $chillerImg($fcu['img']) }}" alt="{{ $fcu['title'] }}" loading="lazy" class="aspect-[2/1] w-full object-cover">
+                    <div class="flex flex-1 flex-col p-6">
+                        <h4 class="text-lg font-bold"><span class="mr-2 text-brand-600">{{ $n + 1 }}</span>{{ $fcu['title'] }}</h4>
+                        <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                            @foreach ($fcu['points'] as $point)
+                                <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand-600"></i>{{ $point }}</li>
+                            @endforeach
+                        </ul>
+                        <p class="mt-auto pt-5"><span class="inline-flex rounded-full bg-brand-50 px-3 py-1.5 text-sm font-bold text-brand-700">Capacity: {{ $fcu['cap'] }}</span></p>
+                    </div>
+                </article>
             @endforeach
         </div>
 
