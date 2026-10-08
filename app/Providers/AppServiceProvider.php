@@ -26,14 +26,35 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('layouts.store', function ($view) {
-            $view->with('navCategories', Category::active()
+            $navCategories = Category::active()
                 ->topLevel()
                 ->with(['children' => function ($query) {
                     $query->active()->orderBy('sort_order')->orderBy('name');
                 }])
                 ->orderBy('sort_order')
                 ->orderBy('name')
-                ->get());
+                ->get();
+
+            $view->with('navCategories', $navCategories);
+
+            // Products previewed in each menu's hover panel: up to 4 per top-level category (featured first),
+            // taken from the category and its sub-categories in one query.
+            $topOf = [];
+            foreach ($navCategories as $navCategory) {
+                $topOf[$navCategory->id] = $navCategory->id;
+                foreach ($navCategory->children as $child) {
+                    $topOf[$child->id] = $navCategory->id;
+                }
+            }
+            $view->with('navProducts', \App\Models\Product::with('primaryImage')
+                ->where('status', true)
+                ->whereIn('category_id', array_keys($topOf))
+                ->orderByDesc('featured')
+                ->orderBy('sort_order')
+                ->orderBy('id')
+                ->get()
+                ->groupBy(fn ($p) => $topOf[$p->category_id])
+                ->map(fn ($group) => $group->take(4)));
 
             $logo = Setting::current()->logo;
             $lightLogo = $logo ? SettingController::lightVariantPath($logo) : null;

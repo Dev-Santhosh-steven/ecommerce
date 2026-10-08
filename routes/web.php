@@ -70,6 +70,11 @@ Route::get('/product/{slug}', function (string $slug) {
     return redirect('/product/' . str_replace('-hd-ready-', '-hd-', $slug), 301);
 })->where('slug', '(.*-hd-ready-.*|yara-\d+-inch-lcd-video-wall-.*)');
 
+// ACs were split by tonnage; they now live in one Inverter AC category (tonnage is a filter there).
+Route::permanentRedirect('/category/1-ton-ac', '/category/inverter-ac');
+Route::permanentRedirect('/category/1-5-ton-ac', '/category/inverter-ac');
+Route::permanentRedirect('/category/2-ton-ac', '/category/inverter-ac');
+
 Route::get('/category/{category:slug}', [StoreCategoryController::class, 'show'])
     ->name('store.category');
 

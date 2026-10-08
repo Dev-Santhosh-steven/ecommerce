@@ -425,7 +425,7 @@ final class QueryParser
             }
 
             $screens = (bool) array_intersect($q->categories, self::SCREEN_CATEGORIES);
-            $cooling = (bool) array_intersect($q->categories, ['air-conditioners', '1-ton-ac', '1-5-ton-ac', '2-ton-ac']);
+            $cooling = (bool) array_intersect($q->categories, ['air-conditioners', 'inverter-ac', '1-ton-ac', '1-5-ton-ac', '2-ton-ac']);
 
             if (isset($rule['inch']) && $screens && $q->inchMin === null && $q->inchMax === null) {
                 [$q->inchMin, $q->inchMax] = $rule['inch'];
@@ -461,7 +461,7 @@ final class QueryParser
                 if (array_intersect($cats, ['washing-machine', 'fully_automatic', 'semi-automatic', 'only-washer'])) {
                     $q->kgMin ??= $kind === 'big' ? 8.5 : null;
                     $q->kgMax ??= $kind === 'small' ? 7 : null;
-                } elseif (array_intersect($cats, ['air-conditioners', '1-ton-ac', '1-5-ton-ac', '2-ton-ac'])) {
+                } elseif (array_intersect($cats, ['air-conditioners', 'inverter-ac', '1-ton-ac', '1-5-ton-ac', '2-ton-ac'])) {
                     $q->tonMin ??= $kind === 'big' ? 2 : null;
                     $q->tonMax ??= $kind === 'small' ? 1 : null;
                 } elseif (! $cats || array_intersect($cats, self::SCREEN_CATEGORIES)) {

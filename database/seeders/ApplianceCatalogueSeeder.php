@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
  * Yara TV, air-conditioner and washing-machine range from the 2026 specification sheets.
  *
  *  - Televisions: Anti-Glare, Google, QLED, Mini QLED, Smart and Non-Smart sub-categories (49 models)
- *  - Air Conditioners: 1 Ton, 1.5 Ton and 2 Ton sub-categories (9 models)
+ *  - Air Conditioners: Inverter AC sub-category (9 models; tonnage and star rating are filters)
  *  - Washing Machines: Fully Automatic, Semi Automatic and Only Washer sub-categories (17 models)
  *
  * Product data comes from database/seeders/data/appliances.json (parsed from the sheets); images from
@@ -51,9 +51,12 @@ class ApplianceCatalogueSeeder extends Seeder
             }
 
             foreach ($data['ac'] as $i => $ac) {
-                $product = $this->seedProduct($categories[$ac['category']], $ac, $i, $this->acDescription($ac),
+                $product = $this->seedProduct($categories['inverter-ac'], $ac, $i, $this->acDescription($ac),
                     collect($applianceImages['ac'][$ac['model']] ?? [])->map(fn ($f) => ["air-conditioners/products/{$f}", "products/air-conditioners/{$f}"])->all());
-                $this->tag($product, [['energy-rating', 'Energy Rating', "{$ac['star']} Star", $ac['star']]]);
+                $this->tag($product, [
+                    ['energy-rating', 'Energy Rating', "{$ac['star']} Star", $ac['star']],
+                    ['ac-capacity', 'Capacity', $ac['ton'], (int) round((float) $ac['ton'] * 10)],
+                ]);
             }
 
             foreach ($data['wm'] as $i => $wm) {
@@ -94,9 +97,7 @@ class ApplianceCatalogueSeeder extends Seeder
             'fully_automatic' => [$wm, 'Fully Automatic', 'Fully automatic top-load and front-load washing machines from 6.5 kg to 10 kg.', null, 0],
             'semi-automatic' => [$wm, 'Semi Automatic', 'Semi-automatic twin-tub washing machines from 7 kg to 11 kg, with separate wash and spin tubs.', 'washing-machines', 1],
             'only-washer' => [$wm, 'Only Washer', 'Compact wash-only machines for small homes, paired with any spin dryer.', 'washing-machines', 2],
-            '1-ton-ac' => [$ac, '1 Ton AC', '1 ton inverter split ACs (3 and 5 star) for bedrooms and small rooms up to about 120 sq ft.', 'air-conditioners', 0],
-            '1-5-ton-ac' => [$ac, '1.5 Ton AC', '1.5 ton inverter split ACs (3 and 5 star) for living rooms and bedrooms of 120–180 sq ft.', 'air-conditioners', 1],
-            '2-ton-ac' => [$ac, '2 Ton AC', '2 ton inverter split ACs (3 and 5 star) for large halls and offices of 180–250 sq ft.', 'air-conditioners', 2],
+            'inverter-ac' => [$ac, 'Inverter AC', 'Yara inverter split ACs in 1, 1.5 and 2 ton, 3 star and 5 star: steady cooling, lower bills, 100% copper coils and R-32 refrigerant.', 'air-conditioners', 0],
         ];
 
         $out = [];
@@ -110,6 +111,10 @@ class ApplianceCatalogueSeeder extends Seeder
             $category->save();
             $out[$slug] = $category;
         }
+
+        // The ACs used to be split by tonnage; they now live in Inverter AC (tonnage and star rating are filters).
+        // The old pages stay switched off and redirect (routes/web.php).
+        Category::whereIn('slug', ['1-ton-ac', '1-5-ton-ac', '2-ton-ac'])->update(['status' => false]);
 
         // Parent TV category art only when an admin hasn't uploaded their own.
         if (blank($tv->image)) {

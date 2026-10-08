@@ -78,34 +78,79 @@
 
                     @foreach ($navCategories as $navCategory)
 
-                        <div class="group relative">
+                        @php $menuProducts = $navProducts[$navCategory->id] ?? collect(); @endphp
+
+                        {{-- Static (not relative): the panel spans the header, below the whole menu bar --}}
+                        <div class="group">
 
                             <a href="{{ route('store.category', $navCategory) }}"
                                class="nav-link flex items-center gap-1 {{ request()->route('category')?->is($navCategory) || request()->route('category')?->parent_id === $navCategory->id ? 'is-active' : '' }}">
 
                                 <span title="{{ $navCategory->name }}">{{ $navShort[$navCategory->slug] ?? $navCategory->name }}</span>
 
-                                @if ($navCategory->children->isNotEmpty())
+                                @if ($navCategory->children->isNotEmpty() || $menuProducts->isNotEmpty())
                                     <i data-lucide="chevron-down" class="hidden h-3.5 w-3.5 opacity-60 transition group-hover:rotate-180 min-[1700px]:block"></i>
                                 @endif
 
                             </a>
 
-                            @if ($navCategory->children->isNotEmpty())
+                            @if ($navCategory->children->isNotEmpty() || $menuProducts->isNotEmpty())
 
-                                <div class="nav-dropdown invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                                {{-- Mega panel: sub-categories on the left, the category's products on the right --}}
+                                <div class="nav-dropdown nav-mega invisible absolute inset-x-0 top-full z-50 pt-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
 
-                                    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white p-2 shadow-xl">
+                                    <div class="mx-auto max-w-[1180px] px-6">
+                                        <div class="grid grid-cols-[230px_1fr] gap-8 rounded-3xl border border-gray-200 bg-white p-6 text-gray-900 shadow-2xl shadow-black/20">
 
-                                        @foreach ($navCategory->children as $child)
+                                            <div class="flex flex-col border-r border-gray-100 pr-6">
+                                                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">Shop</p>
+                                                <p class="mt-1 font-display text-xl font-bold">{{ $navCategory->name }}</p>
 
-                                            <a href="{{ route('store.category', $child) }}" style="--i: {{ $loop->index }}"
-                                               class="nav-dropdown-item block rounded-lg px-3 py-2 text-[15px] text-gray-700 hover:bg-brand-50 hover:text-brand-700">
-                                                {{ $child->name }}
-                                            </a>
+                                                @if ($navCategory->children->isNotEmpty())
+                                                    <div class="mt-4 space-y-0.5">
+                                                        @foreach ($navCategory->children as $child)
+                                                            <a href="{{ route('store.category', $child) }}" style="--i: {{ $loop->index }}"
+                                                               class="nav-dropdown-item block rounded-lg px-3 py-2 text-[15px] text-gray-700 hover:bg-brand-50 hover:text-brand-700">
+                                                                {{ $child->name }}
+                                                            </a>
+                                                        @endforeach
+                                                    </div>
+                                                @elseif ($navCategory->description)
+                                                    <p class="mt-3 line-clamp-4 text-sm leading-6 text-gray-500">{{ $navCategory->description }}</p>
+                                                @endif
 
-                                        @endforeach
+                                                <a href="{{ route('store.category', $navCategory) }}"
+                                                   class="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-brand-600 hover:text-brand-700">
+                                                    View all {{ $navShort[$navCategory->slug] ?? $navCategory->name }}
+                                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                                </a>
+                                            </div>
 
+                                            <div class="grid grid-cols-4 gap-4">
+                                                @foreach ($menuProducts as $menuProduct)
+                                                    <a href="{{ $menuProduct->url() }}" style="--i: {{ $loop->index }}"
+                                                       class="nav-mega-card group/card flex flex-col rounded-2xl p-2 transition hover:bg-gray-50">
+                                                        <span class="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-gray-50 to-gray-100">
+                                                            @if ($menuProduct->primaryImage)
+                                                                <img src="{{ asset('storage/' . $menuProduct->primaryImage->image) }}" alt="{{ $menuProduct->name }}" loading="lazy"
+                                                                     class="h-full w-full object-contain p-2 transition duration-500 group-hover/card:scale-105">
+                                                            @else
+                                                                <i data-lucide="image" class="h-8 w-8 text-gray-300"></i>
+                                                            @endif
+                                                        </span>
+                                                        <span class="mt-3 line-clamp-2 text-sm font-semibold leading-snug group-hover/card:text-brand-700">{{ $menuProduct->name }}</span>
+                                                        <span class="mt-1 text-sm text-gray-500">
+                                                            @if ($menuProduct->hasPrice())
+                                                                <span class="font-semibold text-gray-900">₹{{ number_format($menuProduct->unitPrice()) }}</span>
+                                                            @else
+                                                                Price on request
+                                                            @endif
+                                                        </span>
+                                                    </a>
+                                                @endforeach
+                                            </div>
+
+                                        </div>
                                     </div>
 
                                 </div>

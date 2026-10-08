@@ -133,6 +133,39 @@
     transition-delay: calc(60ms + var(--i, 0) * 35ms), calc(60ms + var(--i, 0) * 35ms), 0s, 0s, 0s;
 }
 
+/* Mega panel: a short open delay so sweeping across the menu doesn't flash every panel;
+   the products slide up one after another. */
+.site-header .nav-mega {
+    transition: opacity 0.25s ease 0.08s, visibility 0.25s ease 0.08s;
+}
+
+.site-header .nav-mega > div {
+    transform: translateY(8px);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) 0.08s;
+}
+
+.site-header .nav-mega-card {
+    opacity: 0;
+    translate: 0 10px;
+    transition: opacity 0.35s ease, translate 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease;
+}
+
+.site-header .group:hover .nav-mega-card,
+.site-header .group:focus-within .nav-mega-card {
+    opacity: 1;
+    translate: 0 0;
+    transition-delay: calc(140ms + var(--i, 0) * 60ms), calc(140ms + var(--i, 0) * 60ms), 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .nav-mega > div,
+    .site-header .nav-mega-card {
+        transform: none;
+        translate: none;
+        transition: none;
+    }
+}
+
 /* A short red bar grows in at the left of the hovered link. */
 .site-header .nav-dropdown-item::before {
     content: '';

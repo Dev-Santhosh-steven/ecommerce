@@ -97,7 +97,7 @@
 </div>
 
 {{-- Tagline under the category title --}}
-@push('wash-banner-text')
+@push('category-banner-text')
     <p class="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">{{ $scene['eyebrow'] }}</p>
 @endpush
 
