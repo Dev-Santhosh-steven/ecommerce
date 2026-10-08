@@ -28,7 +28,7 @@ class CentumSeeder extends Seeder
         foreach ([
             'screen-neon.jpg', 'neon-on.jpg', 'neon-off.jpg', 'neon-tubes.png', 'screen-leopard-swirl.jpg', 'screen-leopard-royal.jpg', 'screen-horses.jpg', 'screen-house.jpg', 'screen-layers.jpg', 'screen-mountain.jpg',
             'screen-mandala.jpg', 'screen-earth.jpg', 'screen-coast.jpg', 'screen-stage.jpg',
-            'centum-neon.png', 'centum-leopard-tv.png', 'yara-logo.png', 'yara-logo-light.png', 'room-living.jpg',
+            'centum-neon.png', 'centum-leopard-tv.png', 'yara-logo.png', 'yara-logo-light.png', 'room-theatre.jpg',
         ] as $file) {
             $this->publish($file, "products/centum/{$file}");
         }

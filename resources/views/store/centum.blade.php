@@ -52,15 +52,15 @@
             </p>
         </div>
 
-        {{-- TV stage: the Centum on a living-room feature wall, the neon frame flickering on over deep red leaves --}}
+        {{-- TV stage: the Centum filling the wall of a home theatre (the seats in front show its 100" scale), the neon frame flickering on over deep red leaves --}}
         <div class="relative mx-auto mt-12 max-w-6xl">
 
             <div class="centum-ambient !inset-[8%_6%_12%]"></div>
 
-            <x-tv-room src="{{ asset('storage/products/centum/room-living.jpg') }}"
-                       alt="Yara Centum 100 inch 4K UHD Smart LED TV on a wood-slat feature wall in a living room"
-                       :screen="[[29.57, 32.20], [63.48, 32.20], [63.48, 69.41], [29.57, 69.41]]"
-                       glow="rgba(255, 40, 80, 0.16)"
+            <x-tv-room src="{{ asset('storage/products/centum/room-theatre.jpg') }}"
+                       alt="Yara Centum 100 inch 4K UHD Smart LED TV filling the wall of a home theatre"
+                       :screen="[[31.13, 3.31], [68.08, 3.31], [68.08, 44.78], [31.13, 44.78]]"
+                       glow="rgba(255, 40, 80, 0.20)"
                        class="tv-room-rise rounded-[1.5rem] shadow-[0_50px_100px_-30px_rgba(220,30,70,0.45)] ring-1 ring-white/10 sm:rounded-[2rem]">
                 <x-neon-scene class="absolute inset-0" />
             </x-tv-room>
