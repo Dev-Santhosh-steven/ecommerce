@@ -39,7 +39,7 @@
             @endphp
 
             {{-- Desktop: expanding panels --}}
-            <div class="hidden h-[34rem] gap-3 lg:flex xl:h-[38rem]" x-data="{ active: 0 }" data-reveal>
+            <div class="hidden h-[36rem] gap-3 lg:flex xl:h-[40rem]" x-data="{ active: 0 }" data-reveal>
 
                 @foreach ($categories as $i => $category)
 
@@ -51,11 +51,15 @@
                        class="group relative flex-1 min-w-0 overflow-hidden rounded-3xl bg-gray-900 transition-[flex-grow] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
 
                         @if ($category->image)
-                            {{-- Only the open panel shows the photo; slim strips would show an odd sliver of it --}}
-                            <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
-                                 class="absolute inset-0 h-full w-full object-cover transition duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                                 :class="active === {{ $i }} ? 'scale-100 opacity-100' : 'scale-110 opacity-0'"
-                                 @if ($i > 0) style="opacity: 0" @endif :style="''">
+                            {{-- Only the open panel shows the photo; slim strips would show an odd sliver of it.
+                                 The art is 4:3 and the open panel is tall, so the panel is filled with a blurred copy and
+                                 the whole picture (never cropped) takes the space above the details below. --}}
+                            <span class="absolute inset-0 transition duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                                  :class="active === {{ $i }} ? 'scale-100 opacity-100' : 'scale-110 opacity-0'"
+                                  @if ($i > 0) style="opacity: 0" @endif :style="''">
+                                <img src="{{ asset('storage/' . $category->image) }}" alt="" aria-hidden="true"
+                                     class="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-2xl">
+                            </span>
                         @endif
 
                         {{-- Collapsed strip: a clean dark card with a soft brand glow --}}
@@ -84,8 +88,19 @@
                         </span>
 
                         {{-- Expanded: details --}}
-                        <div class="absolute inset-x-0 bottom-0 p-8 xl:p-10"
+                        <div class="absolute inset-0 flex flex-col p-8 pt-14 xl:p-9 xl:pt-14"
                              :class="active === {{ $i }} ? 'pointer-events-auto' : 'pointer-events-none'">
+
+                            @if ($category->image)
+                                <div class="mb-4 min-h-0 flex-1 transition duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                                     :class="active === {{ $i }} ? 'scale-100 opacity-100' : 'scale-95 opacity-0'"
+                                     @if ($i > 0) style="opacity: 0" @endif :style="''">
+                                    <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
+                                         class="h-full w-full object-contain">
+                                </div>
+                            @else
+                                <div class="flex-1"></div>
+                            @endif
 
                             <div class="max-w-lg transition duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                                  :class="active === {{ $i }} ? 'opacity-100 translate-y-0 delay-200' : 'opacity-0 translate-y-8'"
@@ -98,21 +113,21 @@
                                     </span>
                                 @endif
 
-                                <h3 class="mt-4 text-4xl font-bold leading-tight text-white xl:text-5xl">{{ $category->name }}</h3>
+                                <h3 class="mt-3 text-3xl font-bold leading-tight text-white xl:text-4xl">{{ $category->name }}</h3>
 
                                 @if ($category->description)
                                     <p class="mt-3 line-clamp-2 text-white/80">{{ $category->description }}</p>
                                 @endif
 
                                 @if ($category->children->isNotEmpty())
-                                    <div class="mt-5 flex flex-wrap gap-2">
-                                        @foreach ($category->children->take(4) as $child)
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        @foreach ($category->children->take(3) as $child)
                                             <span class="rounded-full border border-white/25 px-3 py-1 text-xs font-medium text-white/90">{{ $child->name }}</span>
                                         @endforeach
                                     </div>
                                 @endif
 
-                                <span class="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition group-hover:bg-brand-600 group-hover:text-white">
+                                <span class="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition group-hover:bg-brand-600 group-hover:text-white">
                                     Explore {{ $category->name }}
                                     <i data-lucide="arrow-right" class="h-4 w-4"></i>
                                 </span>
