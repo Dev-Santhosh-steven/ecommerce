@@ -322,16 +322,16 @@
                 <div class="relative grid grid-cols-2 gap-4">
 
                     @foreach ([
-                        ['home-outdoor', 'Outdoor billboards', 'Sunlight readable, IP65', 'col-span-2 aspect-[16/9]'],
-                        ['home-indoor', 'Indoor & corporate', 'Fine-pitch P1.25–P2.5', 'aspect-[4/3]'],
-                        ['home-stage', 'Rental & events', 'Tool-less cabinets', 'aspect-[4/3]'],
-                    ] as [$image, $title, $caption, $size])
+                        ['home-outdoor', 'Outdoor billboards', 'Sunlight readable, IP65', 'col-span-2 aspect-[16/10]', 'object-top'],
+                        ['home-indoor', 'Indoor & corporate', 'Fine-pitch P1.25–P2.5', 'aspect-[4/3]', ''],
+                        ['home-stage', 'Rental & events', 'Tool-less cabinets', 'aspect-[4/3]', ''],
+                    ] as [$image, $title, $caption, $size, $focus])
 
                         <a href="{{ route('store.led-calculator') }}" class="group relative overflow-hidden rounded-2xl border border-white/10 {{ $size }}">
                             <img src="{{ asset('storage/led-video-walls/' . $image . '.jpg') }}"
                                  alt="{{ $title }} LED video wall"
                                  loading="lazy"
-                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                                 class="h-full w-full object-cover {{ $focus }} transition duration-500 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
                             <div class="absolute bottom-0 p-4 sm:p-5">
                                 <p class="font-semibold">{{ $title }}</p>
