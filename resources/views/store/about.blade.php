@@ -12,7 +12,7 @@
         ['value' => 10, 'suffix' => '+', 'label' => 'Product categories', 'icon' => 'layers'],
         ['value' => 100, 'suffix' => '"', 'label' => 'Largest TV we make', 'icon' => 'tv'],
         ['value' => 500, 'suffix' => '"', 'label' => 'Largest LED wall', 'icon' => 'layout-grid'],
-        ['value' => 13, 'suffix' => '+', 'label' => 'Certifications & registrations', 'icon' => 'badge-check'],
+        ['value' => 15, 'suffix' => '+', 'label' => 'Certifications & registrations', 'icon' => 'badge-check'],
     ];
 
     // Our journey, drawn as a wave: arcs alternate above and below the line (see the Our Story section).
@@ -86,6 +86,8 @@
         ['code' => 'ISO 9001', 'name' => 'Quality Management', 'text' => 'ISO 9001:2015 certified quality processes.', 'logo' => $mark('iso-9001.png')],
         ['code' => 'ISO 14001', 'name' => 'Environmental Management', 'text' => 'Responsible, environment-conscious manufacturing.', 'logo' => $mark('iso-14001.png')],
         ['code' => 'ISO 27001', 'name' => 'Information Security', 'text' => 'Secure handling of customer and business data.', 'logo' => $mark('iso-27001.png')],
+        ['code' => 'ISO 20000-1', 'name' => 'IT Service Management', 'text' => 'ISO/IEC 20000-1:2018 certified IT service management.', 'logo' => $mark('iso-20000-1.png')],
+        ['code' => 'ISO 45001', 'name' => 'Occupational Health & Safety', 'text' => 'ISO 45001:2018 certified workplace health and safety.', 'logo' => $mark('iso-45001.png')],
         ['code' => 'BEE', 'name' => 'Bureau of Energy Efficiency', 'text' => 'Energy-efficiency rated appliances.', 'logo' => $mark('bee.png')],
         ['code' => 'CE', 'name' => 'Conformité Européenne', 'text' => 'Meets European health, safety and environmental norms.', 'logo' => $mark('ce.png')],
         ['code' => 'RoHS', 'name' => 'RoHS Compliant', 'text' => 'Free from restricted hazardous substances.', 'logo' => $mark('rohs.png')],

@@ -24,6 +24,8 @@ class CertificationSeeder extends Seeder
             ['ISO 9001', 'ISO 9001:2015 Quality Management', 'International Organization for Standardization', 'Certified quality management processes.', 'badge-check', $logo('iso-9001.png')],
             ['ISO 14001', 'ISO 14001:2015 Environmental Management', 'International Organization for Standardization', 'Responsible, environment-conscious manufacturing.', 'leaf', $logo('iso-14001.png')],
             ['ISO 27001', 'ISO/IEC 27001:2022 Information Security', 'International Organization for Standardization', 'Secure handling of customer and business data.', 'lock', $logo('iso-27001.png')],
+            ['ISO 20000-1', 'ISO/IEC 20000-1:2018 IT Service Management', 'International Organization for Standardization', 'Certified IT service management processes.', 'server-cog', $logo('iso-20000-1.png')],
+            ['ISO 45001', 'ISO 45001:2018 Occupational Health & Safety', 'International Organization for Standardization', 'Certified occupational health and safety management.', 'hard-hat', $logo('iso-45001.png')],
             ['BEE', 'BEE Model Approval', 'Bureau of Energy Efficiency, Ministry of Power', 'Energy-efficiency rated appliances.', 'zap', $logo('bee.png')],
             ['CE', 'CE Conformity', 'Conformité Européenne', 'Meets European health, safety and environmental norms.', 'badge-check', $logo('ce.png')],
             ['RoHS', 'RoHS Certificate of Compliance', 'RoHS Directive 2011/65/EU', 'Free from restricted hazardous substances.', 'leaf', $logo('rohs.png')],

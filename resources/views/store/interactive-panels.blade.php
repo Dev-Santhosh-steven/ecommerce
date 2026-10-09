@@ -117,14 +117,17 @@
     {{-- numbers teachers care about --}}
     <div class="mx-auto mt-14 grid max-w-[1500px] grid-cols-2 gap-px overflow-hidden rounded-3xl bg-white/10 sm:mx-6 lg:mx-auto lg:grid-cols-4">
         @foreach ([
-            ['20', 'point', 'Students can write together'],
-            ['4K', 'UHD', 'Clear from the last bench'],
-            ['0', 'PC needed', 'Android 14 with whiteboard built in'],
-            ['55–100', 'inch', 'For every size of classroom'],
-        ] as $k => [$big, $unit, $text])
+            ['40', 'point', 'Students can write together', 'from 20 points'],
+            ['4K', 'UHD', 'Clear from the last bench', null],
+            ['0', 'PC needed', 'Android 14 with whiteboard built in', null],
+            ['55–100', 'inch', 'For every size of classroom', null],
+        ] as $k => [$big, $unit, $text, $note])
             <div class="bg-[#070b18] p-6 text-center sm:p-8" data-reveal style="--reveal-delay: {{ $k * 110 }}ms">
                 <p class="font-display text-4xl font-extrabold sm:text-5xl">{{ $big }}<span class="ml-1 text-base font-semibold text-sky-300">{{ $unit }}</span></p>
                 <p class="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">{{ $text }}</p>
+                @if ($note)
+                    <p class="mt-1 text-[11px] text-gray-500">{{ $note }}</p>
+                @endif
             </div>
         @endforeach
     </div>
